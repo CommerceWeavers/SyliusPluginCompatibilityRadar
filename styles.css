@@ -477,6 +477,77 @@ button { font-family: inherit; letter-spacing: inherit; cursor: pointer; }
     margin-top: 0.15rem;
 }
 
+.row__migrate {
+    margin: 0.4rem 0 0;
+    padding: 0.45rem 0.7rem;
+    background: rgba(43, 131, 244, 0.06);
+    border: 1px solid rgba(43, 131, 244, 0.22);
+    border-left: 2px solid var(--blue);
+    border-radius: 0.4rem;
+    font-size: 0.82rem;
+    color: var(--text-2);
+    display: flex; flex-wrap: wrap; align-items: baseline;
+    gap: 0.35rem;
+}
+.row__migrate-arrow {
+    color: var(--blue);
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 700;
+}
+.row__migrate-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: var(--track-wide);
+    color: var(--text-3);
+    font-weight: 700;
+}
+.row__migrate-target {
+    font-family: "JetBrains Mono", monospace;
+    color: var(--text);
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex; align-items: baseline; gap: 0.25rem;
+    border-bottom: 1px solid transparent;
+    transition: border-color .15s, color .15s;
+}
+.row__migrate-target:hover,
+.row__migrate-target:focus-visible {
+    color: var(--yellow);
+    border-bottom-color: var(--yellow);
+    text-decoration: none;
+}
+.row__migrate-target code {
+    color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+}
+.row__migrate-target-arrow {
+    font-size: 0.72rem;
+    color: var(--blue);
+    transition: color .15s;
+}
+.row__migrate-target:hover .row__migrate-target-arrow,
+.row__migrate-target:focus-visible .row__migrate-target-arrow {
+    color: var(--yellow);
+}
+.row__migrate-tags {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.72rem;
+    color: var(--text-4);
+}
+.row__migrate-reason {
+    display: block;
+    flex-basis: 100%;
+    color: var(--text-3);
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+}
+.row__migrate--alternative {
+    background: rgba(148, 163, 184, 0.05);
+    border-color: rgba(148, 163, 184, 0.2);
+    border-left-color: var(--text-4);
+}
+
 /* collapsible "other" */
 .other {
     border-top: 1px solid var(--line);

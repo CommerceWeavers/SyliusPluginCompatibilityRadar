@@ -71,6 +71,48 @@
 }`,
     };
 
+    // Known package handovers / takeovers by the Sylius core team.
+    // When a user's composer.json pins one of these older names, surface the
+    // Sylius-maintained successor so the upgrade path is visible at a glance.
+    //
+    //  urgency:
+    //    'replace'     — community package handed over; migrate to Sylius.
+    //    'alternative' — Sylius also publishes one; old one still supported.
+    //
+    // Verified against Packagist on 2026-04-21. Stripe takeover intentionally
+    // omitted until sylius/stripe-plugin lands on Packagist; flux-se users
+    // should keep their current plugin per CW guidance.
+    // Evidence for `directDescendant: true` is GitHub contributor-count
+    // matching between the two repos — identical counts imply imported git
+    // history, i.e. same underlying commits. `null` means partial overlap
+    // only, so drop-in replacement is not guaranteed.
+    const MIGRATIONS = {
+        'bitbag/cms-plugin': {
+            target: 'sylius/cms-plugin',
+            urgency: 'replace',
+            directDescendant: true,
+            reason: "BitBag's repo declares 1.x-only and points to Sylius for 2.x. Shared git-history contributors confirm the codebase carried over.",
+        },
+        'bitbag/wishlist-plugin': {
+            target: 'sylius/wishlist-plugin',
+            urgency: 'replace',
+            directDescendant: true,
+            reason: "BitBag's repo declares 1.x-only and points to Sylius for 2.x. Shared git-history contributors confirm the codebase carried over.",
+        },
+        'bitbag/sylius-adyen-plugin': {
+            target: 'sylius/adyen-plugin',
+            urgency: 'replace',
+            directDescendant: null, // partial contributor overlap only
+            reason: 'Sylius publishes an official Adyen plugin. Contributor overlap with BitBag is partial — expect some migration work, not a drop-in swap.',
+        },
+        'mollie/sylius-plugin': {
+            target: 'sylius/mollie-plugin',
+            urgency: 'replace',
+            directDescendant: true,
+            reason: 'Mollie archived their repo and redirects to Sylius. Shared git-history contributors confirm the codebase carried over, with further rework by the Sylius team.',
+        },
+    };
+
     // Sylius monorepo + framework packages. These track sylius/sylius directly;
     // route them out of the plugin buckets so core isn't mislabeled as missing.
     const SYLIUS_CORE = new Set([
@@ -255,9 +297,10 @@
                 core.push(pkg);
                 continue;
             }
+            const migration = MIGRATIONS[pkg.name] ? resolveMigration(pkg.name) : null;
             const entry = state.db.get(pkg.name);
             if (entry) {
-                const row = { ...entry, userConstraint: pkg.constraint };
+                const row = { ...entry, userConstraint: pkg.constraint, migration };
                 if (entry.notes && /in\s*progress|alpha|beta|rc|v2\s*branch|work\s*in\s*progress/i.test(entry.notes)) {
                     inProgress.push(row);
                 } else if (entry.supports2x) {
@@ -268,10 +311,11 @@
                     unknownSylius.push({
                         packageName: pkg.name,
                         note: 'Radar has no parseable Sylius constraint for this plugin',
+                        migration,
                     });
                 }
             } else if (looksLikeSylius(pkg.name)) {
-                unknownSylius.push({ packageName: pkg.name, note: null });
+                unknownSylius.push({ packageName: pkg.name, note: null, migration });
             } else {
                 other.push(pkg.name);
             }
@@ -287,6 +331,17 @@
 
     function looksLikeSylius(name) {
         return /sylius|bitbag|setono|monsieurbiz|webgriffe|synolia/.test(name);
+    }
+
+    function resolveMigration(oldName) {
+        const m = MIGRATIONS[oldName];
+        if (!m) return null;
+        const successor = state.db ? state.db.get(m.target) : null;
+        return {
+            ...m,
+            successorSupports2x: successor ? !!successor.supports2x : null,
+            successorTag: successor ? successor.latestTag : null,
+        };
     }
 
     // ---------- rendering ----------
@@ -411,6 +466,7 @@
             withText(el('code', 'is-stale'), `${e.constraintFrom || 'sylius/sylius'}: ${e.syliusConstraint || '?'}`),
         );
         info.appendChild(meta);
+        if (e.migration) info.appendChild(renderMigrationHint(e.migration));
         if (e.downloads) {
             const suffix = e.downloads > 250000 ? ' · high-impact block' : '';
             info.appendChild(withText(el('span', 'row__downloads'), `${formatDownloads(e.downloads)} downloads${suffix}`));
@@ -421,11 +477,40 @@
 
     function renderUnknownRow(e) {
         const row = el('div', 'row row--unknown');
-        row.append(
+        const info = el('div');
+        info.append(
             withText(el('span', 'row__name'), e.packageName),
             withText(el('span', 'row__tag'), e.note || 'Not yet covered by the radar'),
         );
+        if (e.migration) info.appendChild(renderMigrationHint(e.migration));
+        row.appendChild(info);
         return row;
+    }
+
+    function renderMigrationHint(m) {
+        const p = el('p', `row__migrate row__migrate--${m.urgency}`);
+        p.appendChild(withText(el('span', 'row__migrate-arrow'), '→'));
+        const label = m.urgency === 'replace' ? 'Migrate to' : 'Also available as';
+        p.appendChild(withText(el('span', 'row__migrate-label'), label));
+
+        const link = document.createElement('a');
+        link.href = `https://packagist.org/packages/${m.target}`;
+        link.target = '_blank';
+        link.rel = 'noopener';
+        link.className = 'row__migrate-target';
+        link.innerHTML = `<code>${m.target}</code><span class="row__migrate-target-arrow">↗</span>`;
+        p.appendChild(link);
+
+        const tags = [];
+        if (m.directDescendant === true) tags.push('drop-in successor');
+        else if (m.directDescendant === null) tags.push('verify migration path');
+        if (m.successorSupports2x === true && m.successorTag) tags.push(`${m.successorTag} is on 2.x`);
+        if (tags.length) {
+            p.appendChild(withText(el('span', 'row__migrate-tags'), `· ${tags.join(' · ')}`));
+        }
+
+        p.appendChild(withText(el('span', 'row__migrate-reason'), m.reason));
+        return p;
     }
 
     function renderDetected(constraint) {
