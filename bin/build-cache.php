@@ -5,9 +5,9 @@ declare(strict_types=1);
 /**
  * Throwaway seed script. Pulls `type: sylius-plugin` (and, since the coverage
  * expansion pass, `type: sylius-bundle` plus a general `sylius` name-match
- * search) packages from Packagist, resolves the `sylius/sylius` constraint
- * from the latest stable release, and writes plugins.json for the static
- * radar page.
+ * search and a tag-based search) packages from Packagist, resolves the
+ * `sylius/sylius` constraint from the latest stable release, and writes
+ * plugins.json for the static radar page.
  *
  * Sources (merged, deduped by packageName):
  *   1. Packagist search: type:sylius-plugin
@@ -15,10 +15,12 @@ declare(strict_types=1);
  *   3. Packagist search: q=sylius             (catches library/project types
  *      that are still Sylius ecosystem packages; filtered by known vendors
  *      to avoid dragging in unrelated projects)
- *   4. Curated list in bin/curated_packages.php (resolvable + manual)
+ *   4. Packagist search: tags=sylius plugin   (catches plugins only tagged,
+ *      not typed; filtered by the same vendor allowlist as the name search)
+ *   5. Curated list in bin/curated_packages.php (resolvable + manual)
  *
  * Usage:
- *   php bin/build-cache.php [--limit=N] [--only=vendor/pkg,...] [--no-search=bundle,name] [--only-curated]
+ *   php bin/build-cache.php [--limit=N] [--only=vendor/pkg,...] [--no-search=bundle,name,tags] [--only-curated]
  */
 
 require __DIR__ . '/../vendor/autoload.php';
@@ -28,6 +30,7 @@ use Composer\Semver\VersionParser;
 
 const PACKAGIST_SEARCH_TYPE = 'https://packagist.org/search.json?type=%s&per_page=100';
 const PACKAGIST_SEARCH_QUERY = 'https://packagist.org/search.json?q=%s&per_page=100';
+const PACKAGIST_SEARCH_TAGS = 'https://packagist.org/search.json?tags=%s&per_page=100';
 const PACKAGIST_P2 = 'https://repo.packagist.org/p2/%s.json';
 const USER_AGENT = 'CommerceWeavers-Radar-Seed/1.1 (+https://commerceweavers.com)';
 
@@ -105,6 +108,23 @@ if (!$onlyCurated) {
         ));
         fwrite(STDERR, sprintf("  %d raw / %d kept after vendor allowlist\n", count($raw), count($filtered)));
         mergePackages($pool, $filtered, 'name-match');
+        fwrite(STDERR, sprintf("  pool size now %d\n", count($pool)));
+    }
+
+    if (!in_array('tags', $disabledSources, true)) {
+        // Packagist's web UI search at /search/?tags=sylius%20plugin sends
+        // the tags param with a literal space. The JSON endpoint accepts the
+        // same space (URL-encoded) and returns the same superset that the web
+        // UI shows; pulling the single-tag form `sylius-plugin` misses packages
+        // that only tag themselves with the two separate words.
+        fwrite(STDERR, "Fetching Packagist tag-match tags=sylius plugin (filtered by vendor allowlist)…\n");
+        $raw = fetchPackagistByTags('sylius plugin');
+        $filtered = array_values(array_filter(
+            $raw,
+            fn($row) => isTrustedSyliusVendor($row['name'] ?? '')
+        ));
+        fwrite(STDERR, sprintf("  %d raw / %d kept after vendor allowlist\n", count($raw), count($filtered)));
+        mergePackages($pool, $filtered, 'tags:sylius-plugin');
         fwrite(STDERR, sprintf("  pool size now %d\n", count($pool)));
     }
 }
@@ -231,6 +251,11 @@ function fetchPackagistByType(string $type): array
 function fetchPackagistByQuery(string $query): array
 {
     return fetchPackagistPaginated(sprintf(PACKAGIST_SEARCH_QUERY, urlencode($query)));
+}
+
+function fetchPackagistByTags(string $tags): array
+{
+    return fetchPackagistPaginated(sprintf(PACKAGIST_SEARCH_TAGS, urlencode($tags)));
 }
 
 function fetchPackagistPaginated(string $url): array

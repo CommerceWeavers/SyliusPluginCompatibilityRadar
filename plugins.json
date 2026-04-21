@@ -1,6 +1,6 @@
 {
-    "generatedAt": "2026-04-21T13:16:01+00:00",
-    "sourceCount": 370,
+    "generatedAt": "2026-04-21T15:50:09+00:00",
+    "sourceCount": 384,
     "plugins": [
         {
             "packageName": "sylius/registry",
@@ -1653,6 +1653,17 @@
             "description": "Sylius plugin that optimizes your images"
         },
         {
+            "packageName": "brille24/sylius-special-price-plugin",
+            "homepage": "https://github.com/Brille24/SyliusSpecialPricePlugin",
+            "latestTag": "1.11.0",
+            "syliusConstraint": "^1.11",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 27637,
+            "description": "Provides time based special pricing for Sylius."
+        },
+        {
             "packageName": "umanit/sylius-product-variant-attribute-plugin",
             "homepage": "https://github.com/umanit/sylius-product-variant-attribute-plugin",
             "latestTag": "1.10.0",
@@ -1684,6 +1695,17 @@
             "supports2x": true,
             "downloads": 26128,
             "description": "Clerk.io plugin for Sylius."
+        },
+        {
+            "packageName": "sylius/customer-order-cancellation-plugin",
+            "homepage": "https://github.com/Sylius/CustomerOrderCancellationPlugin",
+            "latestTag": "v1.1.0",
+            "syliusConstraint": "^1.4",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 25829,
+            "description": "Plugin that allows customers to cancel the placed order before it is processed."
         },
         {
             "packageName": "gewebe/sylius-vat-plugin",
@@ -2764,6 +2786,17 @@
             "description": "InPost plugin for Sylius"
         },
         {
+            "packageName": "webgriffe/sylius-pagolight-plugin",
+            "homepage": "https://github.com/webgriffe/SyliusHeyLightPlugin",
+            "latestTag": "v3.0.1",
+            "syliusConstraint": "^2.1",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": false,
+            "supports2x": true,
+            "downloads": 3749,
+            "description": "Sylius plugin for HeyLight payment gateway (ex PagoLight BNPL and PagoLight PRO)"
+        },
+        {
             "packageName": "arobases-sylius-public/sylius-professional-customer-plugin",
             "homepage": "https://github.com/Arobases-Sylius-Plugins/ArobasesSyliusProfessionalCustomerPlugin",
             "latestTag": "3.0.1",
@@ -2958,7 +2991,7 @@
             "constraintFrom": "sylius/sylius",
             "supports1x": false,
             "supports2x": true,
-            "downloads": 2467,
+            "downloads": 2474,
             "description": "Sylius connector for Gally"
         },
         {
@@ -3380,6 +3413,17 @@
             "description": ""
         },
         {
+            "packageName": "asdoria/sylius-pictogram-plugin",
+            "homepage": "https://github.com/asdoria/SyliusPictogramPlugin",
+            "latestTag": "0.1.4",
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 987,
+            "description": "A Pictogram plugin for Sylius"
+        },
+        {
             "packageName": "3brs/sylius-packeta-plugin",
             "homepage": "https://github.com/3BRS/sylius-packeta-plugin",
             "latestTag": "v5.0.0",
@@ -3402,6 +3446,28 @@
             "description": "Sylius plugin for product labels."
         },
         {
+            "packageName": "acseo/sylius-typesense",
+            "homepage": "https://github.com/acseo/SyliusTypesensePlugin",
+            "latestTag": "v1",
+            "syliusConstraint": ">=1.12 <1.14",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 871,
+            "description": "Sylius Typesense is a plugin for integrating Typesense, a fast and powerful search engine, with Sylius, an open-source e-commerce platform. This plugin boosts your Sylius store\u2019s search capabilities by leveraging Typesense\u2019s advanced search features, providing fast, relevant search results."
+        },
+        {
+            "packageName": "asdoria/sylius-marketing-cart-plugin",
+            "homepage": "https://github.com/asdoria/SyliusMarketingCartPlugin",
+            "latestTag": "0.1.3",
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 757,
+            "description": "Create the page products with muti criteria for you shop"
+        },
+        {
             "packageName": "bitbag/dpd-pl-shipping-export-plugin",
             "homepage": "https://github.com/BitBagCommerce/SyliusDPDPlShippingExportPlugin",
             "latestTag": "v3.0.0",
@@ -3411,6 +3477,17 @@
             "supports2x": true,
             "downloads": 752,
             "description": "DPD PL shipping export plugin for Sylius based applications."
+        },
+        {
+            "packageName": "asdoria/sylius-configurator-plugin",
+            "homepage": "https://github.com/asdoria/SyliusConfiguratorPlugin",
+            "latestTag": "0.1.2",
+            "syliusConstraint": "^1.11",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 725,
+            "description": "Create the Product configurator - Product customization for you shop"
         },
         {
             "packageName": "setono/sylius-plugin",
@@ -3512,6 +3589,17 @@
             "description": "PDF generation bundle with swappable renderer abstraction."
         },
         {
+            "packageName": "asdoria/sylius-pickup-point-plugin",
+            "homepage": "https://github.com/asdoria/SyliusPickupPointPlugin",
+            "latestTag": "0.1.6",
+            "syliusConstraint": null,
+            "constraintFrom": null,
+            "supports1x": false,
+            "supports2x": false,
+            "downloads": 511,
+            "description": "Asdoria Pickup point plugin for Sylius"
+        },
+        {
             "packageName": "softylines/wishlist-plugin",
             "homepage": "https://github.com/ahmedazizabbassi/SyliusWishlistPlugin",
             "latestTag": "v5.1.1",
@@ -3554,6 +3642,17 @@
             "supports2x": false,
             "downloads": 442,
             "description": "Generates quote requests in sylius."
+        },
+        {
+            "packageName": "payplug/payplug-sylius",
+            "homepage": "https://github.com/payplug/SyliusPayPlugPlugin",
+            "latestTag": "1.11.1",
+            "syliusConstraint": "^1.11.0",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 435,
+            "description": "PayPlug payment plugin for Sylius applications."
         },
         {
             "packageName": "agence-adeliom/sylius-happy-cms-plugin",
@@ -3831,6 +3930,17 @@
             "description": "PPL parcelshops plugin for Sylius"
         },
         {
+            "packageName": "3brs/sylius-gpwebpay-plugin",
+            "homepage": "https://github.com/3BRS/sylius-gpwebpay-plugin",
+            "latestTag": "v2.5.0",
+            "syliusConstraint": "^2.1",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": false,
+            "supports2x": true,
+            "downloads": 106,
+            "description": "GPWebpay payment gateway plugin for Sylius"
+        },
+        {
             "packageName": "tilleuls/sylius-quick-import-plugin",
             "homepage": "https://github.com/coopTilleuls/CoopTilleulsSyliusQuickImportPlugin",
             "latestTag": "v0.1.1",
@@ -3884,6 +3994,17 @@
             "supports2x": true,
             "downloads": 63,
             "description": "Billink integration for Sylius"
+        },
+        {
+            "packageName": "3brs/sylius-gopay-plugin",
+            "homepage": "https://github.com/3BRS/sylius-gopay",
+            "latestTag": "3.1.1",
+            "syliusConstraint": "^2.1",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": false,
+            "supports2x": true,
+            "downloads": 58,
+            "description": "GoPay payment gateway plugin for Sylius applications."
         },
         {
             "packageName": "gontran/sylius-paybox",
@@ -3952,6 +4073,17 @@
             "description": "A plugin that allows to add tierprices to Sylius"
         },
         {
+            "packageName": "3brs/sylius-gpwebpay-payment-gateway-plugin",
+            "homepage": "https://github.com/3BRS/sylius-gpwebpay-plugin",
+            "latestTag": "v2.5.0",
+            "syliusConstraint": "^2.1",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": false,
+            "supports2x": true,
+            "downloads": 34,
+            "description": "GPWebpay payment gateway plugin for Sylius"
+        },
+        {
             "packageName": "abderrahimghazali/sylius-social-proof-plugin",
             "homepage": "https://github.com/abderrahimghazali/sylius-social-proof-plugin",
             "latestTag": "v2.0.0",
@@ -3961,6 +4093,17 @@
             "supports2x": true,
             "downloads": 24,
             "description": "Social proof and FOMO widgets for Sylius 2.x \u2014 live viewers, recent purchases, sales counter, low stock alerts"
+        },
+        {
+            "packageName": "abderrahimghazali/sylius-upsell-plugin",
+            "homepage": "https://github.com/abderrahimghazali/sylius-upsell-plugin",
+            "latestTag": "v2.1.0",
+            "syliusConstraint": "^2.1",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": false,
+            "supports2x": true,
+            "downloads": 23,
+            "description": "Post-purchase upsell and cross-sell plugin for Sylius 2.x \u2014 Frequently Bought Together, one-click add-all-to-cart"
         },
         {
             "packageName": "brille24/customer-options",
@@ -4005,6 +4148,17 @@
             "supports2x": false,
             "downloads": 11,
             "description": "SyliusETL plugin for Sylius"
+        },
+        {
+            "packageName": "abderrahimghazali/sylius-popup-plugin",
+            "homepage": "https://github.com/abderrahimghazali/sylius-popup-plugin",
+            "latestTag": "v2.0.0",
+            "syliusConstraint": "^2.1",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": false,
+            "supports2x": true,
+            "downloads": 11,
+            "description": "Exit-intent & engagement popup system for Sylius 2.x stores, fully managed from the admin panel."
         },
         {
             "packageName": "iam-sayco/sylius-mautic-plugin",

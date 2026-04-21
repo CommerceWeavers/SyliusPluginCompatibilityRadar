@@ -82,29 +82,99 @@
     // Verified against Packagist on 2026-04-21. Stripe takeover intentionally
     // omitted until sylius/stripe-plugin lands on Packagist; flux-se users
     // should keep their current plugin per CW guidance.
-    // Hand-curated list of plugins with visible 2.x work in flight.
-    // Each entry points at the specific PR or branch so viewers can audit,
-    // not just take our word. Verified on 2026-04-21; expect staleness over
-    // time. Add only when there is a real tracker URL to cite.
+    // Plugins with visible Sylius 2.x work in flight. Seeded from a
+    // 2026-04-21 scan of every supports1x-only plugin in the radar;
+    // each entry cites a specific PR or branch the viewer can audit.
+    // `stale: true` means the tracker hasn't moved in 6+ months.
     const IN_PROGRESS = {
+        'bitbag/payu-plugin': {
+            summary: 'Open 2.x PR: "Upgrade to Sylius 2.0 - OP-561"',
+            tracker: { type: 'pr', url: 'https://github.com/BitBagCommerce/SyliusPayUPlugin/pull/73', label: 'PR #73' },
+            lastUpdate: '2025-09-16',
+            stale: true,
+        },
+        'bitbag/sylius-mailchimp-plugin': {
+            summary: 'Migration branch OP-557 targets Sylius 2.0',
+            tracker: { type: 'branch', url: 'https://github.com/BitBagCommerce/SyliusMailChimpPlugin/tree/OP-557-Plugin-to-Sylius-2.0', label: 'OP-557 branch' },
+        },
+        'dedi/sylius-seo-plugin': {
+            summary: 'Open 2.x PR: "Sylius upgrade 2.1"',
+            tracker: { type: 'pr', url: 'https://github.com/dediagency/sylius-seo-plugin/pull/81', label: 'PR #81' },
+            lastUpdate: '2025-10-13',
+            stale: true,
+        },
+        'flux-se/sylius-payum-stripe-plugin': {
+            summary: 'Open 2.x PR on the (now Sylius-maintained) repo: "Sylius 2.0"',
+            tracker: { type: 'pr', url: 'https://github.com/Sylius/PayumStripePlugin/pull/69', label: 'PR #69' },
+            lastUpdate: '2026-02-06',
+        },
+        'loevgaard/sylius-brand-plugin': {
+            summary: 'Dedicated 2.x branch',
+            tracker: { type: 'branch', url: 'https://github.com/loevgaard/SyliusBrandPlugin/tree/2.x', label: '2.x branch' },
+            lastUpdate: '2025-12-04',
+        },
+        'monsieurbiz/sylius-advanced-option-plugin': {
+            summary: 'Open 2.x PR: "Sylius 2.0 Available"',
+            tracker: { type: 'pr', url: 'https://github.com/monsieurbiz/SyliusAdvancedOptionPlugin/pull/21', label: 'PR #21' },
+            lastUpdate: '2026-01-21',
+        },
+        'monsieurbiz/sylius-order-history-plugin': {
+            summary: 'Open 2.x PR: "WIP for Sylius 2"',
+            tracker: { type: 'pr', url: 'https://github.com/monsieurbiz/SyliusOrderHistoryPlugin/pull/11', label: 'PR #11' },
+            lastUpdate: '2025-08-28',
+            stale: true,
+        },
+        'setono/sylius-abandoned-cart-plugin': {
+            summary: 'Dedicated 2.x branch',
+            tracker: { type: 'branch', url: 'https://github.com/Setono/SyliusAbandonedCartPlugin/tree/2.x', label: '2.x branch' },
+            lastUpdate: '2026-03-25',
+        },
+        'setono/sylius-age-verification-plugin': {
+            summary: 'Dedicated 2.x branch',
+            tracker: { type: 'branch', url: 'https://github.com/Setono/sylius-age-verification-plugin/tree/2.x', label: '2.x branch' },
+            lastUpdate: '2026-03-10',
+        },
         'setono/sylius-feed-plugin': {
             summary: 'Active 2.x PR in review',
             tracker: { type: 'pr', url: 'https://github.com/Setono/SyliusFeedPlugin/pull/109', label: 'PR #109' },
             lastUpdate: '2026-02-25',
         },
-        'monsieurbiz/sylius-order-history-plugin': {
-            summary: 'WIP 2.x branch — hasn’t moved since Aug 2025',
-            tracker: { type: 'pr', url: 'https://github.com/monsieurbiz/SyliusOrderHistoryPlugin/pull/11', label: 'PR #11' },
-            lastUpdate: '2025-08-28',
+        'setono/sylius-google-ads-plugin': {
+            summary: 'Dedicated 2.x branch',
+            tracker: { type: 'branch', url: 'https://github.com/Setono/SyliusGoogleAdsPlugin/tree/2.x', label: '2.x branch' },
+            lastUpdate: '2026-02-21',
+        },
+        'setono/sylius-pickup-point-plugin': {
+            summary: 'Dedicated 2.x branch',
+            tracker: { type: 'branch', url: 'https://github.com/Setono/SyliusPickupPointPlugin/tree/2.x', label: '2.x branch' },
+            lastUpdate: '2023-01-09',
             stale: true,
+        },
+        'setono/sylius-plausible-plugin': {
+            summary: 'Dedicated 2.x branch',
+            tracker: { type: 'branch', url: 'https://github.com/Setono/sylius-plausible-plugin/tree/2.x', label: '2.x branch' },
+            lastUpdate: '2026-01-05',
         },
         'setono/sylius-redirect-plugin': {
             summary: '2.x branch exists in the repo; no open PR yet',
             tracker: { type: 'branch', url: 'https://github.com/Setono/SyliusRedirectPlugin/tree/2.x', label: '2.x branch' },
         },
-        'bitbag/sylius-mailchimp-plugin': {
-            summary: 'Migration branch OP-557 targets Sylius 2.0',
-            tracker: { type: 'branch', url: 'https://github.com/BitBagCommerce/SyliusMailChimpPlugin/tree/OP-557-Plugin-to-Sylius-2.0', label: 'OP-557 branch' },
+        'setono/sylius-trustpilot-plugin': {
+            summary: 'Dedicated 2.x branch',
+            tracker: { type: 'branch', url: 'https://github.com/Setono/SyliusTrustpilotPlugin/tree/2.x', label: '2.x branch' },
+            lastUpdate: '2022-09-09',
+            stale: true,
+        },
+        'sherlockode/sylius-mondial-relay-plugin': {
+            summary: 'Dedicated feature/sylius-2-compatibility branch',
+            tracker: { type: 'branch', url: 'https://github.com/sherlockode/SyliusMondialRelayPlugin/tree/feature/sylius-2-compatibility', label: 'feature/sylius-2-compatibility' },
+            lastUpdate: '2025-12-11',
+        },
+        'stefandoorn/sylius-google-tag-manager-enhanced-ecommerce-plugin': {
+            summary: 'Open 2.x PR: "Refactor events to dedicated services and fix Sylius 2.0"',
+            tracker: { type: 'pr', url: 'https://github.com/stefandoorn/sylius-google-tag-manager-enhanced-ecommerce-plugin/pull/221', label: 'PR #221' },
+            lastUpdate: '2025-06-27',
+            stale: true,
         },
     };
 
