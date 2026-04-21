@@ -417,7 +417,7 @@
             const entry = state.db.get(pkg.name);
             if (entry) {
                 const row = { ...entry, userConstraint: pkg.constraint, migration, progress };
-                const notesInProgress = entry.notes && /in\s*progress|alpha|beta|rc|v2\s*branch|work\s*in\s*progress/i.test(entry.notes);
+                const notesInProgress = entry.notes && /\b(in\s*progress|alpha|beta|rc|v2\s*branch|work\s*in\s*progress)\b/i.test(entry.notes);
                 if ((progress || notesInProgress) && !entry.supports2x) {
                     inProgress.push(row);
                 } else if (entry.supports2x) {
@@ -431,6 +431,16 @@
                         migration,
                     });
                 }
+            } else if (progress) {
+                // IN_PROGRESS entry with no DB row — the package is probably
+                // unpublished or not yet on Packagist, but its tracker link is
+                // still load-bearing. Surface it rather than dropping it.
+                inProgress.push({
+                    packageName: pkg.name,
+                    userConstraint: pkg.constraint,
+                    migration,
+                    progress,
+                });
             } else if (looksLikeSylius(pkg.name)) {
                 unknownSylius.push({ packageName: pkg.name, note: null, migration });
             } else {
@@ -468,10 +478,10 @@
         dom.countNumber.textContent = String(total);
         dom.countLabel.textContent = total === 1 ? 'Sylius plugin identified' : 'Sylius plugins identified';
         dom.groups.innerHTML = '';
+        dom.summaryStrip.innerHTML = '';
 
         if (total > 0) {
             dom.summaryStrip.classList.remove('is-hidden');
-            dom.summaryStrip.innerHTML = '';
             dom.summaryStrip.append(
                 summaryCell('ready', buckets.ready.length, 'Ready for 2.x'),
                 summaryCell('progress', buckets.inProgress.length, 'In progress'),
@@ -591,7 +601,8 @@
         link.target = '_blank';
         link.rel = 'noopener';
         link.className = 'row__progress-link';
-        link.innerHTML = `<code>${progress.tracker.label}</code><span class="row__progress-link-arrow">↗</span>`;
+        link.appendChild(withText(el('code'), progress.tracker.label));
+        link.appendChild(withText(el('span', 'row__progress-link-arrow'), '↗'));
         p.appendChild(link);
 
         if (progress.lastUpdate) {
@@ -647,7 +658,8 @@
         link.target = '_blank';
         link.rel = 'noopener';
         link.className = 'row__migrate-target';
-        link.innerHTML = `<code>${m.target}</code><span class="row__migrate-target-arrow">↗</span>`;
+        link.appendChild(withText(el('code'), m.target));
+        link.appendChild(withText(el('span', 'row__migrate-target-arrow'), '↗'));
         p.appendChild(link);
 
         const tags = [];

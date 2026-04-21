@@ -50,7 +50,7 @@ foreach ($pkgs as $name => $constraint) {
     }
     $entry = $byName[$name] ?? null;
     if ($entry) {
-        if (!empty($entry['notes']) && preg_match('/in\s*progress|alpha|beta|rc|v2\s*branch|work\s*in\s*progress/i', $entry['notes'])) {
+        if (!empty($entry['notes']) && preg_match('/\b(in\s*progress|alpha|beta|rc|v2\s*branch|work\s*in\s*progress)\b/i', $entry['notes'])) {
             $inProgress[] = ['name' => $name, 'entry' => $entry, 'constraint' => $constraint];
         } elseif ($entry['supports2x']) {
             $ready[] = ['name' => $name, 'entry' => $entry, 'constraint' => $constraint];
