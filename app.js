@@ -82,6 +82,32 @@
     // Verified against Packagist on 2026-04-21. Stripe takeover intentionally
     // omitted until sylius/stripe-plugin lands on Packagist; flux-se users
     // should keep their current plugin per CW guidance.
+    // Hand-curated list of plugins with visible 2.x work in flight.
+    // Each entry points at the specific PR or branch so viewers can audit,
+    // not just take our word. Verified on 2026-04-21; expect staleness over
+    // time. Add only when there is a real tracker URL to cite.
+    const IN_PROGRESS = {
+        'setono/sylius-feed-plugin': {
+            summary: 'Active 2.x PR in review',
+            tracker: { type: 'pr', url: 'https://github.com/Setono/SyliusFeedPlugin/pull/109', label: 'PR #109' },
+            lastUpdate: '2026-02-25',
+        },
+        'monsieurbiz/sylius-order-history-plugin': {
+            summary: 'WIP 2.x branch — hasn’t moved since Aug 2025',
+            tracker: { type: 'pr', url: 'https://github.com/monsieurbiz/SyliusOrderHistoryPlugin/pull/11', label: 'PR #11' },
+            lastUpdate: '2025-08-28',
+            stale: true,
+        },
+        'setono/sylius-redirect-plugin': {
+            summary: '2.x branch exists in the repo; no open PR yet',
+            tracker: { type: 'branch', url: 'https://github.com/Setono/SyliusRedirectPlugin/tree/2.x', label: '2.x branch' },
+        },
+        'bitbag/sylius-mailchimp-plugin': {
+            summary: 'Migration branch OP-557 targets Sylius 2.0',
+            tracker: { type: 'branch', url: 'https://github.com/BitBagCommerce/SyliusMailChimpPlugin/tree/OP-557-Plugin-to-Sylius-2.0', label: 'OP-557 branch' },
+        },
+    };
+
     // Evidence for `directDescendant: true` is GitHub contributor-count
     // matching between the two repos — identical counts imply imported git
     // history, i.e. same underlying commits. `null` means partial overlap
@@ -298,10 +324,12 @@
                 continue;
             }
             const migration = MIGRATIONS[pkg.name] ? resolveMigration(pkg.name) : null;
+            const progress = IN_PROGRESS[pkg.name] ?? null;
             const entry = state.db.get(pkg.name);
             if (entry) {
-                const row = { ...entry, userConstraint: pkg.constraint, migration };
-                if (entry.notes && /in\s*progress|alpha|beta|rc|v2\s*branch|work\s*in\s*progress/i.test(entry.notes)) {
+                const row = { ...entry, userConstraint: pkg.constraint, migration, progress };
+                const notesInProgress = entry.notes && /in\s*progress|alpha|beta|rc|v2\s*branch|work\s*in\s*progress/i.test(entry.notes);
+                if ((progress || notesInProgress) && !entry.supports2x) {
                     inProgress.push(row);
                 } else if (entry.supports2x) {
                     ready.push(row);
@@ -444,14 +472,46 @@
         const row = el('div', 'row row--muted');
         const info = el('div');
         info.appendChild(withText(el('span', 'row__name'), e.packageName));
+
         const meta = el('p', 'row__meta');
-        meta.append(document.createTextNode('Notes: '), withText(el('span', 'row__note'), e.notes || 'in progress'));
+        const summary = e.progress?.summary || e.notes || 'in progress';
+        meta.append(
+            document.createTextNode('Status: '),
+            withText(el('span', 'row__note'), summary),
+        );
         info.appendChild(meta);
+
+        if (e.progress?.tracker) {
+            info.appendChild(renderProgressTracker(e.progress));
+        }
+
         if (e.downloads) {
             info.appendChild(withText(el('span', 'row__downloads'), `${formatDownloads(e.downloads)} downloads`));
         }
         row.append(info, packagistLink(e.packageName));
         return row;
+    }
+
+    function renderProgressTracker(progress) {
+        const p = el('p', 'row__progress');
+        p.appendChild(withText(el('span', 'row__progress-arrow'), '↻'));
+        p.appendChild(withText(el('span', 'row__progress-label'), progress.tracker.type === 'pr' ? 'Tracking' : 'Branch'));
+
+        const link = document.createElement('a');
+        link.href = progress.tracker.url;
+        link.target = '_blank';
+        link.rel = 'noopener';
+        link.className = 'row__progress-link';
+        link.innerHTML = `<code>${progress.tracker.label}</code><span class="row__progress-link-arrow">↗</span>`;
+        p.appendChild(link);
+
+        if (progress.lastUpdate) {
+            p.appendChild(withText(el('span', 'row__progress-updated'), `· updated ${progress.lastUpdate}`));
+        }
+        if (progress.stale) {
+            p.appendChild(withText(el('span', 'row__progress-stale'), '· looks stale'));
+        }
+        return p;
     }
 
     function renderNotReadyRow(e) {

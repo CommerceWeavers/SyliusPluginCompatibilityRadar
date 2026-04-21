@@ -548,6 +548,64 @@ button { font-family: inherit; letter-spacing: inherit; cursor: pointer; }
     border-left-color: var(--text-4);
 }
 
+.row__progress {
+    margin: 0.4rem 0 0;
+    padding: 0.45rem 0.7rem;
+    background: rgba(96, 165, 250, 0.06);
+    border: 1px solid rgba(96, 165, 250, 0.22);
+    border-left: 2px solid #60a5fa;
+    border-radius: 0.4rem;
+    font-size: 0.82rem;
+    color: var(--text-2);
+    display: flex; flex-wrap: wrap; align-items: baseline;
+    gap: 0.35rem;
+}
+.row__progress-arrow {
+    color: #60a5fa;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 700;
+}
+.row__progress-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: var(--track-wide);
+    color: var(--text-3);
+    font-weight: 700;
+}
+.row__progress-link {
+    font-family: "JetBrains Mono", monospace;
+    color: var(--text);
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex; align-items: baseline; gap: 0.25rem;
+    border-bottom: 1px solid transparent;
+    transition: border-color .15s, color .15s;
+}
+.row__progress-link:hover,
+.row__progress-link:focus-visible {
+    color: var(--yellow);
+    border-bottom-color: var(--yellow);
+    text-decoration: none;
+}
+.row__progress-link code { color: inherit; font-family: inherit; font-weight: inherit; }
+.row__progress-link-arrow {
+    font-size: 0.72rem;
+    color: #60a5fa;
+    transition: color .15s;
+}
+.row__progress-link:hover .row__progress-link-arrow,
+.row__progress-link:focus-visible .row__progress-link-arrow { color: var(--yellow); }
+.row__progress-updated {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.72rem;
+    color: var(--text-4);
+}
+.row__progress-stale {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.72rem;
+    color: var(--amber);
+}
+
 /* collapsible "other" */
 .other {
     border-top: 1px solid var(--line);
