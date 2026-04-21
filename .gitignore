@@ -1,0 +1,11 @@
+/vendor/
+composer.lock
+.DS_Store
+.idea/
+.vscode/
+
+# Client composer.json fixtures. Local smoke-test only, never committed.
+# Deny-by-default: exclude anything matching fixtures/composer-*, then
+# re-allow vetted public fixtures (currently Sylius-Standard only).
+fixtures/composer-*.json
+!fixtures/composer-sylius-standard-*.json

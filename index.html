@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sylius 2 plugin compatibility radar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="radar__page">
+
+        <header class="radar__header">
+            <div class="radar__header-row">
+                <h1 class="radar__title">
+                    Sylius 2 plugin <span class="radar__title-accent">compatibility radar</span>
+                </h1>
+                <div class="radar__snapshot" role="note" aria-label="Data snapshot date">
+                    <span class="radar__snapshot-label">Data snapshot</span>
+                    <span class="radar__snapshot-date" data-radar-generated>—</span>
+                </div>
+            </div>
+            <p class="radar__tagline">Check which of your Sylius plugins are ready for 2.x, without reading each composer.json yourself.</p>
+        </header>
+
+        <!-- INPUT SCREEN -->
+        <section id="input-screen" aria-labelledby="input-title">
+            <h2 id="input-title" class="is-hidden">Input</h2>
+            <div class="radar__card">
+                <label for="composer-input" class="radar__input-label">Paste your composer.json</label>
+                <textarea
+                    id="composer-input"
+                    class="radar__textarea"
+                    spellcheck="false"
+                    autocomplete="off"
+                    placeholder='{ "require": { "sylius/sylius": "^1.14", "bitbag/cms-plugin": "^1.13", "setono/sylius-feed-plugin": "^0.6" } }'
+                ></textarea>
+                <div id="parse-error" class="radar__error is-hidden" role="alert"></div>
+
+                <div class="radar__actions">
+                    <button id="check-btn" type="button" class="btn btn--primary">Check compatibility</button>
+                    <div class="radar__single">
+                        <label for="single-input" class="radar__single-label">Or check a single package</label>
+                        <input
+                            id="single-input"
+                            type="text"
+                            class="radar__single-input"
+                            placeholder="vendor/package-name"
+                            autocomplete="off"
+                            spellcheck="false"
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <footer class="radar__footer">
+                Part of the
+                <a href="https://commerceweavers.com/upgrade-to-sylius-2" target="_blank" rel="noopener">Sylius 2 migration toolbox</a>
+                by Commerce Weavers.
+            </footer>
+        </section>
+
+        <!-- RESULTS SCREEN -->
+        <section id="results-screen" class="is-hidden" aria-labelledby="results-title">
+            <h2 id="results-title" class="is-hidden">Results</h2>
+            <div class="radar__results-header">
+                <div class="radar__count-badge">
+                    <span id="plugin-count" class="radar__count-number">0</span>
+                    <span class="radar__count-label" id="plugin-count-label">Sylius plugins identified</span>
+                </div>
+                <button type="button" class="btn btn--ghost" data-radar-back>← Check another</button>
+            </div>
+
+            <div id="results-groups"></div>
+
+            <div class="radar__center">
+                <button type="button" class="btn btn--secondary" data-radar-back>Check another composer.json</button>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

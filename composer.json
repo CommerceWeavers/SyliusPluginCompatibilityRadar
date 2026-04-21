@@ -1,0 +1,13 @@
+{
+    "name": "commerceweavers/sylius-plugin-compatibility-radar",
+    "description": "Static tool that reports which Sylius plugins survive the 1.x to 2.x upgrade, driven by a seeded Packagist snapshot.",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": ">=8.2",
+        "composer/semver": "^3.4"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
