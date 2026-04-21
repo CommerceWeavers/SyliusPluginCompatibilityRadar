@@ -4,8 +4,7 @@ composer.lock
 .idea/
 .vscode/
 
-# Client composer.json fixtures. Local smoke-test only, never committed.
-# Deny-by-default: exclude anything matching fixtures/composer-*, then
-# re-allow vetted public fixtures (currently Sylius-Standard only).
-fixtures/composer-*.json
-!fixtures/composer-sylius-standard-*.json
+# Smoke-test fixtures live outside the repo (~/Sites/CommerceWeavers/YouTube/fixtures)
+# so client composer.json files never end up here. Keep the directory out of
+# version control entirely in case anyone drops one in by accident.
+/fixtures/

@@ -290,10 +290,20 @@
         const info = el('div');
         info.appendChild(withText(el('span', 'radar__row-name'), entry.packageName));
         const meta = el('p', 'radar__row-meta');
-        meta.appendChild(document.createTextNode('Latest '));
-        meta.appendChild(withText(el('code'), entry.latestTag || '?'));
-        meta.appendChild(document.createTextNode(' requires '));
-        meta.appendChild(withText(el('code', entry.constraintFrom && entry.constraintFrom !== 'sylius/sylius' ? 'is-fallback' : ''), `${entry.constraintFrom || 'sylius/sylius'}: ${entry.syliusConstraint || '?'}`));
+
+        if (entry.syliusConstraint && entry.latestTag) {
+            meta.appendChild(document.createTextNode('Latest '));
+            meta.appendChild(withText(el('code'), entry.latestTag));
+            meta.appendChild(document.createTextNode(' requires '));
+            meta.appendChild(withText(el('code', entry.constraintFrom && entry.constraintFrom !== 'sylius/sylius' ? 'is-fallback' : ''), `${entry.constraintFrom || 'sylius/sylius'}: ${entry.syliusConstraint}`));
+        } else if (entry.notes) {
+            // Curated entry with no Packagist resolution (e.g., sylius/plus).
+            // The note is load-bearing — surface it verbatim.
+            meta.appendChild(withText(el('span', 'radar__row-note'), entry.notes));
+        } else {
+            meta.appendChild(document.createTextNode('Radar flags this package as ready for 2.x.'));
+        }
+
         info.appendChild(meta);
         row.appendChild(info);
         row.appendChild(packagistLink(entry.packageName));

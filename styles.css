@@ -71,11 +71,11 @@ button {
 
 .radar__title {
     margin: 0;
-    font-size: clamp(1.75rem, 4vw, 2.5rem);
-    font-weight: 900;
-    line-height: 1.1;
+    font-size: clamp(1.85rem, 4.2vw, 2.75rem);
+    font-weight: 700;
+    line-height: 1.05;
     text-transform: uppercase;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.035em;
 }
 
 .radar__title-accent {
@@ -145,7 +145,7 @@ button {
     padding: 1rem;
     font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
     font-size: 0.85rem;
-    color: #4ade80;
+    color: #e4e4e7;
     outline: none;
     resize: vertical;
     transition: border-color 0.15s, box-shadow 0.15s;
@@ -396,8 +396,8 @@ button {
 }
 
 .radar__row {
-    background: linear-gradient(135deg, #16191c 0%, #070808 100%);
-    border: 1px solid #2d2d2d;
+    background: #0c0c0d;
+    border: 1px solid #232326;
     border-radius: 0.75rem;
     padding: 1rem 1.25rem;
     display: flex;

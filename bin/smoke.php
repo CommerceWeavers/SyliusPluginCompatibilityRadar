@@ -7,7 +7,10 @@ declare(strict_types=1);
  * which plugins land in Ready / In Progress / Not yet ready / Unknown / Other.
  * Not shipped to users; this is how we verify plugins.json against a real tree.
  *
- * Usage: php bin/smoke.php fixtures/composer-akoro.json
+ * Usage: php bin/smoke.php ~/Sites/CommerceWeavers/YouTube/fixtures/composer-akoro.json
+ *
+ * Fixtures live outside the repo (under ~/Sites/CommerceWeavers/YouTube/fixtures)
+ * so client composer.json files never get tracked here.
  */
 
 $argv1 = $argv[1] ?? null;
