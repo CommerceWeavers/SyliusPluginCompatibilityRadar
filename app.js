@@ -82,6 +82,17 @@
     // Verified against Packagist on 2026-04-21. Stripe takeover intentionally
     // omitted until sylius/stripe-plugin lands on Packagist; flux-se users
     // should keep their current plugin per CW guidance.
+    // Sylius-adjacent packages that carry no Sylius runtime dependency —
+    // coding standards, Rector configs, Behat extensions, and the like.
+    // By default they classify as "Not yet covered" (no parseable
+    // sylius/sylius constraint), which misleads viewers: these work
+    // with any Sylius version, so the upgrade doesn't touch them.
+    const VERSION_AGNOSTIC = new Set([
+        'sylius-labs/coding-standard',
+        'sylius-labs/suite-tags-extension',
+        'sylius/sylius-rector',
+    ]);
+
     // Plugins with visible Sylius 2.x work in flight. Seeded from a
     // 2026-04-21 scan of every supports1x-only plugin in the radar;
     // each entry cites a specific PR or branch the viewer can audit.
@@ -391,6 +402,14 @@
             }
             if (SYLIUS_CORE.has(pkg.name)) {
                 core.push(pkg);
+                continue;
+            }
+            if (VERSION_AGNOSTIC.has(pkg.name)) {
+                ready.push({
+                    packageName: pkg.name,
+                    userConstraint: pkg.constraint,
+                    notes: 'Development-time tool with no Sylius runtime dependency — carries no upgrade risk.',
+                });
                 continue;
             }
             const migration = MIGRATIONS[pkg.name] ? resolveMigration(pkg.name) : null;
