@@ -1,6 +1,6 @@
 {
-    "generatedAt": "2026-04-21T15:50:09+00:00",
-    "sourceCount": 384,
+    "generatedAt": "2026-04-21T16:40:47+00:00",
+    "sourceCount": 418,
     "plugins": [
         {
             "packageName": "sylius/registry",
@@ -1165,7 +1165,7 @@
             "constraintFrom": "sylius/sylius",
             "supports1x": true,
             "supports2x": true,
-            "downloads": 76538,
+            "downloads": 76574,
             "description": "Payment plugin to integrate Alma installments and pay later payments with your Sylius shop"
         },
         {
@@ -2412,6 +2412,17 @@
             "description": "A Simply Facet filter plugin for Sylius"
         },
         {
+            "packageName": "adexos/sylius-postgre-compatibility-plugin",
+            "homepage": "https://github.com/adexos/SyliusPostgreCompatibilityPlugin",
+            "latestTag": "v1.12.2",
+            "syliusConstraint": "~1.9.0 || ~1.10.0 || ~1.11.0 || ~1.12.0",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 7268,
+            "description": "PostgreSQL compatibility bundle"
+        },
+        {
             "packageName": "jbdevlabs/sylius-cli-context-plugin",
             "homepage": "https://github.com/JBDevLabs/SyliusCliContextPlugin",
             "latestTag": "v1.4.0",
@@ -2632,6 +2643,17 @@
             "description": "Plugin adding the hCaptcha field to some frontend FormType of Sylius"
         },
         {
+            "packageName": "workouse/availability-notifier-sylius",
+            "homepage": "https://github.com/workouse/availability-notifier-sylius",
+            "latestTag": "1.0.0",
+            "syliusConstraint": "^1.4",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 5346,
+            "description": "This plugin provides 'send notification when product is available' feature for products out of stock."
+        },
+        {
             "packageName": "vanssata/sylius-pag-online-imprese-plugin",
             "homepage": "https://github.com/vanssata/SyliusPagOnlineImpresePlugin",
             "latestTag": "1.0.8",
@@ -2817,6 +2839,17 @@
             "supports2x": true,
             "downloads": 3600,
             "description": "Product bundle for Sylius."
+        },
+        {
+            "packageName": "lakion/cms-plugin",
+            "homepage": "https://github.com/Lakion/CmsPlugin",
+            "latestTag": "v0.1.0",
+            "syliusConstraint": "1.0.0-beta.2",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 3582,
+            "description": "Simple CMS for Sylius."
         },
         {
             "packageName": "3brs/sylius-shipment-export-plugin",
@@ -3105,6 +3138,17 @@
             "description": "Sylius MCP Server Plugin"
         },
         {
+            "packageName": "gewebe/sylius-product-deposit-plugin",
+            "homepage": "https://github.com/gewebe/SyliusProductDepositPlugin",
+            "latestTag": "v1.2.2",
+            "syliusConstraint": "^1.11",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 1992,
+            "description": "A Sylius plugin that allows products with deposit price"
+        },
+        {
             "packageName": "babdev/supplier-plugin",
             "homepage": "https://github.com/BabDev/supplier-plugin",
             "latestTag": "v0.1.0",
@@ -3127,6 +3171,17 @@
             "description": "Sylius extensions and rules for PHPStan"
         },
         {
+            "packageName": "webburza/sylius-wishlist-bundle",
+            "homepage": "https://github.com/webburza/sylius-wishlist-bundle",
+            "latestTag": "v1.1.0",
+            "syliusConstraint": "~1.1.0",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 1942,
+            "description": "Wishlist plugin for Sylius e-commerce platform."
+        },
+        {
             "packageName": "bitbag/dhl24-pl-shipping-export-plugin",
             "homepage": "https://github.com/BitBagCommerce/SyliusDHL24PlShippingExportPlugin",
             "latestTag": "v1.5.0",
@@ -3147,6 +3202,17 @@
             "supports2x": false,
             "downloads": 1901,
             "description": "Send review requests to your customers"
+        },
+        {
+            "packageName": "solutiondrive/sylius-product-bundles-plugin",
+            "homepage": "https://github.com/solutionDrive/SyliusProductBundlesPlugin",
+            "latestTag": "v0.5.0",
+            "syliusConstraint": "^1.0.4",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 1862,
+            "description": "Plugin for Sylius to configure bundles for products that can be sold together"
         },
         {
             "packageName": "sylius/adyen-plugin",
@@ -3257,6 +3323,17 @@
             "supports2x": false,
             "downloads": 1524,
             "description": "Sylius backend integration for Vue Storefront 2"
+        },
+        {
+            "packageName": "akawakaweb/sylius-fixtures-plugin",
+            "homepage": "https://github.com/akawakaweb/sylius-fixtures-plugin",
+            "latestTag": "v0.1.0",
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/core-bundle",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 1497,
+            "description": "Sylius fixtures plugin for Sylius shops."
         },
         {
             "packageName": "sylius/legacy-shop-bridge-plugin",
@@ -3512,6 +3589,17 @@
             "description": "Simple DPD REST Plugin for Sylius"
         },
         {
+            "packageName": "vivanwebsolution/sylius-2fa-plugin",
+            "homepage": "https://github.com/vivanwebsolution/sylius-2fa-plugin",
+            "latestTag": "v1.1.0",
+            "syliusConstraint": "~2.0.0",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": false,
+            "supports2x": true,
+            "downloads": 677,
+            "description": "VivanWebSolution Sylius 2FA Plugin"
+        },
+        {
             "packageName": "asdoria/sylius-shipping-delivery-time-plugin",
             "homepage": "https://github.com/asdoria/SyliusShippingDeliveryTimePlugin",
             "latestTag": "0.1.0",
@@ -3600,6 +3688,28 @@
             "description": "Asdoria Pickup point plugin for Sylius"
         },
         {
+            "packageName": "softylines/mvm-rbac",
+            "homepage": "https://github.com/softylines/mvm-rbac",
+            "latestTag": "v1.6.1",
+            "syliusConstraint": "^2.1",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": false,
+            "supports2x": true,
+            "downloads": 500,
+            "description": "Sylius roles and permissions management plugin"
+        },
+        {
+            "packageName": "urbitech/sylius-product-variant-attribute-plugin",
+            "homepage": "https://github.com/urbitech/sylius-product-variant-attribute-plugin",
+            "latestTag": "1.0.3",
+            "syliusConstraint": "^1.7",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 484,
+            "description": "Plugin for Sylius to add attributes on product variants."
+        },
+        {
             "packageName": "softylines/wishlist-plugin",
             "homepage": "https://github.com/ahmedazizabbassi/SyliusWishlistPlugin",
             "latestTag": "v5.1.1",
@@ -3620,6 +3730,17 @@
             "supports2x": false,
             "downloads": 474,
             "description": "Setono example plugin for Sylius."
+        },
+        {
+            "packageName": "vanssa/borica-sylius-plugin",
+            "homepage": "https://github.com/vanssata/BoricaSyliusPlugin",
+            "latestTag": "v0.0.6",
+            "syliusConstraint": ">=1.6",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": true,
+            "downloads": 451,
+            "description": "Borica integration from Sylius"
         },
         {
             "packageName": "leadz/sylius-cmi-plugin",
@@ -3688,6 +3809,17 @@
             "description": "Sylius plugin that enables order reordering for a customer"
         },
         {
+            "packageName": "vldmr-k/sylius-viewed-products-plugin",
+            "homepage": "https://github.com/vldmr-k/sylius-viewed-products-plugin",
+            "latestTag": "1.0.1",
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 372,
+            "description": ""
+        },
+        {
             "packageName": "snake-tn/catalog-promotion-plugin",
             "homepage": "https://github.com/Snake-Tn/SyliusCatalogPromotionPlugin",
             "latestTag": "v1.0.1",
@@ -3732,6 +3864,17 @@
             "description": "Wishlist plugin for Sylius e-commerce platform."
         },
         {
+            "packageName": "lakion/sylius-cms-bundle",
+            "homepage": "https://github.com/Lakion/SyliusCmsBundle",
+            "latestTag": "v0.1.0",
+            "syliusConstraint": "1.0.0-beta.2",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 325,
+            "description": "Simple CMS for Sylius."
+        },
+        {
             "packageName": "odiseoteam/sylius-referrals-plugin",
             "homepage": "https://github.com/odiseoteam/SyliusReferralsPlugin",
             "latestTag": "v1.1.0",
@@ -3752,6 +3895,17 @@
             "supports2x": false,
             "downloads": 296,
             "description": ""
+        },
+        {
+            "packageName": "arobases/sylius-rights-management-plugin",
+            "homepage": "https://github.com/Arobases-Sylius-Plugins/ArobasesSyliusRightsManagementPlugin",
+            "latestTag": "2.0.1",
+            "syliusConstraint": "^1.10",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 291,
+            "description": "This plugin allows you to manage the rights and roles of administrator users"
         },
         {
             "packageName": "nextstore/sylius-inventory-plugin",
@@ -3875,6 +4029,28 @@
             "description": "Recommendations plugin for Sylius."
         },
         {
+            "packageName": "abenmada/sylius-backoffice-plugin",
+            "homepage": "https://github.com/ayman-benmada/Sylius-Backoffice-Plugin",
+            "latestTag": "v1.0.3",
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 179,
+            "description": "The Backoffice plugin allows you to change back office color and channel logo"
+        },
+        {
+            "packageName": "4c0n/sylius-barcode-search-plugin",
+            "homepage": "https://github.com/4c0n/SyliusBarcodeSearchPlugin",
+            "latestTag": "0.0.5",
+            "syliusConstraint": ">=1.6.8 <1.7.0 || >=1.7.4 <1.8.0",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 170,
+            "description": "Plugin that makes it possible for users to use their camera to search for a barcode."
+        },
+        {
             "packageName": "tavy315/sylius-invoices-plugin",
             "homepage": "https://github.com/tavy315/SyliusInvoicesPlugin",
             "latestTag": "v0.3.1",
@@ -3928,6 +4104,28 @@
             "supports2x": true,
             "downloads": 143,
             "description": "PPL parcelshops plugin for Sylius"
+        },
+        {
+            "packageName": "arobases-sylius-public/sylius-customer-support-plugin",
+            "homepage": "https://github.com/Arobases-Sylius-Plugins/ArobasesSyliusCustomerSupportPlugin",
+            "latestTag": "2.0.0",
+            "syliusConstraint": "^1.10",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 140,
+            "description": "Plugin allowing to users to open tickets for their orders and the administrator can manage and respond to them in the back office on Sylius"
+        },
+        {
+            "packageName": "waaz/etransactions-plugin",
+            "homepage": "https://github.com/StudioWaaz/WaazEtransactionsPlugin",
+            "latestTag": "0.5",
+            "syliusConstraint": "^1.8",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 133,
+            "description": "Acme example plugin for Sylius."
         },
         {
             "packageName": "3brs/sylius-gpwebpay-plugin",
@@ -3985,6 +4183,17 @@
             "description": "Mondial Relay pickup point shipping integration for Sylius 2"
         },
         {
+            "packageName": "waaz/sylius-tnt-plugin",
+            "homepage": "https://github.com/StudioWaaz/SyliusTntPlugin",
+            "latestTag": "0.6",
+            "syliusConstraint": "^1.11",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 67,
+            "description": "This TNT plugin enables you to easily print shipping labels and show available pickup locations for customers to choose from."
+        },
+        {
             "packageName": "commerce-weavers/sylius-billink-plugin",
             "homepage": "https://github.com/CommerceWeavers/SyliusBillinkPlugin",
             "latestTag": "v2.0",
@@ -3996,6 +4205,28 @@
             "description": "Billink integration for Sylius"
         },
         {
+            "packageName": "aropixel/sylius-stock-alert-plugin",
+            "homepage": "https://github.com/aropixel/SyliusStockAlertPlugin",
+            "latestTag": "v0.2.4",
+            "syliusConstraint": "^1.7",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 61,
+            "description": "Get notifed when your product stock reaches a certain treshold"
+        },
+        {
+            "packageName": "eresbiotech/iyzico-sylius",
+            "homepage": "https://github.com/workouse/iyzico-sylius",
+            "latestTag": "1.10",
+            "syliusConstraint": "^1.4 || ~1.9.0 || ~1.10.0@beta",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 60,
+            "description": "Iyzico payment plugin for Sylius applications"
+        },
+        {
             "packageName": "3brs/sylius-gopay-plugin",
             "homepage": "https://github.com/3BRS/sylius-gopay",
             "latestTag": "3.1.1",
@@ -4005,6 +4236,17 @@
             "supports2x": true,
             "downloads": 58,
             "description": "GoPay payment gateway plugin for Sylius applications."
+        },
+        {
+            "packageName": "waaz/u2pay-etransactions-plugin",
+            "homepage": "https://github.com/StudioWaaz/WaazU2PayEtransactionsPlugin",
+            "latestTag": "0.4",
+            "syliusConstraint": "^1.8",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 56,
+            "description": "Acme example plugin for Sylius."
         },
         {
             "packageName": "gontran/sylius-paybox",
@@ -4073,6 +4315,17 @@
             "description": "A plugin that allows to add tierprices to Sylius"
         },
         {
+            "packageName": "wunderbit/sylius-wunderbit-commerce-plugin",
+            "homepage": "https://bitbucket.org/infinites/syliuswunderbitcommerceplugin.git",
+            "latestTag": "v0.0.8",
+            "syliusConstraint": "^1.4",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 35,
+            "description": "Wunderbit Commerce plugin for Sylius."
+        },
+        {
             "packageName": "3brs/sylius-gpwebpay-payment-gateway-plugin",
             "homepage": "https://github.com/3BRS/sylius-gpwebpay-plugin",
             "latestTag": "v2.5.0",
@@ -4082,6 +4335,17 @@
             "supports2x": true,
             "downloads": 34,
             "description": "GPWebpay payment gateway plugin for Sylius"
+        },
+        {
+            "packageName": "8lines/sylius-notification-plugin",
+            "homepage": "https://github.com/8lines/SyliusNotificationPlugin",
+            "latestTag": "1.0.1",
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 30,
+            "description": "Notification plugin for Sylius"
         },
         {
             "packageName": "abderrahimghazali/sylius-social-proof-plugin",
@@ -4104,6 +4368,28 @@
             "supports2x": true,
             "downloads": 23,
             "description": "Post-purchase upsell and cross-sell plugin for Sylius 2.x \u2014 Frequently Bought Together, one-click add-all-to-cart"
+        },
+        {
+            "packageName": "vaachar/sylius-archivable-products-plugin",
+            "homepage": "https://github.com/Vaalyn/sylius-archivable-products-plugin",
+            "latestTag": "v1.0.2",
+            "syliusConstraint": "^1.8",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 19,
+            "description": "A sylius plugin to add archiving to products."
+        },
+        {
+            "packageName": "abenmada/sylius-multi-factor-authentication-plugin",
+            "homepage": "https://github.com/ayman-benmada/Sylius-Multi-Factor-Authentication-Plugin",
+            "latestTag": "v1.0.1",
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 16,
+            "description": "Multi factor authentication plugin for ShopUser and AdminUser."
         },
         {
             "packageName": "brille24/customer-options",
@@ -4170,6 +4456,94 @@
             "supports2x": false,
             "downloads": 8,
             "description": "Mautic integration plugin for Sylius."
+        },
+        {
+            "packageName": "vanssa/sylius-slider-plugin",
+            "homepage": "https://github.com/vanssata/sylius-slider-plugin",
+            "latestTag": "2.2.7",
+            "syliusConstraint": "^2.1",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": false,
+            "supports2x": true,
+            "downloads": 8,
+            "description": "Vanssa Sylius Slider plugin."
+        },
+        {
+            "packageName": "abenmada/sylius-media-plugin",
+            "homepage": "https://github.com/ayman-benmada/Sylius-Media-Plugin",
+            "latestTag": "v1.0.2",
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 6,
+            "description": "The Media plugin provides a library to manage your media"
+        },
+        {
+            "packageName": "abenmada/sylius-export-plugin",
+            "homepage": "https://github.com/ayman-benmada/Sylius-Export-Plugin",
+            "latestTag": "v1.0.2",
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 5,
+            "description": "The Export plugin allows you to export all data of any entity directly from the configuration file"
+        },
+        {
+            "packageName": "wintopay/sylius-plugin",
+            "homepage": "https://github.com/win2pay/sylius-plugin",
+            "latestTag": "v1.0.3",
+            "syliusConstraint": ">=1.8",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": true,
+            "downloads": 5,
+            "description": "Acme example plugin for Sylius."
+        },
+        {
+            "packageName": "vldmr-k/sylius-what-in-box-plugin",
+            "homepage": "https://github.com/vldmr-k/sylius-what-in-box-plugin",
+            "latestTag": "1.0.0",
+            "syliusConstraint": "^1.10",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 5,
+            "description": "What in the box plugin."
+        },
+        {
+            "packageName": "abenmada/sylius-broken-link-handler-plugin",
+            "homepage": "https://github.com/ayman-benmada/Sylius-Broken-Link-Handler-Plugin",
+            "latestTag": "v1.0.0",
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 4,
+            "description": "The Broken Link Handler plugin automatically redirects outdated product and taxon slugs to their new versions, ensuring they remain permanent and preventing their reuse by other entities"
+        },
+        {
+            "packageName": "websteem/photo-plugin",
+            "homepage": "https://github.com/MatBonnin/PhotoPlugin",
+            "latestTag": "v1.0.0",
+            "syliusConstraint": "~1.13.0",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 3,
+            "description": "A Sylius plugin for selling photos"
+        },
+        {
+            "packageName": "vinium/sylius-manage-price-plugin",
+            "homepage": "https://github.com/ViniumLuxuryWebdesign/SyliusManagePricePlugin",
+            "latestTag": "v1.0.1",
+            "syliusConstraint": "~1.8.0 || ~1.9.0 || ~1.10 || ~1.11",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "downloads": 3,
+            "description": "Manage price for all variants and channels"
         },
         {
             "packageName": "marcelsud/elastic-search-plugin",

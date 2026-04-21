@@ -113,18 +113,20 @@ if (!$onlyCurated) {
 
     if (!in_array('tags', $disabledSources, true)) {
         // Packagist's web UI search at /search/?tags=sylius%20plugin sends
-        // the tags param with a literal space. The JSON endpoint accepts the
-        // same space (URL-encoded) and returns the same superset that the web
-        // UI shows; pulling the single-tag form `sylius-plugin` misses packages
-        // that only tag themselves with the two separate words.
-        fwrite(STDERR, "Fetching Packagist tag-match tags=sylius plugin (filtered by vendor allowlist)…\n");
+        // the tags param with a literal space; the JSON endpoint accepts
+        // the same space (URL-encoded). Note: the JSON API caps tag-based
+        // results at ~300 regardless of `per_page`, so some web-UI matches
+        // won't appear here — that's a Packagist limit, not ours.
+        //
+        // No vendor-allowlist filter on this source: a package that tags
+        // itself as a Sylius plugin is saying so explicitly, so dropping
+        // it for being from an unfamiliar vendor just hides legitimate
+        // small-vendor work (waaz, workouse, vaachar, abenmada, vldmr-k,
+        // vanssa, lakion, etc.).
+        fwrite(STDERR, "Fetching Packagist tag-match tags=sylius plugin (no vendor filter)…\n");
         $raw = fetchPackagistByTags('sylius plugin');
-        $filtered = array_values(array_filter(
-            $raw,
-            fn($row) => isTrustedSyliusVendor($row['name'] ?? '')
-        ));
-        fwrite(STDERR, sprintf("  %d raw / %d kept after vendor allowlist\n", count($raw), count($filtered)));
-        mergePackages($pool, $filtered, 'tags:sylius-plugin');
+        fwrite(STDERR, sprintf("  %d raw packages\n", count($raw)));
+        mergePackages($pool, $raw, 'tags:sylius-plugin');
         fwrite(STDERR, sprintf("  pool size now %d\n", count($pool)));
     }
 }
