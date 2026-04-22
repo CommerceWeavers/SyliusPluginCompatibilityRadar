@@ -31,28 +31,31 @@
         empty: '',
         b2c: `{
   "require": {
-    "sylius/sylius": "^2.0",
-    "sylius/refund-plugin": "^2.0",
-    "sylius/paypal-plugin": "^2.0",
-    "sylius/invoicing-plugin": "^2.0",
+    "sylius/sylius": "^1.14",
+    "sylius/refund-plugin": "^1.6",
+    "sylius/paypal-plugin": "^1.7",
+    "sylius/invoicing-plugin": "^1.1",
     "bitbag/cms-plugin": "^4.0",
     "bitbag/wishlist-plugin": "^4.0",
-    "stefandoorn/sitemap-plugin": "^3.0",
-    "monsieurbiz/sylius-rich-editor-plugin": "^3.0",
+    "stefandoorn/sitemap-plugin": "^2.0",
+    "monsieurbiz/sylius-rich-editor-plugin": "^2.0",
     "monsieurbiz/sylius-search-plugin": "^3.0",
+    "acme/sylius-custom-checkout-plugin": "^1.0",
     "symfony/framework-bundle": "^6.4",
     "doctrine/orm": "^2.15",
+    "sylius-labs/coding-standard": "^4.3",
     "twig/twig": "^3.8"
   }
 }`,
         b2b: `{
   "require": {
-    "sylius/sylius": "^2.0",
-    "sylius/refund-plugin": "^2.0",
-    "sylius/invoicing-plugin": "^2.0",
-    "bitbag/elasticsearch-plugin": "^5.0",
-    "friendsofsylius/sylius-import-export-plugin": "~0.28",
-    "synolia/sylius-scheduler-command-plugin": "^4.0",
+    "sylius/sylius": "^1.14",
+    "sylius/plus": "^1.13",
+    "sylius/refund-plugin": "^1.6",
+    "sylius/invoicing-plugin": "^1.1",
+    "bitbag/elasticsearch-plugin": "^4.0",
+    "friendsofsylius/sylius-import-export-plugin": "~0.27",
+    "synolia/sylius-scheduler-command-plugin": "^3.8",
     "commerce-weavers/sylius-tpay-plugin": "^1.0",
     "api-platform/core": "^3.2",
     "symfony/messenger": "^6.4"
@@ -62,7 +65,7 @@
   "require": {
     "sylius/sylius": "^1.13",
     "bitbag/cms-plugin": "^1.13",
-    "bitbag/wishlist-plugin": "^1.13",
+    "bitbag/sylius-adyen-plugin": "^1.13",
     "setono/sylius-feed-plugin": "^0.6",
     "setono/sylius-redirect-plugin": "^1.0",
     "stefandoorn/sitemap-plugin": "^1.8",
@@ -91,6 +94,7 @@
         'sylius-labs/coding-standard',
         'sylius-labs/suite-tags-extension',
         'sylius/sylius-rector',
+        'setono/code-quality-pack',
     ]);
 
     // Plugins with visible Sylius 2.x work in flight. Seeded from a
@@ -165,10 +169,6 @@
             summary: 'Dedicated 2.x branch',
             tracker: { type: 'branch', url: 'https://github.com/Setono/sylius-plausible-plugin/tree/2.x', label: '2.x branch' },
             lastUpdate: '2026-01-05',
-        },
-        'setono/sylius-redirect-plugin': {
-            summary: '2.x branch exists in the repo; no open PR yet',
-            tracker: { type: 'branch', url: 'https://github.com/Setono/SyliusRedirectPlugin/tree/2.x', label: '2.x branch' },
         },
         'setono/sylius-trustpilot-plugin': {
             summary: 'Dedicated 2.x branch',
