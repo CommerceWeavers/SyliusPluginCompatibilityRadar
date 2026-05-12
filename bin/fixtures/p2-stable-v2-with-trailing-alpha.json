@@ -1,0 +1,62 @@
+{
+    "_doc": "Plugin with a stable v2 release plus later alphas of a future major — resolver must pick the stable, not the alpha. Mirrors real loevgaard/sylius-brand-plugin shape from 2026-05-11.",
+    "input": {
+        "name": "example/stable-then-alpha",
+        "searchRow": {
+            "name": "example/stable-then-alpha",
+            "downloads": 80000,
+            "description": "Stable v2 lineage with newer alpha series",
+            "repository": "https://github.com/example/stable-then-alpha"
+        },
+        "versions": [
+            {
+                "version": "v3.0.0-alpha.3",
+                "version_normalized": "3.0.0.0-alpha3",
+                "require": {
+                    "php": "^8.2",
+                    "sylius/sylius": "^2.0"
+                }
+            },
+            {
+                "version": "v3.0.0-alpha.2",
+                "version_normalized": "3.0.0.0-alpha2",
+                "require": {
+                    "php": "^8.2",
+                    "sylius/sylius": "^2.0"
+                }
+            },
+            {
+                "version": "v2.2.1",
+                "version_normalized": "2.2.1.0",
+                "require": {
+                    "php": "^8.1",
+                    "sylius/sylius": "^1.13"
+                }
+            },
+            {
+                "version": "v2.2.0",
+                "version_normalized": "2.2.0.0",
+                "require": {
+                    "php": "^8.1",
+                    "sylius/sylius": "^1.13"
+                }
+            }
+        ]
+    },
+    "expected": {
+        "outcome": "ok",
+        "entry": {
+            "packageName": "example/stable-then-alpha",
+            "latestTag": "v2.2.1",
+            "syliusConstraint": "^1.13",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "prereleaseOnly": false,
+            "prereleaseTag": "v3.0.0-alpha.3",
+            "prereleaseSyliusConstraint": "^2.0",
+            "prereleaseConstraintFrom": "sylius/sylius",
+            "prereleaseTargets2x": true
+        }
+    }
+}

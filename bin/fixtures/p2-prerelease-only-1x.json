@@ -1,0 +1,42 @@
+{
+    "_doc": "Prerelease-only fixture for the 1.x case: alpha targeting Sylius ^1.13. Both flags must be false and prereleaseOnly true; constraint is carried for display.",
+    "input": {
+        "name": "example/prerelease-only-1x",
+        "searchRow": {
+            "name": "example/prerelease-only-1x",
+            "downloads": 300,
+            "description": "Plugin still in alpha for Sylius 1.x",
+            "repository": "https://github.com/example/prerelease-only-1x"
+        },
+        "versions": [
+            {
+                "version": "v2.0.0-alpha.2",
+                "version_normalized": "2.0.0.0-alpha2",
+                "require": {
+                    "php": "^8.0",
+                    "sylius/sylius": "^1.13"
+                }
+            },
+            {
+                "version": "v2.0.0-alpha",
+                "version_normalized": "2.0.0.0-alpha",
+                "require": {
+                    "php": "^8.0",
+                    "sylius/sylius": "^1.13"
+                }
+            }
+        ]
+    },
+    "expected": {
+        "outcome": "ok",
+        "entry": {
+            "packageName": "example/prerelease-only-1x",
+            "latestTag": "v2.0.0-alpha.2",
+            "syliusConstraint": "^1.13",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": false,
+            "supports2x": false,
+            "prereleaseOnly": true
+        }
+    }
+}

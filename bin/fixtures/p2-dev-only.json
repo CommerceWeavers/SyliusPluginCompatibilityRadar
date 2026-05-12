@@ -1,0 +1,26 @@
+{
+    "_doc": "Edge case: only dev-* branch entries (shouldn't happen via stable p2 endpoint in practice, but defend the invariant). Resolver throws because there's no stable or prerelease to anchor on. Pre-Unit-1 this would have silently emitted a 'dev-master' tag with whatever constraint that branch declared.",
+    "input": {
+        "name": "example/dev-only",
+        "searchRow": {
+            "name": "example/dev-only",
+            "downloads": 100,
+            "description": null,
+            "repository": null
+        },
+        "versions": [
+            {
+                "version": "dev-master",
+                "version_normalized": "9999999-dev",
+                "require": {
+                    "php": "^8.0",
+                    "sylius/sylius": "^1.0 || ^2.0"
+                }
+            }
+        ]
+    },
+    "expected": {
+        "outcome": "throws",
+        "throwsMessage": "no stable or prerelease versions in p2"
+    }
+}

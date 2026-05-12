@@ -1,0 +1,50 @@
+{
+    "_doc": "Plugin with a stable 2.x release requiring sylius/sylius ^2.0 — happy path for Ready bucket",
+    "input": {
+        "name": "example/sylius-2x-plugin",
+        "searchRow": {
+            "name": "example/sylius-2x-plugin",
+            "downloads": 50000,
+            "description": "Example plugin already on Sylius 2.x",
+            "repository": "https://github.com/example/sylius-2x-plugin"
+        },
+        "versions": [
+            {
+                "version": "v2.1.0",
+                "version_normalized": "2.1.0.0",
+                "require": {
+                    "php": "^8.1",
+                    "sylius/sylius": "^2.0"
+                }
+            },
+            {
+                "version": "v2.0.0",
+                "version_normalized": "2.0.0.0",
+                "require": {
+                    "php": "^8.1",
+                    "sylius/sylius": "^2.0"
+                }
+            },
+            {
+                "version": "v1.9.0",
+                "version_normalized": "1.9.0.0",
+                "require": {
+                    "php": "^8.0",
+                    "sylius/sylius": "^1.12"
+                }
+            }
+        ]
+    },
+    "expected": {
+        "outcome": "ok",
+        "entry": {
+            "packageName": "example/sylius-2x-plugin",
+            "latestTag": "v2.1.0",
+            "syliusConstraint": "^2.0",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": false,
+            "supports2x": true,
+            "prereleaseOnly": false
+        }
+    }
+}
