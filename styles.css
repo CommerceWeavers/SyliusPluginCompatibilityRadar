@@ -560,6 +560,17 @@ button { font-family: inherit; letter-spacing: inherit; cursor: pointer; }
     display: flex; flex-wrap: wrap; align-items: baseline;
     gap: 0.35rem;
 }
+.row__prerelease {
+    margin: 0.4rem 0 0;
+    padding: 0.4rem 0.7rem;
+    background: rgba(251, 191, 36, 0.06);
+    border: 1px solid rgba(251, 191, 36, 0.22);
+    border-left: 2px solid #fbbf24;
+    border-radius: 0.4rem;
+    font-size: 0.78rem;
+    color: var(--text-2);
+}
+.row__prerelease code { color: #fbbf24; }
 .row__progress-arrow {
     color: #60a5fa;
     font-family: "JetBrains Mono", monospace;

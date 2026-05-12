@@ -1,0 +1,17 @@
+{
+    "_doc": "Edge case: Packagist returns no versions at all for the package. Resolver throws; build-cache catches and skips. Behavior unchanged from pre-Unit-1.",
+    "input": {
+        "name": "example/empty",
+        "searchRow": {
+            "name": "example/empty",
+            "downloads": 0,
+            "description": null,
+            "repository": null
+        },
+        "versions": []
+    },
+    "expected": {
+        "outcome": "throws",
+        "throwsMessage": "no versions in p2"
+    }
+}

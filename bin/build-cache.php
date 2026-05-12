@@ -75,6 +75,13 @@ const TRUSTED_SYLIUS_VENDOR_ALLOWLIST = [
     'payplug',
 ];
 
+// Library mode: when this file is `require`d by another script (e.g.
+// bin/smoke.php for resolver fixture tests), only function/constant
+// definitions are needed. The CLI orchestration below runs only when
+// the file is the entry script.
+$invokedAsEntryScript = realpath($_SERVER['SCRIPT_FILENAME'] ?? '') === __FILE__;
+
+if ($invokedAsEntryScript) {
 $options = parseArgs($argv);
 $limit = isset($options['limit']) ? (int) $options['limit'] : 0;
 $only = isset($options['only']) ? array_map('trim', explode(',', $options['only'])) : [];
@@ -230,6 +237,8 @@ $target = __DIR__ . '/../plugins.json';
 file_put_contents($target, json_encode($out, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) . "\n");
 fwrite(STDERR, sprintf("\nWrote %s (%d entries)\n", $target, count($final)));
 
+} // end if ($invokedAsEntryScript)
+
 // --- helpers ---
 
 function parseArgs(array $argv): array
@@ -307,24 +316,56 @@ function resolvePackage(string $name, array $searchRow): array
     $url = sprintf(PACKAGIST_P2, $name);
     $data = httpGetJson($url);
     $versions = $data['packages'][$name] ?? [];
+    return resolvePackageFromVersions($name, $versions, $searchRow);
+}
+
+/**
+ * Pure classifier. Given a Packagist p2 versions list (newest-first) and a
+ * search row, emit the radar entry shape. No HTTP, no I/O — used by the
+ * live builder and by bin/smoke.php --resolver-fixtures.
+ *
+ * Prerelease handling: when no stable release exists, the plugin gets
+ * `prereleaseOnly: true` and `supports1x`/`supports2x` are forced to false.
+ * Customers should never see "Ready for 2.x" derived from an `-alpha` tag
+ * whose `require` was bumped to ^2.0 ahead of an actual stable release.
+ */
+function resolvePackageFromVersions(string $name, array $versions, array $searchRow): array
+{
     if (!$versions) {
         throw new RuntimeException('no versions in p2');
     }
 
     $latestStable = null;
+    $latestPrerelease = null;
     foreach ($versions as $v) {
         $ver = $v['version'] ?? '';
-        if (!$ver || str_contains($ver, 'dev-') || str_starts_with($ver, 'dev-')) {
+        if (!$ver) {
             continue;
         }
-        if (preg_match('/-(alpha|beta|rc|pre)/i', $ver)) {
+        $stability = stabilityOf($ver);
+        if ($stability === 'dev') {
+            continue;
+        }
+        if ($stability !== 'stable') {
+            // Track the newest prerelease so we can still surface it for
+            // display when no stable exists; never let it drive supports2x.
+            $latestPrerelease ??= $v;
             continue;
         }
         $latestStable = $v;
         break; // p2 is ordered newest first
     }
 
-    $source = $latestStable ?? $versions[0];
+    $prereleaseOnly = false;
+    if ($latestStable !== null) {
+        $source = $latestStable;
+    } elseif ($latestPrerelease !== null) {
+        $source = $latestPrerelease;
+        $prereleaseOnly = true;
+    } else {
+        throw new RuntimeException('no stable or prerelease versions in p2');
+    }
+
     $tag = $source['version'] ?? null;
 
     // Prefer sylius/sylius; fall back to monorepo components that mirror its version.
@@ -340,8 +381,38 @@ function resolvePackage(string $name, array $searchRow): array
         }
     }
 
-    $supports2x = $syliusConstraint ? constraintIntersects($syliusConstraint, '>=2.0.0 <3.0.0') : false;
-    $supports1x = $syliusConstraint ? constraintIntersects($syliusConstraint, '>=1.0.0 <2.0.0') : false;
+    // Hard rule: only a stable release can claim Sylius 1.x or 2.x support.
+    // A prerelease's `require` reflects WIP intent, not shipped behavior.
+    if ($prereleaseOnly) {
+        $supports2x = false;
+        $supports1x = false;
+    } else {
+        $supports2x = $syliusConstraint ? constraintIntersects($syliusConstraint, '>=2.0.0 <3.0.0') : false;
+        $supports1x = $syliusConstraint ? constraintIntersects($syliusConstraint, '>=1.0.0 <2.0.0') : false;
+    }
+
+    // When a newer prerelease exists alongside the chosen stable, surface its
+    // Sylius constraint as a secondary signal. This catches plugins like
+    // stefandoorn/sylius-gtm where stable v3.1.0 still pins ^1.9 but the newer
+    // v4.0.0-alpha.1 already targets ^2.0 — a customer needs to know the
+    // maintainer is in flight even though no 2.x stable shipped yet.
+    $prereleaseTag = null;
+    $prereleaseSyliusConstraint = null;
+    $prereleaseConstraintFrom = null;
+    $prereleaseTargets2x = false;
+    if (!$prereleaseOnly && $latestPrerelease !== null) {
+        foreach ($constraintSources as $key) {
+            if (!empty($latestPrerelease['require'][$key])) {
+                $prereleaseSyliusConstraint = $latestPrerelease['require'][$key];
+                $prereleaseConstraintFrom = $key;
+                break;
+            }
+        }
+        $prereleaseTag = $latestPrerelease['version'] ?? null;
+        $prereleaseTargets2x = $prereleaseSyliusConstraint
+            ? constraintIntersects($prereleaseSyliusConstraint, '>=2.0.0 <3.0.0')
+            : false;
+    }
 
     // Prefer a homepage that points somewhere useful. Packagist search row has repository.
     $homepage = $searchRow['repository']
@@ -357,9 +428,29 @@ function resolvePackage(string $name, array $searchRow): array
         'constraintFrom' => $constraintFrom,
         'supports1x' => $supports1x,
         'supports2x' => $supports2x,
+        'prereleaseOnly' => $prereleaseOnly,
+        'prereleaseTag' => $prereleaseTag,
+        'prereleaseSyliusConstraint' => $prereleaseSyliusConstraint,
+        'prereleaseConstraintFrom' => $prereleaseConstraintFrom,
+        'prereleaseTargets2x' => $prereleaseTargets2x,
         'downloads' => (int) ($searchRow['downloads'] ?? 0),
         'description' => $searchRow['description'] ?? null,
     ];
+}
+
+/**
+ * Wraps Composer\Semver\VersionParser::parseStability(), which returns one of
+ * `stable`, `RC`, `beta`, `alpha`, `dev`. We normalize "everything that isn't
+ * stable or dev" into a single `prerelease` bucket for our routing logic.
+ */
+function stabilityOf(string $version): string
+{
+    $s = strtolower(VersionParser::parseStability($version));
+    return match ($s) {
+        'stable' => 'stable',
+        'dev' => 'dev',
+        default => 'prerelease',
+    };
 }
 
 function constraintIntersects(string $pluginConstraint, string $targetRange): bool

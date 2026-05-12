@@ -3,19 +3,29 @@
 declare(strict_types=1);
 
 /**
- * CLI smoke test that mirrors app.js classify(): paste a composer.json, print
- * which plugins land in Ready / In Progress / Not yet ready / Unknown / Other.
- * Not shipped to users; this is how we verify plugins.json against a real tree.
+ * CLI smoke test. Two modes:
  *
- * Usage: php bin/smoke.php ~/Sites/CommerceWeavers/YouTube/fixtures/composer-akoro.json
+ *   php bin/smoke.php <composer.json>
+ *     Classifier smoke against a real composer.json. Composer-fixture files
+ *     live outside the repo (~/Sites/CommerceWeavers/YouTube/fixtures) to
+ *     keep client composer.json out of git.
  *
- * Fixtures live outside the repo (under ~/Sites/CommerceWeavers/YouTube/fixtures)
- * so client composer.json files never get tracked here.
+ *   php bin/smoke.php --resolver-fixtures
+ *     Run the Packagist resolver against synthetic fixtures under
+ *     bin/fixtures/p2-*.json. Locks resolvePackageFromVersions() shape
+ *     against regressions, especially the prerelease-only handling
+ *     introduced 2026-05-11.
  */
+
+if (in_array('--resolver-fixtures', $argv, true)) {
+    require __DIR__ . '/build-cache.php';
+    exit(runResolverFixtures(__DIR__ . '/fixtures'));
+}
 
 $argv1 = $argv[1] ?? null;
 if (!$argv1) {
     fwrite(STDERR, "usage: php bin/smoke.php <composer.json>\n");
+    fwrite(STDERR, "       php bin/smoke.php --resolver-fixtures\n");
     exit(1);
 }
 
@@ -85,3 +95,109 @@ echo "\n=== OTHER PHP DEPS (" . count($other) . ") ===\n";
 foreach ($other as $n) echo "  $n\n";
 
 echo "\nTotal Sylius-identified: " . (count($ready) + count($inProgress) + count($notReady) + count($unknown)) . "\n";
+
+/**
+ * Runs every bin/fixtures/p2-*.json through resolvePackageFromVersions() and
+ * compares against the fixture's `expected.entry` keys. Returns process exit
+ * code (0 pass, 1 any mismatch).
+ */
+function runResolverFixtures(string $dir): int
+{
+    $files = glob($dir . '/p2-*.json');
+    if (!$files) {
+        fwrite(STDERR, "no fixtures found under {$dir}\n");
+        return 1;
+    }
+    sort($files);
+
+    $pass = $fail = 0;
+    $failures = [];
+
+    foreach ($files as $file) {
+        $base = basename($file);
+        $raw = file_get_contents($file);
+        try {
+            $fix = json_decode($raw, true, flags: JSON_THROW_ON_ERROR);
+        } catch (Throwable $e) {
+            $fail++;
+            $failures[] = "{$base}: invalid JSON ({$e->getMessage()})";
+            continue;
+        }
+        $expected = $fix['expected'] ?? null;
+        $input = $fix['input'] ?? null;
+        if (!is_array($expected) || !is_array($input)) {
+            $fail++;
+            $failures[] = "{$base}: missing input/expected blocks";
+            continue;
+        }
+
+        $expectedOutcome = $expected['outcome'] ?? 'ok';
+
+        try {
+            $entry = resolvePackageFromVersions(
+                $input['name'],
+                $input['versions'] ?? [],
+                $input['searchRow'] ?? []
+            );
+        } catch (RuntimeException $e) {
+            if ($expectedOutcome === 'throws') {
+                $msg = $expected['throwsMessage'] ?? null;
+                if ($msg !== null && $e->getMessage() !== $msg) {
+                    $fail++;
+                    $failures[] = sprintf(
+                        "%s: threw RuntimeException but message differed\n  expected: %s\n    actual: %s",
+                        $base, $msg, $e->getMessage()
+                    );
+                    printf("  FAIL  %s\n", $base);
+                    continue;
+                }
+                $pass++;
+                printf("  PASS  %s (threw as expected)\n", $base);
+            } else {
+                $fail++;
+                $failures[] = sprintf("%s: unexpected throw: %s", $base, $e->getMessage());
+                printf("  FAIL  %s\n", $base);
+            }
+            continue;
+        }
+
+        if ($expectedOutcome === 'throws') {
+            $fail++;
+            $failures[] = sprintf("%s: expected RuntimeException but resolver returned %s",
+                $base, json_encode($entry));
+            printf("  FAIL  %s\n", $base);
+            continue;
+        }
+
+        $expectedEntry = $expected['entry'] ?? [];
+        $diffs = [];
+        foreach ($expectedEntry as $key => $want) {
+            $got = $entry[$key] ?? '<missing>';
+            if ($got !== $want) {
+                $diffs[] = sprintf("    %s: expected %s, got %s",
+                    $key,
+                    json_encode($want),
+                    json_encode($got)
+                );
+            }
+        }
+        if ($diffs) {
+            $fail++;
+            $failures[] = "{$base}:\n" . implode("\n", $diffs);
+            printf("  FAIL  %s\n", $base);
+        } else {
+            $pass++;
+            printf("  PASS  %s\n", $base);
+        }
+    }
+
+    echo "\n";
+    echo "Resolver fixtures: {$pass} pass, {$fail} fail\n";
+    if ($failures) {
+        echo "\n--- failures ---\n";
+        foreach ($failures as $f) {
+            echo $f . "\n";
+        }
+    }
+    return $fail === 0 ? 0 : 1;
+}

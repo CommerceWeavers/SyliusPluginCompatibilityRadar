@@ -1,0 +1,50 @@
+{
+    "_doc": "Bug regression fixture: plugin has only alpha tags requiring sylius/sylius ^2.0. Old resolver would inherit ^2.0 from the alpha and set supports2x=true (wrong). New resolver emits prereleaseOnly=true with both support flags false.",
+    "input": {
+        "name": "example/prerelease-only-2x",
+        "searchRow": {
+            "name": "example/prerelease-only-2x",
+            "downloads": 1200,
+            "description": "Plugin still in alpha for its first 2.x release",
+            "repository": "https://github.com/example/prerelease-only-2x"
+        },
+        "versions": [
+            {
+                "version": "v3.0.0-alpha.3",
+                "version_normalized": "3.0.0.0-alpha3",
+                "require": {
+                    "php": "^8.2",
+                    "sylius/sylius": "^2.0"
+                }
+            },
+            {
+                "version": "v3.0.0-alpha.2",
+                "version_normalized": "3.0.0.0-alpha2",
+                "require": {
+                    "php": "^8.2",
+                    "sylius/sylius": "^2.0"
+                }
+            },
+            {
+                "version": "v3.0.0-alpha",
+                "version_normalized": "3.0.0.0-alpha",
+                "require": {
+                    "php": "^8.2",
+                    "sylius/sylius": "^2.0"
+                }
+            }
+        ]
+    },
+    "expected": {
+        "outcome": "ok",
+        "entry": {
+            "packageName": "example/prerelease-only-2x",
+            "latestTag": "v3.0.0-alpha.3",
+            "syliusConstraint": "^2.0",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": false,
+            "supports2x": false,
+            "prereleaseOnly": true
+        }
+    }
+}
