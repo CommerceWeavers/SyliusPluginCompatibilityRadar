@@ -12,14 +12,14 @@ declare(strict_types=1);
  *
  *   php bin/smoke.php --resolver-fixtures
  *     Run the Packagist resolver against synthetic fixtures under
- *     bin/fixtures/p2-*.json. Locks resolvePackageFromVersions() shape
+ *     tests/fixtures/p2-*.json. Locks resolvePackageFromVersions() shape
  *     against regressions, especially the prerelease-only handling
  *     introduced 2026-05-11.
  */
 
 if (in_array('--resolver-fixtures', $argv, true)) {
     require __DIR__ . '/build-cache.php';
-    exit(runResolverFixtures(__DIR__ . '/fixtures'));
+    exit(runResolverFixtures(__DIR__ . '/../tests/fixtures'));
 }
 
 $argv1 = $argv[1] ?? null;
@@ -97,7 +97,7 @@ foreach ($other as $n) echo "  $n\n";
 echo "\nTotal Sylius-identified: " . (count($ready) + count($inProgress) + count($notReady) + count($unknown)) . "\n";
 
 /**
- * Runs every bin/fixtures/p2-*.json through resolvePackageFromVersions() and
+ * Runs every tests/fixtures/p2-*.json through resolvePackageFromVersions() and
  * compares against the fixture's `expected.entry` keys. Returns process exit
  * code (0 pass, 1 any mismatch).
  */
