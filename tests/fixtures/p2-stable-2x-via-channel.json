@@ -1,0 +1,44 @@
+{
+    "_doc": "Plugin that declares only sylius/channel + sylius/locale (no sylius/sylius, no sylius/core, no sylius/core-bundle) — should still classify as 2.x ready when those split packages declare ^2.0. Real-world case: setono/sylius-static-contexts-bundle v2.0.0.",
+    "input": {
+        "name": "example/sylius-static-contexts-bundle",
+        "searchRow": {
+            "name": "example/sylius-static-contexts-bundle",
+            "downloads": 6644,
+            "description": "Static contexts bundle (utility plugin depending on Sylius split packages only)",
+            "repository": "https://github.com/example/sylius-static-contexts-bundle"
+        },
+        "versions": [
+            {
+                "version": "v2.0.0",
+                "version_normalized": "2.0.0.0",
+                "require": {
+                    "php": "^8.1",
+                    "sylius/channel": "^2.0",
+                    "sylius/locale": "^2.0"
+                }
+            },
+            {
+                "version": "v1.0.0",
+                "version_normalized": "1.0.0.0",
+                "require": {
+                    "php": "^8.0",
+                    "sylius/channel": "^1.13",
+                    "sylius/locale": "^1.13"
+                }
+            }
+        ]
+    },
+    "expected": {
+        "outcome": "ok",
+        "entry": {
+            "packageName": "example/sylius-static-contexts-bundle",
+            "latestTag": "v2.0.0",
+            "syliusConstraint": "^2.0",
+            "constraintFrom": "sylius/channel",
+            "supports1x": false,
+            "supports2x": true,
+            "prereleaseOnly": false
+        }
+    }
+}

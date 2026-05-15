@@ -1,5 +1,5 @@
 {
-    "generatedAt": "2026-05-12T15:37:00+00:00",
+    "generatedAt": "2026-05-15T20:39:41+00:00",
     "sourceCount": 422,
     "plugins": [
         {
@@ -15,7 +15,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 11322923,
+            "downloads": 11346894,
             "description": "Services registry."
         },
         {
@@ -31,7 +31,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 10471485,
+            "downloads": 10494688,
             "description": "Resource component for Sylius."
         },
         {
@@ -47,7 +47,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 8551159,
+            "downloads": 8572005,
             "description": "Amazing grids with support of filters and custom fields integrated into Symfony."
         },
         {
@@ -63,7 +63,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 8359238,
+            "downloads": 8379366,
             "description": "Mailers and e-mail template management for Symfony projects."
         },
         {
@@ -79,7 +79,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 8301776,
+            "downloads": 8320087,
             "description": "Themes management for Symfony projects."
         },
         {
@@ -95,23 +95,23 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 7937724,
+            "downloads": 7956965,
             "description": "Configurable fixtures for Symfony applications."
         },
         {
             "packageName": "sylius/sylius",
             "homepage": "https://github.com/Sylius/Sylius",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.13",
+            "constraintFrom": "sylius/grid",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 5744399,
+            "downloads": 5754047,
             "description": "E-Commerce platform for PHP, based on Symfony framework."
         },
         {
@@ -127,7 +127,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 4299565,
+            "downloads": 4304565,
             "description": "Date handling for PHP applications."
         },
         {
@@ -143,7 +143,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 2725157,
+            "downloads": 2729836,
             "description": "Basic resource interfaces for PHP applications."
         },
         {
@@ -159,7 +159,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 1708887,
+            "downloads": 1711860,
             "description": "Plugin provides basic refunds functionality for Sylius application."
         },
         {
@@ -175,7 +175,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 1444582,
+            "downloads": 1448555,
             "description": "PayPal plugin for Sylius."
         },
         {
@@ -191,7 +191,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 1184076,
+            "downloads": 1184145,
             "description": "Multiple action setups for Symfony2, build your checkouts/installers or whatever needs more than one step to complete."
         },
         {
@@ -207,7 +207,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 1151924,
+            "downloads": 1153034,
             "description": "CMS plugin for Sylius applications."
         },
         {
@@ -223,7 +223,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 1116585,
+            "downloads": 1130083,
             "description": "Composable Twig layouts"
         },
         {
@@ -239,7 +239,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 1103753,
+            "downloads": 1117639,
             "description": "Additional Twig extensions for your Symfony projects"
         },
         {
@@ -255,7 +255,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 1047978,
+            "downloads": 1049556,
             "description": "Sitemap Plugin for Sylius"
         },
         {
@@ -271,7 +271,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 1031417,
+            "downloads": 1033649,
             "description": "Invoicing plugin for Sylius."
         },
         {
@@ -287,7 +287,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 1028812,
+            "downloads": 1030257,
             "description": "APIs management for Symfony projects."
         },
         {
@@ -303,7 +303,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 836256,
+            "downloads": 840791,
             "description": "Rector upgrades rules for Sylius"
         },
         {
@@ -319,23 +319,23 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 665482,
+            "downloads": 665992,
             "description": "Sylius Plugin for order creation in Admin panel"
         },
         {
             "packageName": "sylius/money-bundle",
             "homepage": "https://github.com/Sylius/SyliusMoneyBundle",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/resource-bundle",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 664100,
+            "downloads": 664654,
             "description": "Currencies and money formatting engine bundle for Symfony."
         },
         {
@@ -351,39 +351,39 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 603828,
+            "downloads": 604240,
             "description": "Wishlist plugin for Sylius."
         },
         {
             "packageName": "sylius/locale",
             "homepage": "https://github.com/Sylius/Locale",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/resource",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 542690,
+            "downloads": 543323,
             "description": "Locale handling for PHP applications."
         },
         {
             "packageName": "sylius/user",
             "homepage": "https://github.com/Sylius/User",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/resource",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 509479,
+            "downloads": 510122,
             "description": "User handling for PHP applications."
         },
         {
@@ -399,39 +399,39 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 502632,
+            "downloads": 504776,
             "description": "BitBag Elasticsearch plugin for Sylius."
         },
         {
             "packageName": "sylius/promotion",
             "homepage": "https://github.com/Sylius/Promotion",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/resource",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 489133,
+            "downloads": 489594,
             "description": "Flexible promotion management for PHP applications."
         },
         {
             "packageName": "sylius/attribute",
             "homepage": "https://github.com/Sylius/Attribute",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/resource",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 481614,
+            "downloads": 482158,
             "description": "Component for handling object attributes in PHP projects."
         },
         {
@@ -447,7 +447,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 468815,
+            "downloads": 469528,
             "description": "Plugin to generate feeds within the Sylius ecommerce platform"
         },
         {
@@ -463,103 +463,103 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 468010,
+            "downloads": 468658,
             "description": "Translation bundle for Api platform based on Sylius translation"
         },
         {
             "packageName": "sylius/order",
             "homepage": "https://github.com/Sylius/Order",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/resource",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 466556,
+            "downloads": 467064,
             "description": "Orders management library for PHP."
         },
         {
             "packageName": "sylius/locale-bundle",
             "homepage": "https://github.com/Sylius/SyliusLocaleBundle",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
+            "syliusConstraint": "^2.0",
+            "constraintFrom": "sylius/locale",
             "supports1x": false,
-            "supports2x": false,
+            "supports2x": true,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 452381,
+            "downloads": 452835,
             "description": "Locales management for Symfony projects."
         },
         {
             "packageName": "sylius/customer",
             "homepage": "https://github.com/Sylius/Customer",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/resource",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 449434,
+            "downloads": 449946,
             "description": "Customer handling for PHP applications."
         },
         {
             "packageName": "sylius/taxonomy",
             "homepage": "https://github.com/Sylius/Taxonomy",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/resource",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 445677,
+            "downloads": 446117,
             "description": "Taxonomies - categorization of domain models in PHP projects."
         },
         {
             "packageName": "sylius/promotion-bundle",
             "homepage": "https://github.com/Sylius/SyliusPromotionBundle",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
+            "syliusConstraint": "^2.0",
+            "constraintFrom": "sylius/promotion",
             "supports1x": false,
-            "supports2x": false,
+            "supports2x": true,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 435589,
+            "downloads": 435968,
             "description": "Manage ecommerce promotions system in your Symfony application."
         },
         {
             "packageName": "sylius/order-bundle",
             "homepage": "https://github.com/Sylius/SyliusOrderBundle",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
+            "syliusConstraint": "^2.0",
+            "constraintFrom": "sylius/order",
             "supports1x": false,
-            "supports2x": false,
+            "supports2x": true,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 424428,
+            "downloads": 424864,
             "description": "Sales order management for Symfony applications."
         },
         {
@@ -575,7 +575,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 418075,
+            "downloads": 419431,
             "description": "import / export plugin for Sylius."
         },
         {
@@ -591,71 +591,71 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 397740,
+            "downloads": 399121,
             "description": "A Rich Editor plugin for Sylius."
         },
         {
             "packageName": "sylius/taxation",
             "homepage": "https://github.com/Sylius/Taxation",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/resource",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 396890,
+            "downloads": 397458,
             "description": "Flexible taxation system for PHP ecommerce applications."
         },
         {
             "packageName": "sylius/taxonomy-bundle",
             "homepage": "https://github.com/Sylius/SyliusTaxonomyBundle",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/resource-bundle",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 396865,
+            "downloads": 397272,
             "description": "Flexible categorization system for Symfony."
         },
         {
             "packageName": "sylius/user-bundle",
             "homepage": "https://github.com/Sylius/SyliusUserBundle",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/resource-bundle",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 390425,
+            "downloads": 390693,
             "description": "Users management for Symfony projects."
         },
         {
             "packageName": "sylius/product",
             "homepage": "https://github.com/Sylius/Product",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
+            "syliusConstraint": "^2.0",
+            "constraintFrom": "sylius/attribute",
             "supports1x": false,
-            "supports2x": false,
+            "supports2x": true,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 378000,
+            "downloads": 378477,
             "description": "Product catalog system with support for product options and variants."
         },
         {
@@ -671,23 +671,23 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 374164,
+            "downloads": 375512,
             "description": "Scheduler Command Plugin."
         },
         {
             "packageName": "sylius/customer-bundle",
             "homepage": "https://github.com/Sylius/SyliusCustomerBundle",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
+            "syliusConstraint": "^2.0",
+            "constraintFrom": "sylius/customer",
             "supports1x": false,
-            "supports2x": false,
+            "supports2x": true,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 366683,
+            "downloads": 367132,
             "description": "Customers management for Symfony projects."
         },
         {
@@ -703,39 +703,39 @@
             "prereleaseSyliusConstraint": "^2.0",
             "prereleaseConstraintFrom": "sylius/core-bundle",
             "prereleaseTargets2x": true,
-            "downloads": 360163,
+            "downloads": 360842,
             "description": "Sylius plugin for managing redirects"
         },
         {
             "packageName": "sylius/currency",
             "homepage": "https://github.com/Sylius/Currency",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/resource",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 359122,
+            "downloads": 359666,
             "description": "Currency handling for PHP applications."
         },
         {
             "packageName": "sylius/inventory",
             "homepage": "https://github.com/Sylius/Inventory",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/resource",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 357110,
+            "downloads": 357633,
             "description": "Flexible inventory management for PHP applications."
         },
         {
@@ -751,119 +751,119 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 346810,
+            "downloads": 347151,
             "description": "Payum Stripe gateways plugin for Sylius."
         },
         {
             "packageName": "sylius/ui-bundle",
             "homepage": "https://github.com/Sylius/SyliusUiBundle",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.13",
+            "constraintFrom": "sylius/grid-bundle",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 337218,
+            "downloads": 337509,
             "description": "Generic UI bundle for Sylius eCommerce components."
         },
         {
             "packageName": "sylius/payment",
             "homepage": "https://github.com/Sylius/Payment",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/resource",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 334235,
+            "downloads": 334664,
             "description": "Flexible payments system for PHP e-commerce applications."
         },
         {
             "packageName": "sylius/attribute-bundle",
             "homepage": "https://github.com/Sylius/SyliusAttributeBundle",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
+            "syliusConstraint": "^2.0",
+            "constraintFrom": "sylius/attribute",
             "supports1x": false,
-            "supports2x": false,
+            "supports2x": true,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 333861,
+            "downloads": 334281,
             "description": "Managing object attributes for Symfony applications."
         },
         {
             "packageName": "sylius/product-bundle",
             "homepage": "https://github.com/Sylius/SyliusProductBundle",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
+            "syliusConstraint": "^2.0",
+            "constraintFrom": "sylius/attribute-bundle",
             "supports1x": false,
+            "supports2x": true,
+            "prereleaseOnly": false,
+            "prereleaseTag": null,
+            "prereleaseSyliusConstraint": null,
+            "prereleaseConstraintFrom": null,
+            "prereleaseTargets2x": false,
+            "downloads": 333651,
+            "description": "Product catalog for your Symfony applications."
+        },
+        {
+            "packageName": "sylius/taxation-bundle",
+            "homepage": "https://github.com/Sylius/SyliusTaxationBundle",
+            "latestTag": "v2.2.5",
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/resource-bundle",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 333246,
-            "description": "Product catalog for your Symfony applications."
+            "downloads": 330157,
+            "description": "Flexible taxation system for Symfony ecommerce applications."
         },
         {
             "packageName": "setono/sylius-analytics-plugin",
             "homepage": "https://github.com/Setono/SyliusAnalyticsPlugin",
             "latestTag": "v3.0.1",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.6",
+            "constraintFrom": "sylius/resource-bundle",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": "v4.0.0-beta.3",
             "prereleaseSyliusConstraint": "^1.8",
             "prereleaseConstraintFrom": "sylius/core",
             "prereleaseTargets2x": false,
-            "downloads": 329783,
+            "downloads": 329787,
             "description": "Google Analytics plugin for Sylius"
-        },
-        {
-            "packageName": "sylius/taxation-bundle",
-            "homepage": "https://github.com/Sylius/SyliusTaxationBundle",
-            "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
-            "supports2x": false,
-            "prereleaseOnly": false,
-            "prereleaseTag": null,
-            "prereleaseSyliusConstraint": null,
-            "prereleaseConstraintFrom": null,
-            "prereleaseTargets2x": false,
-            "downloads": 329718,
-            "description": "Flexible taxation system for Symfony ecommerce applications."
         },
         {
             "packageName": "sylius/channel",
             "homepage": "https://github.com/Sylius/Channel",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/resource",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 315009,
+            "downloads": 315419,
             "description": "E-Commerce PHP component for managing different sales channels."
         },
         {
@@ -879,7 +879,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 310347,
+            "downloads": 310415,
             "description": "Shop API for Sylius E-Commerce."
         },
         {
@@ -895,7 +895,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 305314,
+            "downloads": 305336,
             "description": "Plugin that integrates Setono/TagBagBundle into your Sylius project"
         },
         {
@@ -911,23 +911,23 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 305305,
+            "downloads": 305333,
             "description": "Component allowing easily & unified storage handling for PHP applications."
         },
         {
             "packageName": "sylius/currency-bundle",
             "homepage": "https://github.com/Sylius/SyliusCurrencyBundle",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
+            "syliusConstraint": "^2.0",
+            "constraintFrom": "sylius/currency",
             "supports1x": false,
-            "supports2x": false,
+            "supports2x": true,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 299479,
+            "downloads": 299895,
             "description": "Currencies processing for Symfony."
         },
         {
@@ -943,7 +943,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 292757,
+            "downloads": 292836,
             "description": "Starting point for projects powered by Sylius eCommerce."
         },
         {
@@ -959,39 +959,39 @@
             "prereleaseSyliusConstraint": "^2.0",
             "prereleaseConstraintFrom": "sylius/sylius",
             "prereleaseTargets2x": true,
-            "downloads": 281524,
+            "downloads": 282225,
             "description": "Google Tag Manager plugin for Sylius."
         },
         {
             "packageName": "sylius/addressing",
             "homepage": "https://github.com/Sylius/Addressing",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/resource",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 277072,
+            "downloads": 277241,
             "description": "Addressing and zone management for PHP applications."
         },
         {
             "packageName": "sylius/payment-bundle",
             "homepage": "https://github.com/Sylius/SyliusPaymentBundle",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
+            "syliusConstraint": "^2.0",
+            "constraintFrom": "sylius/payment",
             "supports1x": false,
-            "supports2x": false,
+            "supports2x": true,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 276470,
+            "downloads": 276812,
             "description": "Flexible payments system for Symfony e-commerce applications."
         },
         {
@@ -1007,55 +1007,55 @@
             "prereleaseSyliusConstraint": "^2.0",
             "prereleaseConstraintFrom": "sylius/sylius",
             "prereleaseTargets2x": true,
-            "downloads": 238354,
+            "downloads": 238910,
             "description": "Google Tag Manager Enhanced Ecommerce plugin for Sylius."
         },
         {
             "packageName": "sylius/addressing-bundle",
             "homepage": "https://github.com/Sylius/SyliusAddressingBundle",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
+            "syliusConstraint": "^2.0",
+            "constraintFrom": "sylius/addressing",
             "supports1x": false,
-            "supports2x": false,
+            "supports2x": true,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 227723,
+            "downloads": 227837,
             "description": "Addressing and zone management for Symfony applications."
         },
         {
             "packageName": "sylius/shipping",
             "homepage": "https://github.com/Sylius/Shipping",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/resource",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 216831,
+            "downloads": 216971,
             "description": "Flexible shipping component for PHP e-commerce projects."
         },
         {
             "packageName": "sylius/channel-bundle",
             "homepage": "https://github.com/Sylius/SyliusChannelBundle",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
+            "syliusConstraint": "^2.0",
+            "constraintFrom": "sylius/channel",
             "supports1x": false,
-            "supports2x": false,
+            "supports2x": true,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 214471,
+            "downloads": 214818,
             "description": "Currencies and channel formatting engine bundle for Symfony."
         },
         {
@@ -1071,7 +1071,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 207156,
+            "downloads": 207268,
             "description": "Bootstrap Theme for Sylius"
         },
         {
@@ -1087,7 +1087,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 199403,
+            "downloads": 200038,
             "description": "Add a settings panel to your Sylius."
         },
         {
@@ -1103,23 +1103,23 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 185713,
+            "downloads": 186977,
             "description": "Lightweight local command to calculate the Sylius instance GMV within a specific period"
         },
         {
             "packageName": "sylius/inventory-bundle",
             "homepage": "https://github.com/Sylius/SyliusInventoryBundle",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
+            "syliusConstraint": "^2.0",
+            "constraintFrom": "sylius/inventory",
             "supports1x": false,
-            "supports2x": false,
+            "supports2x": true,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 182669,
+            "downloads": 182754,
             "description": "Flexible inventory management for Symfony applications."
         },
         {
@@ -1135,7 +1135,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 177706,
+            "downloads": 177917,
             "description": "Gift card plugin for Sylius"
         },
         {
@@ -1151,23 +1151,23 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 175945,
+            "downloads": 176163,
             "description": "A plugin that allows to add tierprices to Sylius"
         },
         {
             "packageName": "sylius/shipping-bundle",
             "homepage": "https://github.com/Sylius/SyliusShippingBundle",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/resource-bundle",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 172181,
+            "downloads": 172267,
             "description": "Flexible shipping system for Symfony ecommerce applications."
         },
         {
@@ -1183,7 +1183,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 165044,
+            "downloads": 165063,
             "description": "Mails management and sending abstraction."
         },
         {
@@ -1199,24 +1199,8 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 161816,
+            "downloads": 161900,
             "description": "PHP library to handle building grid of objects with fields and filters support."
-        },
-        {
-            "packageName": "mollie/sylius-plugin",
-            "homepage": "https://github.com/mollie/Sylius",
-            "latestTag": "v5.7.5",
-            "syliusConstraint": "~1.9.0 || ~1.10.0 || ~1.11.0 || ~1.12.0 || ~1.13.0",
-            "constraintFrom": "sylius/sylius",
-            "supports1x": true,
-            "supports2x": false,
-            "prereleaseOnly": false,
-            "prereleaseTag": null,
-            "prereleaseSyliusConstraint": null,
-            "prereleaseConstraintFrom": null,
-            "prereleaseTargets2x": false,
-            "downloads": 157968,
-            "description": "Mollie payment plugin for Sylius applications."
         },
         {
             "packageName": "sylius/state-machine-abstraction",
@@ -1231,8 +1215,24 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 157862,
+            "downloads": 158471,
             "description": "Abstraction layer for State Machine used in Sylius bundles"
+        },
+        {
+            "packageName": "mollie/sylius-plugin",
+            "homepage": "https://github.com/mollie/Sylius",
+            "latestTag": "v5.7.5",
+            "syliusConstraint": "~1.9.0 || ~1.10.0 || ~1.11.0 || ~1.12.0 || ~1.13.0",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "prereleaseOnly": false,
+            "prereleaseTag": null,
+            "prereleaseSyliusConstraint": null,
+            "prereleaseConstraintFrom": null,
+            "prereleaseTargets2x": false,
+            "downloads": 158009,
+            "description": "Mollie payment plugin for Sylius applications."
         },
         {
             "packageName": "loevgaard/sylius-brand-plugin",
@@ -1247,15 +1247,15 @@
             "prereleaseSyliusConstraint": "^2.0",
             "prereleaseConstraintFrom": "sylius/core",
             "prereleaseTargets2x": true,
-            "downloads": 156170,
+            "downloads": 156307,
             "description": "A Sylius plugin for handling brands"
         },
         {
             "packageName": "sylius/translation",
             "homepage": "https://github.com/Sylius/Translation",
             "latestTag": "v0.19.0",
-            "syliusConstraint": null,
-            "constraintFrom": null,
+            "syliusConstraint": "0.18.*",
+            "constraintFrom": "sylius/resource",
             "supports1x": false,
             "supports2x": false,
             "prereleaseOnly": false,
@@ -1263,7 +1263,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 155899,
+            "downloads": 155962,
             "description": "Translation component for translatable resources."
         },
         {
@@ -1279,39 +1279,39 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 153521,
+            "downloads": 153937,
             "description": "Synolia sylius GDPR plugin."
         },
         {
             "packageName": "sylius/review",
             "homepage": "https://github.com/Sylius/Review",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/resource",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 152394,
+            "downloads": 152534,
             "description": "Review system, for commenting and rating shop components."
         },
         {
             "packageName": "sylius/core",
             "homepage": "https://github.com/Sylius/Core",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
+            "syliusConstraint": "^2.0",
+            "constraintFrom": "sylius/addressing",
             "supports1x": false,
-            "supports2x": false,
+            "supports2x": true,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 149954,
+            "downloads": 150058,
             "description": "Sylius e-commerce core. It integrates all components."
         },
         {
@@ -1327,7 +1327,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 145431,
+            "downloads": 145644,
             "description": "Mail Tester Plugin."
         },
         {
@@ -1343,7 +1343,7 @@
             "prereleaseSyliusConstraint": "~2.0.0",
             "prereleaseConstraintFrom": "sylius/sylius",
             "prereleaseTargets2x": true,
-            "downloads": 141605,
+            "downloads": 141803,
             "description": "Sylius SEO plugin by Dedi."
         },
         {
@@ -1359,7 +1359,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 137844,
+            "downloads": 138358,
             "description": "Sylius roles and permissions management plugin"
         },
         {
@@ -1375,7 +1375,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 129063,
+            "downloads": 132178,
             "description": "Mollie payment plugin for Sylius applications."
         },
         {
@@ -1391,7 +1391,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 124388,
+            "downloads": 125041,
             "description": "This plugins allows you to add manage CMS pages using the Rich Editor"
         },
         {
@@ -1407,7 +1407,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 122338,
+            "downloads": 122380,
             "description": "A search plugin using Elasticsearch for Sylius."
         },
         {
@@ -1423,7 +1423,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 116060,
+            "downloads": 116154,
             "description": "Shipping data export environment for Sylius platform applications"
         },
         {
@@ -1439,7 +1439,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 111363,
+            "downloads": 111430,
             "description": "Payum integration for Symfony e-commerce applications."
         },
         {
@@ -1455,7 +1455,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 106700,
+            "downloads": 106782,
             "description": "This plugin add blog capabilities to your Sylius project"
         },
         {
@@ -1471,7 +1471,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 106444,
+            "downloads": 106445,
             "description": "Mollie payment plugin for Sylius applications."
         },
         {
@@ -1487,7 +1487,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 105774,
+            "downloads": 105859,
             "description": "Helps you upgrade your Sylius app to a new version."
         },
         {
@@ -1503,7 +1503,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 105384,
+            "downloads": 105450,
             "description": "Sylius core bundle. It integrates all other bundles into full stack Symfony ecommerce solution."
         },
         {
@@ -1519,23 +1519,23 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 101641,
+            "downloads": 101744,
             "description": "This plugin add banners to your Sylius project"
         },
         {
             "packageName": "sylius/review-bundle",
             "homepage": "https://github.com/Sylius/SyliusReviewBundle",
             "latestTag": "v2.2.5",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/resource-bundle",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 99919,
+            "downloads": 100024,
             "description": "Review system for Symfony ecommerce applications."
         },
         {
@@ -1551,7 +1551,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 97487,
+            "downloads": 97514,
             "description": "Sylius roles and permissions management plugin"
         },
         {
@@ -1567,7 +1567,7 @@
             "prereleaseSyliusConstraint": "^2.0",
             "prereleaseConstraintFrom": "sylius/sylius",
             "prereleaseTargets2x": true,
-            "downloads": 97133,
+            "downloads": 97219,
             "description": "Akeneo connector for Sylius."
         },
         {
@@ -1583,7 +1583,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 91836,
+            "downloads": 91887,
             "description": "Provides table rate shipping calculator."
         },
         {
@@ -1599,23 +1599,23 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 88029,
+            "downloads": 88038,
             "description": "Sylius plugin that enables order reordering for a customer"
         },
         {
             "packageName": "setono/sylius-terms-plugin",
             "homepage": "https://github.com/Setono/SyliusTermsPlugin",
             "latestTag": "v1.1.0",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.6",
+            "constraintFrom": "sylius/resource-bundle",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": "v2.0.0-beta",
             "prereleaseSyliusConstraint": "^1.0",
             "prereleaseConstraintFrom": "sylius/core",
             "prereleaseTargets2x": false,
-            "downloads": 85229,
+            "downloads": 85254,
             "description": "Sylius terms and conditions plugin"
         },
         {
@@ -1631,7 +1631,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 85020,
+            "downloads": 85055,
             "description": "SEO URLs for Sylius"
         },
         {
@@ -1647,7 +1647,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 83972,
+            "downloads": 84917,
             "description": "Add a media manager to your Sylius."
         },
         {
@@ -1663,7 +1663,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 79850,
+            "downloads": 83445,
             "description": "Telemetry integration for official Sylius plugins"
         },
         {
@@ -1679,7 +1679,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 79650,
+            "downloads": 79712,
             "description": "Plugin allowing to import products data from Akeneo PIM to your Sylius store."
         },
         {
@@ -1695,7 +1695,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 77161,
+            "downloads": 77231,
             "description": "Payment plugin to integrate Alma installments and pay later payments with your Sylius shop"
         },
         {
@@ -1711,7 +1711,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 76846,
+            "downloads": 76977,
             "description": "Plugin for Sylius to make customizable reports."
         },
         {
@@ -1727,7 +1727,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 76809,
+            "downloads": 76960,
             "description": "Product bundle for Sylius."
         },
         {
@@ -1743,7 +1743,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 75134,
+            "downloads": 75193,
             "description": "PayPlug payment plugin for Sylius applications."
         },
         {
@@ -1759,7 +1759,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 74341,
+            "downloads": 74792,
             "description": "This plugins allows you to manage menus."
         },
         {
@@ -1775,7 +1775,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 71672,
+            "downloads": 72724,
             "description": ""
         },
         {
@@ -1791,23 +1791,23 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 71347,
+            "downloads": 71554,
             "description": "Plugin for Sylius when your website is under maintenance"
         },
         {
             "packageName": "setono/sylius-catalog-promotion-plugin",
             "homepage": "https://github.com/Setono/SyliusCatalogPromotionPlugin",
             "latestTag": "v0.5.2",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.6",
+            "constraintFrom": "sylius/resource-bundle",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": "v1.0.0-beta",
             "prereleaseSyliusConstraint": "^1.10.8",
             "prereleaseConstraintFrom": "sylius/core",
             "prereleaseTargets2x": false,
-            "downloads": 69318,
+            "downloads": 69325,
             "description": "Catalog promotion plugin for Sylius"
         },
         {
@@ -1823,7 +1823,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 69040,
+            "downloads": 69084,
             "description": "Sylius plugin which allows Italian merchants to collect invoice data for their orders."
         },
         {
@@ -1839,24 +1839,8 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 67641,
+            "downloads": 67676,
             "description": "Vendor plugin for Sylius. Add Vendor (Brand) to your products"
-        },
-        {
-            "packageName": "sylius/translation-bundle",
-            "homepage": "https://github.com/Sylius/SyliusTranslationBundle",
-            "latestTag": "v0.19.0",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
-            "supports2x": false,
-            "prereleaseOnly": false,
-            "prereleaseTag": null,
-            "prereleaseSyliusConstraint": null,
-            "prereleaseConstraintFrom": null,
-            "prereleaseTargets2x": false,
-            "downloads": 65270,
-            "description": "Sylius translation bundle"
         },
         {
             "packageName": "sylius/cms-plugin",
@@ -1871,8 +1855,24 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 65078,
+            "downloads": 66059,
             "description": "CMS plugin for Sylius applications."
+        },
+        {
+            "packageName": "sylius/translation-bundle",
+            "homepage": "https://github.com/Sylius/SyliusTranslationBundle",
+            "latestTag": "v0.19.0",
+            "syliusConstraint": "0.18.*",
+            "constraintFrom": "sylius/resource-bundle",
+            "supports1x": false,
+            "supports2x": false,
+            "prereleaseOnly": false,
+            "prereleaseTag": null,
+            "prereleaseSyliusConstraint": null,
+            "prereleaseConstraintFrom": null,
+            "prereleaseTargets2x": false,
+            "downloads": 65284,
+            "description": "Sylius translation bundle"
         },
         {
             "packageName": "monsieurbiz/sylius-homepage-plugin",
@@ -1887,7 +1887,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 64642,
+            "downloads": 65098,
             "description": "Add a homepage management to your Sylius using the Rich Editor."
         },
         {
@@ -1903,7 +1903,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 64174,
+            "downloads": 64192,
             "description": "MailChimp plugin for Sylius."
         },
         {
@@ -1919,23 +1919,23 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 62550,
+            "downloads": 62582,
             "description": "Pickup point plugin for Sylius"
         },
         {
             "packageName": "sylius/admin-ui",
             "homepage": "https://github.com/Sylius/AdminUi",
             "latestTag": "v0.12.2",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.13 || ^1.14@alpha",
+            "constraintFrom": "sylius/resource-bundle",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 60223,
+            "downloads": 60748,
             "description": "Minimalist generic templates and routes for your admin panels"
         },
         {
@@ -1951,7 +1951,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 57696,
+            "downloads": 58159,
             "description": "BitBag Adyen plug-in for Sylius."
         },
         {
@@ -1967,23 +1967,23 @@
             "prereleaseSyliusConstraint": "^2.0",
             "prereleaseConstraintFrom": "sylius/core",
             "prereleaseTargets2x": true,
-            "downloads": 55817,
+            "downloads": 55868,
             "description": "Add callouts to your Sylius products"
         },
         {
             "packageName": "setono/sylius-facebook-plugin",
             "homepage": "https://github.com/Setono/SyliusFacebookPlugin",
             "latestTag": "v2.0.0",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.6",
+            "constraintFrom": "sylius/resource-bundle",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": "v3.0.0-beta",
             "prereleaseSyliusConstraint": "^1.0",
             "prereleaseConstraintFrom": "sylius/core",
             "prereleaseTargets2x": false,
-            "downloads": 54293,
+            "downloads": 54296,
             "description": "Sylius plugin that tracks visitors and sends the data to Facebook"
         },
         {
@@ -2003,12 +2003,28 @@
             "description": "Quickpay payment plugin for Sylius"
         },
         {
-            "packageName": "setono/sylius-partner-ads-plugin",
-            "homepage": "https://github.com/Setono/SyliusPartnerAdsPlugin",
-            "latestTag": "v2.2.1",
+            "packageName": "setono/sylius-behat-pack",
+            "homepage": "https://github.com/Setono/sylius-behat-pack",
+            "latestTag": "v0.2.2",
             "syliusConstraint": null,
             "constraintFrom": null,
             "supports1x": false,
+            "supports2x": false,
+            "prereleaseOnly": false,
+            "prereleaseTag": null,
+            "prereleaseSyliusConstraint": null,
+            "prereleaseConstraintFrom": null,
+            "prereleaseTargets2x": false,
+            "downloads": 47854,
+            "description": "A pack that installs everything you need to run behat tests on Sylius plugin or app"
+        },
+        {
+            "packageName": "setono/sylius-partner-ads-plugin",
+            "homepage": "https://github.com/Setono/SyliusPartnerAdsPlugin",
+            "latestTag": "v2.2.1",
+            "syliusConstraint": "^1.6",
+            "constraintFrom": "sylius/resource-bundle",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
@@ -2022,16 +2038,16 @@
             "packageName": "sylius/bootstrap-admin-ui",
             "homepage": "https://github.com/Sylius/BootstrapAdminUi",
             "latestTag": "v0.12.2",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.13 || ^1.15@alpha",
+            "constraintFrom": "sylius/grid-bundle",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 45365,
+            "downloads": 45772,
             "description": "Build your Bootstrap admin panels with Sylius and Symfony UX"
         },
         {
@@ -2047,7 +2063,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 43943,
+            "downloads": 45738,
             "description": "Wishlist plugin for Sylius."
         },
         {
@@ -2063,7 +2079,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 43857,
+            "downloads": 43939,
             "description": "Producer for synchronization products with sulu."
         },
         {
@@ -2079,7 +2095,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 41910,
+            "downloads": 42245,
             "description": "Basic UI translations"
         },
         {
@@ -2095,23 +2111,23 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 40975,
+            "downloads": 41015,
             "description": "Implementation of the Omnibus Directive for Sylius application."
         },
         {
             "packageName": "setono/sylius-mailchimp-plugin",
             "homepage": "https://github.com/Setono/SyliusMailchimpPlugin",
             "latestTag": "v0.5.7",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.6",
+            "constraintFrom": "sylius/resource-bundle",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 37840,
+            "downloads": 37886,
             "description": "Mailchimp plugin for Sylius."
         },
         {
@@ -2127,40 +2143,24 @@
             "prereleaseSyliusConstraint": "^2.0",
             "prereleaseConstraintFrom": "sylius/sylius",
             "prereleaseTargets2x": true,
-            "downloads": 37765,
+            "downloads": 37775,
             "description": "Plugin allowing to integrate marketing automation made by ActiveCampaign in Sylius."
         },
         {
             "packageName": "setono/sylius-variant-link-plugin",
             "homepage": "https://github.com/Setono/SyliusVariantLinkPlugin",
             "latestTag": "v1.2.1",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.6",
+            "constraintFrom": "sylius/resource-bundle",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 37606,
+            "downloads": 37612,
             "description": "Sylius plugin that makes it possible to link directly to variants"
-        },
-        {
-            "packageName": "webgriffe/sylius-nexi-plugin",
-            "homepage": "https://github.com/webgriffe/SyliusNexiPlugin",
-            "latestTag": "v4.0.2",
-            "syliusConstraint": "^2.1",
-            "constraintFrom": "sylius/sylius",
-            "supports1x": false,
-            "supports2x": true,
-            "prereleaseOnly": false,
-            "prereleaseTag": null,
-            "prereleaseSyliusConstraint": null,
-            "prereleaseConstraintFrom": null,
-            "prereleaseTargets2x": false,
-            "downloads": 35993,
-            "description": "Nexi payment plugin for Sylius."
         },
         {
             "packageName": "monsieurbiz/sylius-plus-adapter-plugin",
@@ -2175,8 +2175,24 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 35956,
+            "downloads": 36088,
             "description": "This plugin offer tools to adapt your plugins to Sylius Plus RBAC system."
+        },
+        {
+            "packageName": "webgriffe/sylius-nexi-plugin",
+            "homepage": "https://github.com/webgriffe/SyliusNexiPlugin",
+            "latestTag": "v4.0.2",
+            "syliusConstraint": "^2.1",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": false,
+            "supports2x": true,
+            "prereleaseOnly": false,
+            "prereleaseTag": null,
+            "prereleaseSyliusConstraint": null,
+            "prereleaseConstraintFrom": null,
+            "prereleaseTargets2x": false,
+            "downloads": 36029,
+            "description": "Nexi payment plugin for Sylius."
         },
         {
             "packageName": "setono/sylius-google-ads-plugin",
@@ -2191,7 +2207,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 35761,
+            "downloads": 35782,
             "description": "Google Ads plugin for Sylius."
         },
         {
@@ -2207,7 +2223,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 34983,
+            "downloads": 35001,
             "description": "Adds product customizing to Sylius"
         },
         {
@@ -2223,8 +2239,24 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 34900,
+            "downloads": 34915,
             "description": "Bonus points plugin for Sylius."
+        },
+        {
+            "packageName": "flux-se/sylius-stripe-plugin",
+            "homepage": "https://github.com/Sylius/StripePlugin",
+            "latestTag": "1.0.8",
+            "syliusConstraint": "^2.0",
+            "constraintFrom": "sylius/core-bundle",
+            "supports1x": false,
+            "supports2x": true,
+            "prereleaseOnly": false,
+            "prereleaseTag": null,
+            "prereleaseSyliusConstraint": null,
+            "prereleaseConstraintFrom": null,
+            "prereleaseTargets2x": false,
+            "downloads": 34220,
+            "description": "Sylius Stripe plugin using Payment Request"
         },
         {
             "packageName": "bitbag/braintree-plugin",
@@ -2239,7 +2271,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 34162,
+            "downloads": 34176,
             "description": "Braintree payment plugin for Sylius applications."
         },
         {
@@ -2255,7 +2287,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 33940,
+            "downloads": 33971,
             "description": "PayU payment plugin for Sylius applications"
         },
         {
@@ -2271,24 +2303,8 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 33855,
+            "downloads": 33957,
             "description": "Timely inform customers and guest visitors when a product return in stock"
-        },
-        {
-            "packageName": "flux-se/sylius-stripe-plugin",
-            "homepage": "https://github.com/Sylius/StripePlugin",
-            "latestTag": "1.0.8",
-            "syliusConstraint": "^2.0",
-            "constraintFrom": "sylius/core-bundle",
-            "supports1x": false,
-            "supports2x": true,
-            "prereleaseOnly": false,
-            "prereleaseTag": null,
-            "prereleaseSyliusConstraint": null,
-            "prereleaseConstraintFrom": null,
-            "prereleaseTargets2x": false,
-            "downloads": 33846,
-            "description": "Sylius Stripe plugin using Payment Request"
         },
         {
             "packageName": "bitbag/przelewy24-plugin",
@@ -2303,7 +2319,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 32188,
+            "downloads": 32215,
             "description": "Przelewy24 payment plugin for Sylius applications."
         },
         {
@@ -2319,7 +2335,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 31337,
+            "downloads": 31345,
             "description": "Support for SEO metadata on products"
         },
         {
@@ -2351,7 +2367,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 30365,
+            "downloads": 30431,
             "description": "APIs management for Symfony projects."
         },
         {
@@ -2367,7 +2383,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 30263,
+            "downloads": 30282,
             "description": "A simple plugin to have sales reports in Sylius"
         },
         {
@@ -2383,23 +2399,23 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 30004,
+            "downloads": 30018,
             "description": "Sorting plugin for Sylius"
         },
         {
             "packageName": "setono/sylius-image-optimizer-plugin",
             "homepage": "https://github.com/Setono/SyliusImageOptimizerPlugin",
             "latestTag": "v0.6.3",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.6",
+            "constraintFrom": "sylius/resource-bundle",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 28793,
+            "downloads": 28796,
             "description": "Sylius plugin that optimizes your images"
         },
         {
@@ -2415,7 +2431,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 26732,
+            "downloads": 26782,
             "description": "Plugin for Sylius to add attributes on product variants."
         },
         {
@@ -2431,7 +2447,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 26666,
+            "downloads": 26700,
             "description": "Clerk.io plugin for Sylius."
         },
         {
@@ -2444,8 +2460,8 @@
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": "v2.0.0-alpha.4",
-            "prereleaseSyliusConstraint": null,
-            "prereleaseConstraintFrom": null,
+            "prereleaseSyliusConstraint": "^1.8",
+            "prereleaseConstraintFrom": "sylius/resource-bundle",
             "prereleaseTargets2x": false,
             "downloads": 26270,
             "description": "Trustpilot plugin for Sylius."
@@ -2479,7 +2495,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 25344,
+            "downloads": 25416,
             "description": "VAT number address field with validation, EU VAT rates plugin for Sylius"
         },
         {
@@ -2495,7 +2511,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 24912,
+            "downloads": 24969,
             "description": "Add EU VAT field and validation for Sylius using VIES API Webservice."
         },
         {
@@ -2511,7 +2527,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 24724,
+            "downloads": 24810,
             "description": "Adds a simple message on top of your shop."
         },
         {
@@ -2534,9 +2550,9 @@
             "packageName": "setono/sylius-promotion-extensions-plugin",
             "homepage": "https://github.com/Setono/SyliusPromotionExtensionsPlugin",
             "latestTag": "v1.4.0",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.6",
+            "constraintFrom": "sylius/resource-bundle",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
@@ -2575,7 +2591,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 23358,
+            "downloads": 23437,
             "description": "Size Chart Plugin for Sylius."
         },
         {
@@ -2591,7 +2607,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 22775,
+            "downloads": 22780,
             "description": "Improve the admin login form in Sylius. Let's make it fancy! \ud83c\udf89"
         },
         {
@@ -2607,24 +2623,8 @@
             "prereleaseSyliusConstraint": "^1.0",
             "prereleaseConstraintFrom": "sylius/core",
             "prereleaseTargets2x": false,
-            "downloads": 22372,
+            "downloads": 22417,
             "description": "Reengage customers who abandoned their cart in Sylius"
-        },
-        {
-            "packageName": "flux-se/sylius-payum-monetico-plugin",
-            "homepage": "https://github.com/FLUX-SE/SyliusPayumMoneticoPlugin",
-            "latestTag": "v1.1.3",
-            "syliusConstraint": "^1.5",
-            "constraintFrom": "sylius/sylius",
-            "supports1x": true,
-            "supports2x": false,
-            "prereleaseOnly": false,
-            "prereleaseTag": null,
-            "prereleaseSyliusConstraint": null,
-            "prereleaseConstraintFrom": null,
-            "prereleaseTargets2x": false,
-            "downloads": 22100,
-            "description": "Payum Monetico gateway plugin for Sylius"
         },
         {
             "packageName": "madcoders/sylius-taxon-gallery-plugin",
@@ -2639,23 +2639,39 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 22072,
+            "downloads": 22151,
             "description": "Taxon Gallery plugin for Sylius."
         },
         {
-            "packageName": "mobizel/sylius-export-plugin",
-            "homepage": "https://github.com/mobizel/SyliusExportPlugin",
-            "latestTag": "v0.6.0",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "packageName": "flux-se/sylius-payum-monetico-plugin",
+            "homepage": "https://github.com/FLUX-SE/SyliusPayumMoneticoPlugin",
+            "latestTag": "v1.1.3",
+            "syliusConstraint": "^1.5",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 22007,
+            "downloads": 22106,
+            "description": "Payum Monetico gateway plugin for Sylius"
+        },
+        {
+            "packageName": "mobizel/sylius-export-plugin",
+            "homepage": "https://github.com/mobizel/SyliusExportPlugin",
+            "latestTag": "v0.6.0",
+            "syliusConstraint": "^1.10",
+            "constraintFrom": "sylius/grid-bundle",
+            "supports1x": true,
+            "supports2x": false,
+            "prereleaseOnly": false,
+            "prereleaseTag": null,
+            "prereleaseSyliusConstraint": null,
+            "prereleaseConstraintFrom": null,
+            "prereleaseTargets2x": false,
+            "downloads": 22051,
             "description": "Bulk export of sylius resources"
         },
         {
@@ -2671,7 +2687,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 21573,
+            "downloads": 21640,
             "description": "Sylius eCommerce administration panel component."
         },
         {
@@ -2687,7 +2703,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 20836,
+            "downloads": 20844,
             "description": "Disable the e-commerce on your Sylius."
         },
         {
@@ -2703,7 +2719,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 19665,
+            "downloads": 19667,
             "description": "Payum Monetico gateway plugin for Sylius"
         },
         {
@@ -2719,7 +2735,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 19122,
+            "downloads": 19209,
             "description": "bulk edit for sylius with asynchrone process."
         },
         {
@@ -2735,7 +2751,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 18670,
+            "downloads": 18679,
             "description": "Extended channels plugin for Sylius"
         },
         {
@@ -2751,7 +2767,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 18508,
+            "downloads": 18521,
             "description": "Setono example plugin for Sylius."
         },
         {
@@ -2783,7 +2799,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 17625,
+            "downloads": 17742,
             "description": "Add a contact request plugin to your Sylius."
         },
         {
@@ -2799,7 +2815,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 17321,
+            "downloads": 17345,
             "description": "Order comments plugin for Sylius."
         },
         {
@@ -2815,7 +2831,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 17240,
+            "downloads": 17248,
             "description": "Payment restriction plugin for Sylius"
         },
         {
@@ -2831,16 +2847,16 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 16653,
+            "downloads": 16717,
             "description": "This plugin enables you to setup the Lyra Collect payment gateway on your Sylius website."
         },
         {
             "packageName": "setono/sylius-image-plugin",
             "homepage": "https://github.com/Setono/SyliusImagePlugin",
             "latestTag": "v0.1.8",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.8",
+            "constraintFrom": "sylius/resource-bundle",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
@@ -2879,7 +2895,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 15343,
+            "downloads": 15381,
             "description": "Plugin adding the Google reCAPTCHA v3 field to some frontend FormType of Sylius"
         },
         {
@@ -2895,7 +2911,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 15222,
+            "downloads": 15225,
             "description": "Plugin for Sylius to add Mailchimp ecommerce features"
         },
         {
@@ -2911,7 +2927,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 15186,
+            "downloads": 15213,
             "description": "Mezcalito file upload plugin for Sylius."
         },
         {
@@ -2927,7 +2943,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 14531,
+            "downloads": 14605,
             "description": "Agreement plugin for Sylius"
         },
         {
@@ -2943,7 +2959,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 14348,
+            "downloads": 14355,
             "description": "Click and Collect plugin for Sylius, to sell and deliver securely during the COVID-19 pandemic."
         },
         {
@@ -2975,7 +2991,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 13951,
+            "downloads": 14005,
             "description": "Payment restriction plugin for Sylius"
         },
         {
@@ -2991,8 +3007,24 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 13796,
+            "downloads": 13802,
             "description": "Amazon pay plugin."
+        },
+        {
+            "packageName": "bitbag/banner-plugin",
+            "homepage": "https://github.com/BitBagCommerce/SyliusBannerPlugin",
+            "latestTag": "v2.2.1",
+            "syliusConstraint": "^1.13",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "prereleaseOnly": false,
+            "prereleaseTag": null,
+            "prereleaseSyliusConstraint": null,
+            "prereleaseConstraintFrom": null,
+            "prereleaseTargets2x": false,
+            "downloads": 13415,
+            "description": "Banner plugin for sylius"
         },
         {
             "packageName": "stefandoorn/google-tag-manager-enhanced-ecommerce-plugin",
@@ -3011,10 +3043,10 @@
             "description": "Google Tag Manager Enhanced Ecommerce plugin for Sylius."
         },
         {
-            "packageName": "bitbag/banner-plugin",
-            "homepage": "https://github.com/BitBagCommerce/SyliusBannerPlugin",
-            "latestTag": "v2.2.1",
-            "syliusConstraint": "^1.13",
+            "packageName": "bitbag/mailtemplate-plugin",
+            "homepage": "https://github.com/BitBagCommerce/SyliusMailTemplatePlugin",
+            "latestTag": "v2.1.0",
+            "syliusConstraint": "~1.13.0 || ~1.14.0",
             "constraintFrom": "sylius/sylius",
             "supports1x": true,
             "supports2x": false,
@@ -3023,8 +3055,8 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 13392,
-            "description": "Banner plugin for sylius"
+            "downloads": 13290,
+            "description": "Custom templates for Sylius mails."
         },
         {
             "packageName": "plumtreesystems/sylius-paysera-plugin",
@@ -3043,22 +3075,6 @@
             "description": "This is a sylius plugin that implements the plumtreesystems/payum-paysera-gateway"
         },
         {
-            "packageName": "bitbag/mailtemplate-plugin",
-            "homepage": "https://github.com/BitBagCommerce/SyliusMailTemplatePlugin",
-            "latestTag": "v2.1.0",
-            "syliusConstraint": "~1.13.0 || ~1.14.0",
-            "constraintFrom": "sylius/sylius",
-            "supports1x": true,
-            "supports2x": false,
-            "prereleaseOnly": false,
-            "prereleaseTag": null,
-            "prereleaseSyliusConstraint": null,
-            "prereleaseConstraintFrom": null,
-            "prereleaseTargets2x": false,
-            "downloads": 13219,
-            "description": "Custom templates for Sylius mails."
-        },
-        {
             "packageName": "monsieurbiz/sylius-anti-spam-plugin",
             "homepage": "https://github.com/monsieurbiz/SyliusAntiSpamPlugin",
             "latestTag": "v2.2.0",
@@ -3071,7 +3087,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 13101,
+            "downloads": 13115,
             "description": "This plugins adds captcha and allows you to manage your spams."
         },
         {
@@ -3087,7 +3103,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 12054,
+            "downloads": 12070,
             "description": "Omnisend plugin for Sylius."
         },
         {
@@ -3103,7 +3119,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 11652,
+            "downloads": 11810,
             "description": "Save rich editor contents in database and use it as UI Element"
         },
         {
@@ -3167,7 +3183,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 11085,
+            "downloads": 11089,
             "description": "Splash Bundle for Sylius E-Commerce Solution"
         },
         {
@@ -3190,33 +3206,17 @@
             "packageName": "setono/sylius-facebook-tracking-plugin",
             "homepage": "https://github.com/Setono/SyliusFacebookPlugin",
             "latestTag": "v2.0.0",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.6",
+            "constraintFrom": "sylius/resource-bundle",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": "v3.0.0-beta",
             "prereleaseSyliusConstraint": "^1.0",
             "prereleaseConstraintFrom": "sylius/core",
             "prereleaseTargets2x": false,
-            "downloads": 10991,
+            "downloads": 10994,
             "description": "Sylius plugin that tracks visitors and sends the data to Facebook"
-        },
-        {
-            "packageName": "monsieurbiz/sylius-scripts-plugin",
-            "homepage": "https://github.com/monsieurbiz/SyliusScriptsPlugin",
-            "latestTag": "v2.0.0",
-            "syliusConstraint": "~2.0",
-            "constraintFrom": "sylius/sylius",
-            "supports1x": false,
-            "supports2x": true,
-            "prereleaseOnly": false,
-            "prereleaseTag": null,
-            "prereleaseSyliusConstraint": null,
-            "prereleaseConstraintFrom": null,
-            "prereleaseTargets2x": false,
-            "downloads": 10593,
-            "description": "Allows you to add JS scripts from the admin panel."
         },
         {
             "packageName": "monsieurbiz/sylius-robots-txt-plugin",
@@ -3231,8 +3231,24 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 10579,
+            "downloads": 10725,
             "description": "Manage your robot.txt from your Sylius admin pannel"
+        },
+        {
+            "packageName": "monsieurbiz/sylius-scripts-plugin",
+            "homepage": "https://github.com/monsieurbiz/SyliusScriptsPlugin",
+            "latestTag": "v2.0.0",
+            "syliusConstraint": "~2.0",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": false,
+            "supports2x": true,
+            "prereleaseOnly": false,
+            "prereleaseTag": null,
+            "prereleaseSyliusConstraint": null,
+            "prereleaseConstraintFrom": null,
+            "prereleaseTargets2x": false,
+            "downloads": 10626,
+            "description": "Allows you to add JS scripts from the admin panel."
         },
         {
             "packageName": "monsieurbiz/sylius-order-history-plugin",
@@ -3247,7 +3263,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 10551,
+            "downloads": 10588,
             "description": "Add a timeline with all the order events on back-office."
         },
         {
@@ -3263,7 +3279,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 10236,
+            "downloads": 10237,
             "description": "Payment fee plugin for Sylius."
         },
         {
@@ -3279,7 +3295,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 9568,
+            "downloads": 9576,
             "description": "CrossSelling plugin for Sylius applications."
         },
         {
@@ -3299,6 +3315,22 @@
             "description": "Start tracking your visitors with Plausible.io"
         },
         {
+            "packageName": "3brs/sylius-payment-fee-plugin",
+            "homepage": "https://github.com/3BRS/sylius-payment-fee-plugin",
+            "latestTag": "v2.1.0",
+            "syliusConstraint": "^2.1",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": false,
+            "supports2x": true,
+            "prereleaseOnly": false,
+            "prereleaseTag": null,
+            "prereleaseSyliusConstraint": null,
+            "prereleaseConstraintFrom": null,
+            "prereleaseTargets2x": false,
+            "downloads": 9359,
+            "description": "Payment extra fee plugin for Sylius"
+        },
+        {
             "packageName": "fifty-deg/sylius-robots-plugin",
             "homepage": "https://github.com/FiftyDeg/SyliusRobotsPlugin",
             "latestTag": "v1.0.1",
@@ -3315,22 +3347,6 @@
             "description": "Channel defined robots.txt plugin for Sylius."
         },
         {
-            "packageName": "3brs/sylius-payment-fee-plugin",
-            "homepage": "https://github.com/3BRS/sylius-payment-fee-plugin",
-            "latestTag": "v2.1.0",
-            "syliusConstraint": "^2.1",
-            "constraintFrom": "sylius/sylius",
-            "supports1x": false,
-            "supports2x": true,
-            "prereleaseOnly": false,
-            "prereleaseTag": null,
-            "prereleaseSyliusConstraint": null,
-            "prereleaseConstraintFrom": null,
-            "prereleaseTargets2x": false,
-            "downloads": 9292,
-            "description": "Payment extra fee plugin for Sylius"
-        },
-        {
             "packageName": "synolia/sylius-admin-oauth-plugin",
             "homepage": "https://github.com/synolia/SyliusAdminOAuthPlugin",
             "latestTag": "v2.0.0",
@@ -3343,7 +3359,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 9187,
+            "downloads": 9197,
             "description": "Oauth plugin for Sylius admin."
         },
         {
@@ -3359,7 +3375,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 8967,
+            "downloads": 9120,
             "description": "Add blog features on Sylius application."
         },
         {
@@ -3375,7 +3391,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 8886,
+            "downloads": 8896,
             "description": "Acme example plugin for Sylius."
         },
         {
@@ -3391,7 +3407,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 8645,
+            "downloads": 8647,
             "description": "Mercanet BNP Paribas payment plugin for Sylius applications."
         },
         {
@@ -3423,7 +3439,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 8491,
+            "downloads": 8492,
             "description": "This plugins improves the Product Options."
         },
         {
@@ -3471,7 +3487,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 7860,
+            "downloads": 7863,
             "description": "Shipping export plugin for Sylius"
         },
         {
@@ -3487,8 +3503,24 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 7503,
+            "downloads": 7511,
             "description": "A Simply Facet filter plugin for Sylius"
+        },
+        {
+            "packageName": "asdoria/sylius-locale-switcher-plugin",
+            "homepage": "https://github.com/asdoria/SyliusLocaleSwitcherPlugin",
+            "latestTag": "0.1.2",
+            "syliusConstraint": "^1.9",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "prereleaseOnly": false,
+            "prereleaseTag": null,
+            "prereleaseSyliusConstraint": null,
+            "prereleaseConstraintFrom": null,
+            "prereleaseTargets2x": false,
+            "downloads": 7278,
+            "description": "A change locale plugin for sylius"
         },
         {
             "packageName": "adexos/sylius-postgre-compatibility-plugin",
@@ -3507,22 +3539,6 @@
             "description": "PostgreSQL compatibility bundle"
         },
         {
-            "packageName": "asdoria/sylius-locale-switcher-plugin",
-            "homepage": "https://github.com/asdoria/SyliusLocaleSwitcherPlugin",
-            "latestTag": "0.1.2",
-            "syliusConstraint": "^1.9",
-            "constraintFrom": "sylius/sylius",
-            "supports1x": true,
-            "supports2x": false,
-            "prereleaseOnly": false,
-            "prereleaseTag": null,
-            "prereleaseSyliusConstraint": null,
-            "prereleaseConstraintFrom": null,
-            "prereleaseTargets2x": false,
-            "downloads": 7244,
-            "description": "A change locale plugin for sylius"
-        },
-        {
             "packageName": "jbdevlabs/sylius-cli-context-plugin",
             "homepage": "https://github.com/JBDevLabs/SyliusCliContextPlugin",
             "latestTag": "v1.4.0",
@@ -3535,7 +3551,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 7241,
+            "downloads": 7244,
             "description": "Manage easilly Sylius Context on cli command and keep performance"
         },
         {
@@ -3551,7 +3567,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 7217,
+            "downloads": 7236,
             "description": "SEO plugin for your Sylius store"
         },
         {
@@ -3567,7 +3583,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 7076,
+            "downloads": 7078,
             "description": "Up2Pay Gateway"
         },
         {
@@ -3583,7 +3599,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 6869,
+            "downloads": 6879,
             "description": "Plugin allowing to search products in Sylius."
         },
         {
@@ -3615,17 +3631,17 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 6779,
+            "downloads": 6797,
             "description": "Spinbits Google Analytics 4 plugin for Sylius."
         },
         {
             "packageName": "setono/sylius-static-contexts-bundle",
             "homepage": "https://github.com/Setono/sylius-static-contexts-bundle",
             "latestTag": "v2.0.0",
-            "syliusConstraint": null,
-            "constraintFrom": null,
+            "syliusConstraint": "^2.0",
+            "constraintFrom": "sylius/channel",
             "supports1x": false,
-            "supports2x": false,
+            "supports2x": true,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
@@ -3679,7 +3695,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 6334,
+            "downloads": 6336,
             "description": "Catalog plugin for Sylius"
         },
         {
@@ -3695,24 +3711,8 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 6287,
+            "downloads": 6290,
             "description": "Zasilkovna plugin for Sylius"
-        },
-        {
-            "packageName": "monsieurbiz/sylius-better-admin-plugin",
-            "homepage": "https://github.com/monsieurbiz/SyliusBetterAdminPlugin",
-            "latestTag": "v2.1.0",
-            "syliusConstraint": "~2.0",
-            "constraintFrom": "sylius/sylius",
-            "supports1x": false,
-            "supports2x": true,
-            "prereleaseOnly": false,
-            "prereleaseTag": null,
-            "prereleaseSyliusConstraint": null,
-            "prereleaseConstraintFrom": null,
-            "prereleaseTargets2x": false,
-            "downloads": 6101,
-            "description": "Manage your logos, colors and backgrounds with settings in Sylius Admin pannel"
         },
         {
             "packageName": "3brs/sylius-sorting-plugin",
@@ -3727,24 +3727,24 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 6082,
+            "downloads": 6189,
             "description": "Sorting plugin for Sylius"
         },
         {
-            "packageName": "odiseoteam/sylius-mercado-pago-plugin",
-            "homepage": "https://github.com/odiseoteam/SyliusMercadoPagoPlugin",
-            "latestTag": "v1.1.0",
-            "syliusConstraint": "^1.12",
+            "packageName": "monsieurbiz/sylius-better-admin-plugin",
+            "homepage": "https://github.com/monsieurbiz/SyliusBetterAdminPlugin",
+            "latestTag": "v2.1.0",
+            "syliusConstraint": "~2.0",
             "constraintFrom": "sylius/sylius",
-            "supports1x": true,
-            "supports2x": false,
+            "supports1x": false,
+            "supports2x": true,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 5998,
-            "description": "Plugin for Sylius to add Mercado Pago payment method"
+            "downloads": 6105,
+            "description": "Manage your logos, colors and backgrounds with settings in Sylius Admin pannel"
         },
         {
             "packageName": "locastic/sylius-translation-plugin",
@@ -3759,8 +3759,24 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 5996,
+            "downloads": 6004,
             "description": "A plugin for exposing translations in admin."
+        },
+        {
+            "packageName": "odiseoteam/sylius-mercado-pago-plugin",
+            "homepage": "https://github.com/odiseoteam/SyliusMercadoPagoPlugin",
+            "latestTag": "v1.1.0",
+            "syliusConstraint": "^1.12",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "prereleaseOnly": false,
+            "prereleaseTag": null,
+            "prereleaseSyliusConstraint": null,
+            "prereleaseConstraintFrom": null,
+            "prereleaseTargets2x": false,
+            "downloads": 6003,
+            "description": "Plugin for Sylius to add Mercado Pago payment method"
         },
         {
             "packageName": "czende/gopay-plugin",
@@ -3775,7 +3791,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 5795,
+            "downloads": 5798,
             "description": "GoPay payment gateway plugin for Sylius applications."
         },
         {
@@ -3814,16 +3830,16 @@
             "packageName": "flux-se/sylius-hcaptcha-plugin",
             "homepage": "https://github.com/FLUX-SE/SyliusHCaptchaPlugin",
             "latestTag": "v1.0.2",
-            "syliusConstraint": null,
-            "constraintFrom": null,
+            "syliusConstraint": "^2.0",
+            "constraintFrom": "sylius/shop-bundle",
             "supports1x": false,
-            "supports2x": false,
+            "supports2x": true,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 5491,
+            "downloads": 5526,
             "description": "Plugin adding the hCaptcha field to some frontend FormType of Sylius"
         },
         {
@@ -3871,7 +3887,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 5286,
+            "downloads": 5288,
             "description": "Plugin that enable UniCredit Bulbank PagOnline Imprese payment provider"
         },
         {
@@ -3935,23 +3951,23 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 4997,
+            "downloads": 5009,
             "description": "Byrd shipping export plugin for Sylius based applications."
         },
         {
             "packageName": "setono/sylius-webhook-plugin",
             "homepage": "https://github.com/Setono/SyliusWebhookPlugin",
             "latestTag": "v0.1.0",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.6",
+            "constraintFrom": "sylius/resource-bundle",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 4859,
+            "downloads": 4864,
             "description": "Handle webhooks in your Sylius store"
         },
         {
@@ -4047,24 +4063,8 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 4253,
+            "downloads": 4262,
             "description": "Sylius Prometheus Metrics Plugin"
-        },
-        {
-            "packageName": "whatwedo/sylius-datatrans-payment-plugin",
-            "homepage": "https://github.com/whatwedo/SyliusDatatransPaymentPlugin",
-            "latestTag": "v2.0.1",
-            "syliusConstraint": ">=1.7.5",
-            "constraintFrom": "sylius/sylius",
-            "supports1x": true,
-            "supports2x": true,
-            "prereleaseOnly": false,
-            "prereleaseTag": null,
-            "prereleaseSyliusConstraint": null,
-            "prereleaseConstraintFrom": null,
-            "prereleaseTargets2x": false,
-            "downloads": 4109,
-            "description": "Datatrans payment integration for your sylius e-commerce project."
         },
         {
             "packageName": "sylius/product-bundle-plugin",
@@ -4079,8 +4079,24 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 4097,
+            "downloads": 4250,
             "description": "Product bundle for Sylius."
+        },
+        {
+            "packageName": "whatwedo/sylius-datatrans-payment-plugin",
+            "homepage": "https://github.com/whatwedo/SyliusDatatransPaymentPlugin",
+            "latestTag": "v2.0.1",
+            "syliusConstraint": ">=1.7.5",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": true,
+            "prereleaseOnly": false,
+            "prereleaseTag": null,
+            "prereleaseSyliusConstraint": null,
+            "prereleaseConstraintFrom": null,
+            "prereleaseTargets2x": false,
+            "downloads": 4112,
+            "description": "Datatrans payment integration for your sylius e-commerce project."
         },
         {
             "packageName": "magentix/sylius-pickup-plugin",
@@ -4099,22 +4115,6 @@
             "description": "Pickup Shipping plugin for Sylius."
         },
         {
-            "packageName": "bitbag/inpost-plugin",
-            "homepage": "https://github.com/BitBagCommerce/SyliusInPostPlugin",
-            "latestTag": "v2.2.1",
-            "syliusConstraint": "~1.12.0 || ~1.13.0",
-            "constraintFrom": "sylius/sylius",
-            "supports1x": true,
-            "supports2x": false,
-            "prereleaseOnly": false,
-            "prereleaseTag": null,
-            "prereleaseSyliusConstraint": null,
-            "prereleaseConstraintFrom": null,
-            "prereleaseTargets2x": false,
-            "downloads": 3868,
-            "description": "InPost plugin for Sylius"
-        },
-        {
             "packageName": "3brs/sylius-shipment-export-plugin",
             "homepage": "https://github.com/3BRS/sylius-shipment-export-plugin",
             "latestTag": "v2.0.0",
@@ -4127,8 +4127,24 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 3846,
+            "downloads": 3886,
             "description": "Shipping export plugin for Sylius"
+        },
+        {
+            "packageName": "bitbag/inpost-plugin",
+            "homepage": "https://github.com/BitBagCommerce/SyliusInPostPlugin",
+            "latestTag": "v2.2.1",
+            "syliusConstraint": "~1.12.0 || ~1.13.0",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "prereleaseOnly": false,
+            "prereleaseTag": null,
+            "prereleaseSyliusConstraint": null,
+            "prereleaseConstraintFrom": null,
+            "prereleaseTargets2x": false,
+            "downloads": 3869,
+            "description": "InPost plugin for Sylius"
         },
         {
             "packageName": "webgriffe/sylius-pagolight-plugin",
@@ -4175,8 +4191,24 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 3615,
+            "downloads": 3617,
             "description": "Allows you promotions after tax and multi coupon."
+        },
+        {
+            "packageName": "sylius/pdf-generation-bundle",
+            "homepage": "https://github.com/Sylius/PdfGenerationBundle",
+            "latestTag": "v1.0.0",
+            "syliusConstraint": null,
+            "constraintFrom": null,
+            "supports1x": false,
+            "supports2x": false,
+            "prereleaseOnly": false,
+            "prereleaseTag": null,
+            "prereleaseSyliusConstraint": null,
+            "prereleaseConstraintFrom": null,
+            "prereleaseTargets2x": false,
+            "downloads": 3591,
+            "description": "PDF generation bundle with swappable renderer abstraction."
         },
         {
             "packageName": "lakion/cms-plugin",
@@ -4223,7 +4255,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 3399,
+            "downloads": 3415,
             "description": ""
         },
         {
@@ -4239,7 +4271,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 3342,
+            "downloads": 3362,
             "description": "System Pay payment plugin for Sylius applications."
         },
         {
@@ -4271,8 +4303,24 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 3239,
+            "downloads": 3254,
             "description": "Easy CRUD plugin for Sylius."
+        },
+        {
+            "packageName": "commerce-weavers/no-telemetry",
+            "homepage": "https://github.com/CommerceWeavers/NoTelemetry",
+            "latestTag": "v1.0.1",
+            "syliusConstraint": null,
+            "constraintFrom": null,
+            "supports1x": false,
+            "supports2x": false,
+            "prereleaseOnly": false,
+            "prereleaseTag": null,
+            "prereleaseSyliusConstraint": null,
+            "prereleaseConstraintFrom": null,
+            "prereleaseTargets2x": false,
+            "downloads": 3210,
+            "description": "Telemetry deintegration for official Sylius plugins"
         },
         {
             "packageName": "magentix/sylius-mondial-relay-plugin",
@@ -4291,6 +4339,22 @@
             "description": "Mondial Relay Shipping plugin for Sylius."
         },
         {
+            "packageName": "gl-events/sylius-admin-saml-plugin",
+            "homepage": "https://github.com/GL-EVENTS/SyliusAdminSamlPlugin",
+            "latestTag": "1.0.9",
+            "syliusConstraint": "~1.12",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "prereleaseOnly": false,
+            "prereleaseTag": null,
+            "prereleaseSyliusConstraint": null,
+            "prereleaseConstraintFrom": null,
+            "prereleaseTargets2x": false,
+            "downloads": 3019,
+            "description": "SAML auth SSO plugin for Sylius."
+        },
+        {
             "packageName": "waaz/axepta-plugin",
             "homepage": "https://github.com/StudioWaaz/WaazAxeptaPlugin",
             "latestTag": "2.4",
@@ -4307,22 +4371,6 @@
             "description": "Axepta payment plugin for Sylius"
         },
         {
-            "packageName": "gl-events/sylius-admin-saml-plugin",
-            "homepage": "https://github.com/GL-EVENTS/SyliusAdminSamlPlugin",
-            "latestTag": "1.0.9",
-            "syliusConstraint": "~1.12",
-            "constraintFrom": "sylius/sylius",
-            "supports1x": true,
-            "supports2x": false,
-            "prereleaseOnly": false,
-            "prereleaseTag": null,
-            "prereleaseSyliusConstraint": null,
-            "prereleaseConstraintFrom": null,
-            "prereleaseTargets2x": false,
-            "downloads": 3003,
-            "description": "SAML auth SSO plugin for Sylius."
-        },
-        {
             "packageName": "asdoria/sylius-quick-shopping-plugin",
             "homepage": "https://github.com/asdoria/AsdoriaSyliusQuickShoppingPlugin",
             "latestTag": "0.1.5",
@@ -4335,40 +4383,8 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 2979,
+            "downloads": 2989,
             "description": "A Add multiple products to your shopping cart"
-        },
-        {
-            "packageName": "commerce-weavers/no-telemetry",
-            "homepage": "https://github.com/CommerceWeavers/NoTelemetry",
-            "latestTag": "v1.0.1",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
-            "supports2x": false,
-            "prereleaseOnly": false,
-            "prereleaseTag": null,
-            "prereleaseSyliusConstraint": null,
-            "prereleaseConstraintFrom": null,
-            "prereleaseTargets2x": false,
-            "downloads": 2977,
-            "description": "Telemetry deintegration for official Sylius plugins"
-        },
-        {
-            "packageName": "sylius/pdf-generation-bundle",
-            "homepage": "https://github.com/Sylius/PdfGenerationBundle",
-            "latestTag": "v1.0.0",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
-            "supports2x": false,
-            "prereleaseOnly": false,
-            "prereleaseTag": null,
-            "prereleaseSyliusConstraint": null,
-            "prereleaseConstraintFrom": null,
-            "prereleaseTargets2x": false,
-            "downloads": 2899,
-            "description": "PDF generation bundle with swappable renderer abstraction."
         },
         {
             "packageName": "commerce-weavers/sylius-saferpay-plugin",
@@ -4383,7 +4399,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 2811,
+            "downloads": 2827,
             "description": "Integration with Worldline Saferpay for Sylius"
         },
         {
@@ -4399,7 +4415,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 2768,
+            "downloads": 2779,
             "description": "Bridge's Sylius payment plugin by bank wire transfer"
         },
         {
@@ -4415,7 +4431,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 2676,
+            "downloads": 2707,
             "description": "Sylius Force Login Plugin"
         },
         {
@@ -4431,7 +4447,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 2634,
+            "downloads": 2667,
             "description": "Sylius connector for Gally"
         },
         {
@@ -4447,24 +4463,8 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 2570,
+            "downloads": 2586,
             "description": "Sylius plugin that enables order reordering for a customer"
-        },
-        {
-            "packageName": "akki-team/sylius-settable-locale-plugin",
-            "homepage": "https://github.com/akki-team/sylius-settable-locale-plugin",
-            "latestTag": "1.1.0",
-            "syliusConstraint": "^1.11 || ^1.12 || ^1.13 || ^1.14",
-            "constraintFrom": "sylius/sylius",
-            "supports1x": true,
-            "supports2x": false,
-            "prereleaseOnly": false,
-            "prereleaseTag": null,
-            "prereleaseSyliusConstraint": null,
-            "prereleaseConstraintFrom": null,
-            "prereleaseTargets2x": false,
-            "downloads": 2505,
-            "description": ""
         },
         {
             "packageName": "sylius/mcp-server-plugin",
@@ -4479,8 +4479,24 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 2500,
+            "downloads": 2563,
             "description": "Sylius MCP Server Plugin"
+        },
+        {
+            "packageName": "akki-team/sylius-settable-locale-plugin",
+            "homepage": "https://github.com/akki-team/sylius-settable-locale-plugin",
+            "latestTag": "1.1.0",
+            "syliusConstraint": "^1.11 || ^1.12 || ^1.13 || ^1.14",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "prereleaseOnly": false,
+            "prereleaseTag": null,
+            "prereleaseSyliusConstraint": null,
+            "prereleaseConstraintFrom": null,
+            "prereleaseTargets2x": false,
+            "downloads": 2521,
+            "description": ""
         },
         {
             "packageName": "akki-team/sylius-messenger-plugin",
@@ -4495,7 +4511,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 2500,
+            "downloads": 2516,
             "description": ""
         },
         {
@@ -4511,7 +4527,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 2499,
+            "downloads": 2509,
             "description": "Baselinker Plugin for Sylius."
         },
         {
@@ -4527,7 +4543,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 2412,
+            "downloads": 2414,
             "description": "Plugin allowing to manage Store menus from the Back Office in Sylius"
         },
         {
@@ -4563,6 +4579,22 @@
             "description": "Translation plugin for Sylius."
         },
         {
+            "packageName": "commerce-weavers/sylius-tpay-plugin",
+            "homepage": "https://github.com/CommerceWeavers/SyliusTpayPlugin",
+            "latestTag": "v3.0.0",
+            "syliusConstraint": "^2.0",
+            "constraintFrom": "sylius/core-bundle",
+            "supports1x": false,
+            "supports2x": true,
+            "prereleaseOnly": false,
+            "prereleaseTag": null,
+            "prereleaseSyliusConstraint": null,
+            "prereleaseConstraintFrom": null,
+            "prereleaseTargets2x": false,
+            "downloads": 2321,
+            "description": "Tpay integration for Sylius"
+        },
+        {
             "packageName": "bitbag/product-attribute-groups-plugin",
             "homepage": "https://github.com/BitBagCommerce/SyliusProductAttributeGroupsPlugin",
             "latestTag": "v2.1.1",
@@ -4579,22 +4611,6 @@
             "description": "Plugin which adds possibility to create groups of product attributes"
         },
         {
-            "packageName": "commerce-weavers/sylius-tpay-plugin",
-            "homepage": "https://github.com/CommerceWeavers/SyliusTpayPlugin",
-            "latestTag": "v3.0.0",
-            "syliusConstraint": "^2.0",
-            "constraintFrom": "sylius/core-bundle",
-            "supports1x": false,
-            "supports2x": true,
-            "prereleaseOnly": false,
-            "prereleaseTag": null,
-            "prereleaseSyliusConstraint": null,
-            "prereleaseConstraintFrom": null,
-            "prereleaseTargets2x": false,
-            "downloads": 2284,
-            "description": "Tpay integration for Sylius"
-        },
-        {
             "packageName": "bitexpert/phpstan-sylius",
             "homepage": "https://github.com/bitExpert/phpstan-sylius",
             "latestTag": "v0.3.0",
@@ -4607,7 +4623,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 2243,
+            "downloads": 2301,
             "description": "Sylius extensions and rules for PHPStan"
         },
         {
@@ -4623,7 +4639,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 2152,
+            "downloads": 2158,
             "description": "Setono example plugin for Sylius."
         },
         {
@@ -4639,8 +4655,24 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 2014,
+            "downloads": 2015,
             "description": "A Sylius plugin that allows products with deposit price"
+        },
+        {
+            "packageName": "sylius/import-export-bundle",
+            "homepage": "https://github.com/Sylius/ImportExportBundle",
+            "latestTag": "v0.2.1",
+            "syliusConstraint": "^1.13",
+            "constraintFrom": "sylius/grid-bundle",
+            "supports1x": true,
+            "supports2x": false,
+            "prereleaseOnly": false,
+            "prereleaseTag": null,
+            "prereleaseSyliusConstraint": null,
+            "prereleaseConstraintFrom": null,
+            "prereleaseTargets2x": false,
+            "downloads": 2009,
+            "description": "The ImportExportBundle allows for easy and decoupled data migration to and from various mediums"
         },
         {
             "packageName": "sylius/adyen-plugin",
@@ -4655,24 +4687,8 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 1979,
+            "downloads": 1994,
             "description": "Adyen payment plugin for Sylius applications."
-        },
-        {
-            "packageName": "babdev/supplier-plugin",
-            "homepage": "https://github.com/BabDev/supplier-plugin",
-            "latestTag": "v0.1.0",
-            "syliusConstraint": "^1.0.4",
-            "constraintFrom": "sylius/sylius",
-            "supports1x": true,
-            "supports2x": false,
-            "prereleaseOnly": false,
-            "prereleaseTag": null,
-            "prereleaseSyliusConstraint": null,
-            "prereleaseConstraintFrom": null,
-            "prereleaseTargets2x": false,
-            "downloads": 1964,
-            "description": "Supplier processing for Sylius."
         },
         {
             "packageName": "webburza/sylius-wishlist-bundle",
@@ -4691,20 +4707,20 @@
             "description": "Wishlist plugin for Sylius e-commerce platform."
         },
         {
-            "packageName": "sylius/import-export-bundle",
-            "homepage": "https://github.com/Sylius/ImportExportBundle",
-            "latestTag": "v0.2.1",
-            "syliusConstraint": null,
-            "constraintFrom": null,
+            "packageName": "sylius/legacy-shop-bridge-plugin",
+            "homepage": "https://github.com/Sylius/LegacyShopBridgePlugin",
+            "latestTag": "v0.1.3",
+            "syliusConstraint": "^2.0",
+            "constraintFrom": "sylius/sylius",
             "supports1x": false,
-            "supports2x": false,
+            "supports2x": true,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 1916,
-            "description": "The ImportExportBundle allows for easy and decoupled data migration to and from various mediums"
+            "downloads": 1914,
+            "description": "Legacy Shop Bridge plugin for Sylius."
         },
         {
             "packageName": "bitbag/dhl24-pl-shipping-export-plugin",
@@ -4723,22 +4739,6 @@
             "description": "DHL24 PL shipping export plugin for Sylius based applications."
         },
         {
-            "packageName": "sylius/legacy-shop-bridge-plugin",
-            "homepage": "https://github.com/Sylius/LegacyShopBridgePlugin",
-            "latestTag": "v0.1.3",
-            "syliusConstraint": "^2.0",
-            "constraintFrom": "sylius/sylius",
-            "supports1x": false,
-            "supports2x": true,
-            "prereleaseOnly": false,
-            "prereleaseTag": null,
-            "prereleaseSyliusConstraint": null,
-            "prereleaseConstraintFrom": null,
-            "prereleaseTargets2x": false,
-            "downloads": 1901,
-            "description": "Legacy Shop Bridge plugin for Sylius."
-        },
-        {
             "packageName": "nextstore/sylius-gift-card-plugin",
             "homepage": "https://github.com/nextstore-bundles/NextstoreGiftCardPlugin",
             "latestTag": "v0.1.66",
@@ -4751,7 +4751,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 1901,
+            "downloads": 1907,
             "description": ""
         },
         {
@@ -4783,7 +4783,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 1830,
+            "downloads": 1833,
             "description": "Payment plugin to allow redys payments in redsys."
         },
         {
@@ -4815,7 +4815,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 1789,
+            "downloads": 1791,
             "description": "Sylius plugin for SherlockodeAdvancedContentBundle"
         },
         {
@@ -4847,7 +4847,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 1688,
+            "downloads": 1710,
             "description": "Highlighting Twig hooks in your Sylius project."
         },
         {
@@ -4863,7 +4863,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 1651,
+            "downloads": 1657,
             "description": "Credit notes plugin for Sylius."
         },
         {
@@ -4879,7 +4879,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 1644,
+            "downloads": 1647,
             "description": "Imoje plugin for Sylius."
         },
         {
@@ -4911,7 +4911,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 1526,
+            "downloads": 1527,
             "description": "Sylius backend integration for Vue Storefront 2"
         },
         {
@@ -4943,7 +4943,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 1421,
+            "downloads": 1438,
             "description": "Translation plugin for Sylius."
         },
         {
@@ -4959,8 +4959,24 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 1373,
+            "downloads": 1374,
             "description": "Colissimo plugin for Sylius."
+        },
+        {
+            "packageName": "3brs/sylius-packeta-plugin",
+            "homepage": "https://github.com/3BRS/sylius-packeta-plugin",
+            "latestTag": "v5.0.0",
+            "syliusConstraint": "^2.1",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": false,
+            "supports2x": true,
+            "prereleaseOnly": false,
+            "prereleaseTag": null,
+            "prereleaseSyliusConstraint": null,
+            "prereleaseConstraintFrom": null,
+            "prereleaseTargets2x": false,
+            "downloads": 1332,
+            "description": "Packeta plugin for Sylius"
         },
         {
             "packageName": "abenmada/sylius-translation-plugin",
@@ -4993,22 +5009,6 @@
             "prereleaseTargets2x": false,
             "downloads": 1311,
             "description": "Add a settings panel to your Sylius."
-        },
-        {
-            "packageName": "3brs/sylius-packeta-plugin",
-            "homepage": "https://github.com/3BRS/sylius-packeta-plugin",
-            "latestTag": "v5.0.0",
-            "syliusConstraint": "^2.1",
-            "constraintFrom": "sylius/sylius",
-            "supports1x": false,
-            "supports2x": true,
-            "prereleaseOnly": false,
-            "prereleaseTag": null,
-            "prereleaseSyliusConstraint": null,
-            "prereleaseConstraintFrom": null,
-            "prereleaseTargets2x": false,
-            "downloads": 1298,
-            "description": "Packeta plugin for Sylius"
         },
         {
             "packageName": "odiseoteam/sylius-geo-plugin",
@@ -5046,9 +5046,9 @@
             "packageName": "setono/sylius-algolia-plugin",
             "homepage": "https://github.com/Setono/SyliusAlgoliaPlugin",
             "latestTag": "v0.1.1",
-            "syliusConstraint": null,
-            "constraintFrom": null,
-            "supports1x": false,
+            "syliusConstraint": "^1.6",
+            "constraintFrom": "sylius/resource-bundle",
+            "supports1x": true,
             "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
@@ -5103,7 +5103,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 1050,
+            "downloads": 1052,
             "description": ""
         },
         {
@@ -5167,7 +5167,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 769,
+            "downloads": 799,
             "description": "Sylius 2FA Plugin"
         },
         {
@@ -5203,22 +5203,6 @@
             "description": "DPD PL shipping export plugin for Sylius based applications."
         },
         {
-            "packageName": "3brs/sylius-zasilkovna-plugin",
-            "homepage": "https://github.com/3BRS/sylius-zasilkovna-plugin",
-            "latestTag": "v3.3.0",
-            "syliusConstraint": "1.12.*|1.13.*|1.14.*",
-            "constraintFrom": "sylius/sylius",
-            "supports1x": true,
-            "supports2x": false,
-            "prereleaseOnly": false,
-            "prereleaseTag": null,
-            "prereleaseSyliusConstraint": null,
-            "prereleaseConstraintFrom": null,
-            "prereleaseTargets2x": false,
-            "downloads": 745,
-            "description": "Zasilkovna plugin for Sylius"
-        },
-        {
             "packageName": "magenable/sylius-top-bar-notification-plugin",
             "homepage": "https://github.com/magenable/sylius-top-bar-notification-plugin",
             "latestTag": "1.0.1",
@@ -5231,8 +5215,24 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 734,
+            "downloads": 747,
             "description": "A plugin for Sylius which displays top bar notifications on the shop"
+        },
+        {
+            "packageName": "3brs/sylius-zasilkovna-plugin",
+            "homepage": "https://github.com/3BRS/sylius-zasilkovna-plugin",
+            "latestTag": "v3.3.0",
+            "syliusConstraint": "1.12.*|1.13.*|1.14.*",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "prereleaseOnly": false,
+            "prereleaseTag": null,
+            "prereleaseSyliusConstraint": null,
+            "prereleaseConstraintFrom": null,
+            "prereleaseTargets2x": false,
+            "downloads": 747,
+            "description": "Zasilkovna plugin for Sylius"
         },
         {
             "packageName": "asdoria/sylius-configurator-plugin",
@@ -5263,7 +5263,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 710,
+            "downloads": 711,
             "description": "Simple DPD REST Plugin for Sylius"
         },
         {
@@ -5279,7 +5279,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 694,
+            "downloads": 697,
             "description": "Sylius plugin for Soge commerce payment method by AKAWAKA."
         },
         {
@@ -5343,7 +5343,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 588,
+            "downloads": 590,
             "description": "GoPay payment gateway plugin using Payum config for Sylius applications."
         },
         {
@@ -5361,6 +5361,22 @@
             "prereleaseTargets2x": false,
             "downloads": 530,
             "description": "Integrate Matomo ecommerce tracking into Sylius."
+        },
+        {
+            "packageName": "softylines/mvm-rbac",
+            "homepage": "https://github.com/softylines/mvm-rbac",
+            "latestTag": "v1.6.1",
+            "syliusConstraint": "^2.1",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": false,
+            "supports2x": true,
+            "prereleaseOnly": false,
+            "prereleaseTag": null,
+            "prereleaseSyliusConstraint": null,
+            "prereleaseConstraintFrom": null,
+            "prereleaseTargets2x": false,
+            "downloads": 515,
+            "description": "Sylius roles and permissions management plugin"
         },
         {
             "packageName": "setono/sylius-age-verification-plugin",
@@ -5395,9 +5411,9 @@
             "description": "Asdoria Pickup point plugin for Sylius"
         },
         {
-            "packageName": "softylines/mvm-rbac",
-            "homepage": "https://github.com/softylines/mvm-rbac",
-            "latestTag": "v1.6.1",
+            "packageName": "softylines/wishlist-plugin",
+            "homepage": "https://github.com/ahmedazizabbassi/SyliusWishlistPlugin",
+            "latestTag": "v5.1.1",
             "syliusConstraint": "^2.1",
             "constraintFrom": "sylius/sylius",
             "supports1x": false,
@@ -5407,8 +5423,8 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 507,
-            "description": "Sylius roles and permissions management plugin"
+            "downloads": 496,
+            "description": "Wishlist plugin for Sylius."
         },
         {
             "packageName": "urbitech/sylius-product-variant-attribute-plugin",
@@ -5443,22 +5459,6 @@
             "description": "Sylius plugin to integrate CMI as payment method to sylius shop."
         },
         {
-            "packageName": "softylines/wishlist-plugin",
-            "homepage": "https://github.com/ahmedazizabbassi/SyliusWishlistPlugin",
-            "latestTag": "v5.1.1",
-            "syliusConstraint": "^2.1",
-            "constraintFrom": "sylius/sylius",
-            "supports1x": false,
-            "supports2x": true,
-            "prereleaseOnly": false,
-            "prereleaseTag": null,
-            "prereleaseSyliusConstraint": null,
-            "prereleaseConstraintFrom": null,
-            "prereleaseTargets2x": false,
-            "downloads": 488,
-            "description": "Wishlist plugin for Sylius."
-        },
-        {
             "packageName": "agence-adeliom/sylius-happy-cms-plugin",
             "homepage": "https://github.com/agence-adeliom/sylius-happy-cms-plugin",
             "latestTag": "v2.1.1",
@@ -5471,7 +5471,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 452,
+            "downloads": 466,
             "description": "A simple lightweight CMS bundle for Symfony Sylius"
         },
         {
@@ -5567,7 +5567,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 385,
+            "downloads": 391,
             "description": "DHL shipping export plugin for Sylius."
         },
         {
@@ -5699,6 +5699,22 @@
             "description": "This is internal package, will broke your code"
         },
         {
+            "packageName": "arobases/sylius-rights-management-plugin",
+            "homepage": "https://github.com/Arobases-Sylius-Plugins/ArobasesSyliusRightsManagementPlugin",
+            "latestTag": "2.0.1",
+            "syliusConstraint": "^1.10",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": true,
+            "supports2x": false,
+            "prereleaseOnly": false,
+            "prereleaseTag": null,
+            "prereleaseSyliusConstraint": null,
+            "prereleaseConstraintFrom": null,
+            "prereleaseTargets2x": false,
+            "downloads": 298,
+            "description": "This plugin allows you to manage the rights and roles of administrator users"
+        },
+        {
             "packageName": "lake-dynamics/sylius-monetico-plugin",
             "homepage": "https://github.com/lake-dynamics/SyliusMoneticoPlugin",
             "latestTag": "v1.3.1",
@@ -5715,22 +5731,6 @@
             "description": "Sylius plugin for Monetico payment gateway integration."
         },
         {
-            "packageName": "arobases/sylius-rights-management-plugin",
-            "homepage": "https://github.com/Arobases-Sylius-Plugins/ArobasesSyliusRightsManagementPlugin",
-            "latestTag": "2.0.1",
-            "syliusConstraint": "^1.10",
-            "constraintFrom": "sylius/sylius",
-            "supports1x": true,
-            "supports2x": false,
-            "prereleaseOnly": false,
-            "prereleaseTag": null,
-            "prereleaseSyliusConstraint": null,
-            "prereleaseConstraintFrom": null,
-            "prereleaseTargets2x": false,
-            "downloads": 292,
-            "description": "This plugin allows you to manage the rights and roles of administrator users"
-        },
-        {
             "packageName": "bitbag/multicart-plugin",
             "homepage": "https://github.com/BitBagCommerce/SyliusMulticartPlugin",
             "latestTag": "v1.1.0",
@@ -5743,7 +5743,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 269,
+            "downloads": 280,
             "description": "BitBag multi cart plugin for sylius"
         },
         {
@@ -5759,7 +5759,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 266,
+            "downloads": 269,
             "description": "Sulu CMS plugin for Sylius applications."
         },
         {
@@ -5791,7 +5791,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 239,
+            "downloads": 244,
             "description": "Contact form plugin for Sylius."
         },
         {
@@ -5823,7 +5823,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 226,
+            "downloads": 227,
             "description": "Tailwindcss and daisyUI Theme for Sylius"
         },
         {
@@ -5855,7 +5855,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 204,
+            "downloads": 205,
             "description": ""
         },
         {
@@ -5903,7 +5903,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 182,
+            "downloads": 185,
             "description": "PPL parcelshops plugin for Sylius"
         },
         {
@@ -5921,6 +5921,22 @@
             "prereleaseTargets2x": false,
             "downloads": 179,
             "description": "The Backoffice plugin allows you to change back office color and channel logo"
+        },
+        {
+            "packageName": "abderrahimghazali/sylius-workflow-plugin",
+            "homepage": "https://github.com/abderrahimghazali/sylius-workflow-plugin",
+            "latestTag": "v2.0.0",
+            "syliusConstraint": "^2.1",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": false,
+            "supports2x": true,
+            "prereleaseOnly": false,
+            "prereleaseTag": null,
+            "prereleaseSyliusConstraint": null,
+            "prereleaseConstraintFrom": null,
+            "prereleaseTargets2x": false,
+            "downloads": 171,
+            "description": "Visual marketing automation with node-based canvas for Sylius 2.x"
         },
         {
             "packageName": "4c0n/sylius-barcode-search-plugin",
@@ -5987,22 +6003,6 @@
             "description": "Orders plugin for Sylius."
         },
         {
-            "packageName": "abderrahimghazali/sylius-workflow-plugin",
-            "homepage": "https://github.com/abderrahimghazali/sylius-workflow-plugin",
-            "latestTag": "v2.0.0",
-            "syliusConstraint": "^2.1",
-            "constraintFrom": "sylius/sylius",
-            "supports1x": false,
-            "supports2x": true,
-            "prereleaseOnly": false,
-            "prereleaseTag": null,
-            "prereleaseSyliusConstraint": null,
-            "prereleaseConstraintFrom": null,
-            "prereleaseTargets2x": false,
-            "downloads": 150,
-            "description": "Visual marketing automation with node-based canvas for Sylius 2.x"
-        },
-        {
             "packageName": "arobases-sylius-public/sylius-customer-support-plugin",
             "homepage": "https://github.com/Arobases-Sylius-Plugins/ArobasesSyliusCustomerSupportPlugin",
             "latestTag": "2.0.0",
@@ -6015,7 +6015,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 142,
+            "downloads": 143,
             "description": "Plugin allowing to users to open tickets for their orders and the administrator can manage and respond to them in the back office on Sylius"
         },
         {
@@ -6047,7 +6047,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 115,
+            "downloads": 118,
             "description": "GPWebpay payment gateway plugin for Sylius"
         },
         {
@@ -6079,8 +6079,24 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 95,
+            "downloads": 100,
             "description": "Mondial Relay pickup point shipping integration for Sylius 2"
+        },
+        {
+            "packageName": "3brs/sylius-documentation-plugin",
+            "homepage": "https://github.com/3BRS/sylius-documentation-plugin",
+            "latestTag": "2.3.0",
+            "syliusConstraint": "^2.1",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": false,
+            "supports2x": true,
+            "prereleaseOnly": false,
+            "prereleaseTag": null,
+            "prereleaseSyliusConstraint": null,
+            "prereleaseConstraintFrom": null,
+            "prereleaseTargets2x": false,
+            "downloads": 91,
+            "description": "Documentation plugin for Sylius Admin Panel."
         },
         {
             "packageName": "waaz/sylius-dpd-plugin",
@@ -6115,22 +6131,6 @@
             "description": "Catalog promotion extension for Sylius."
         },
         {
-            "packageName": "3brs/sylius-documentation-plugin",
-            "homepage": "https://github.com/3BRS/sylius-documentation-plugin",
-            "latestTag": "2.3.0",
-            "syliusConstraint": "^2.1",
-            "constraintFrom": "sylius/sylius",
-            "supports1x": false,
-            "supports2x": true,
-            "prereleaseOnly": false,
-            "prereleaseTag": null,
-            "prereleaseSyliusConstraint": null,
-            "prereleaseConstraintFrom": null,
-            "prereleaseTargets2x": false,
-            "downloads": 86,
-            "description": "Documentation plugin for Sylius Admin Panel."
-        },
-        {
             "packageName": "commerce-weavers/sylius-billink-plugin",
             "homepage": "https://github.com/CommerceWeavers/SyliusBillinkPlugin",
             "latestTag": "v2.0",
@@ -6143,7 +6143,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 75,
+            "downloads": 79,
             "description": "Billink integration for Sylius"
         },
         {
@@ -6351,7 +6351,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 30,
+            "downloads": 31,
             "description": "SyliusETL plugin for Sylius"
         },
         {
@@ -6383,7 +6383,7 @@
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
-            "downloads": 27,
+            "downloads": 29,
             "description": "Google Tag Manager integration for Sylius 2.x"
         },
         {
@@ -6467,22 +6467,6 @@
             "description": ""
         },
         {
-            "packageName": "tulik/sylius-better-seo-plugin",
-            "homepage": "https://github.com/tulik/SyliusBetterSeoPlugin",
-            "latestTag": "v1.0.2",
-            "syliusConstraint": "^1.4",
-            "constraintFrom": "sylius/sylius",
-            "supports1x": true,
-            "supports2x": false,
-            "prereleaseOnly": false,
-            "prereleaseTag": null,
-            "prereleaseSyliusConstraint": null,
-            "prereleaseConstraintFrom": null,
-            "prereleaseTargets2x": false,
-            "downloads": 9,
-            "description": "Support for SEO metadata on products"
-        },
-        {
             "packageName": "iam-sayco/sylius-mautic-plugin",
             "homepage": "https://github.com/iam-sayco/SyliusMauticPlugin",
             "latestTag": "0.1.0",
@@ -6529,6 +6513,38 @@
             "prereleaseTargets2x": false,
             "downloads": 6,
             "description": "The Media plugin provides a library to manage your media"
+        },
+        {
+            "packageName": "hipay/hipay-payments-sylius",
+            "homepage": "https://github.com/hipay/hipay-payments-sylius",
+            "latestTag": "v1.0.1",
+            "syliusConstraint": "^2.0",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": false,
+            "supports2x": true,
+            "prereleaseOnly": false,
+            "prereleaseTag": null,
+            "prereleaseSyliusConstraint": null,
+            "prereleaseConstraintFrom": null,
+            "prereleaseTargets2x": false,
+            "downloads": 5,
+            "description": "HiPay payment plugin for Sylius applications"
+        },
+        {
+            "packageName": "guiziweb/sylius-grid-assistant-plugin",
+            "homepage": "https://github.com/Guiziweb/GuiziwebSyliusGridAssistantPlugin",
+            "latestTag": "v0.3.0",
+            "syliusConstraint": "^2.1",
+            "constraintFrom": "sylius/sylius",
+            "supports1x": false,
+            "supports2x": true,
+            "prereleaseOnly": false,
+            "prereleaseTag": null,
+            "prereleaseSyliusConstraint": null,
+            "prereleaseConstraintFrom": null,
+            "prereleaseTargets2x": false,
+            "downloads": 5,
+            "description": "AI-powered grid filtering for Sylius. Natural language to grid filters."
         },
         {
             "packageName": "abenmada/sylius-export-plugin",
@@ -6579,20 +6595,20 @@
             "description": "What in the box plugin."
         },
         {
-            "packageName": "hipay/hipay-payments-sylius",
-            "homepage": "https://github.com/hipay/hipay-payments-sylius",
-            "latestTag": "v1.0.1",
-            "syliusConstraint": "^2.0",
+            "packageName": "monsieurbiz/sylius-markerio-plugin",
+            "homepage": "https://github.com/monsieurbiz/SyliusMarkerioPlugin",
+            "latestTag": "v1.1.0",
+            "syliusConstraint": ">=1.12 <2.0",
             "constraintFrom": "sylius/sylius",
-            "supports1x": false,
-            "supports2x": true,
+            "supports1x": true,
+            "supports2x": false,
             "prereleaseOnly": false,
             "prereleaseTag": null,
             "prereleaseSyliusConstraint": null,
             "prereleaseConstraintFrom": null,
             "prereleaseTargets2x": false,
             "downloads": 4,
-            "description": "HiPay payment plugin for Sylius applications"
+            "description": ""
         },
         {
             "packageName": "abenmada/sylius-broken-link-handler-plugin",
@@ -6673,22 +6689,6 @@
             "prereleaseTargets2x": false,
             "downloads": 1,
             "description": "Elastic search integration for Sylius."
-        },
-        {
-            "packageName": "tulik/sylius-blog-plugin",
-            "homepage": "https://github.com/tulik/SyliusBlogPlugin",
-            "latestTag": "v1.2.2",
-            "syliusConstraint": "~1.8.0 || ~1.9.0",
-            "constraintFrom": "sylius/sylius",
-            "supports1x": true,
-            "supports2x": false,
-            "prereleaseOnly": false,
-            "prereleaseTag": null,
-            "prereleaseSyliusConstraint": null,
-            "prereleaseConstraintFrom": null,
-            "prereleaseTargets2x": false,
-            "downloads": 1,
-            "description": "This plugin add blog capabilities to your Sylius project"
         },
         {
             "packageName": "payum/payum-bundle",

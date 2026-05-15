@@ -22,10 +22,15 @@ if (in_array('--resolver-fixtures', $argv, true)) {
     exit(runResolverFixtures(__DIR__ . '/../tests/fixtures'));
 }
 
+if (in_array('--core-drift', $argv, true)) {
+    exit(runCoreDriftCheck(__DIR__ . '/sylius_core_packages.php', __DIR__ . '/../app.js'));
+}
+
 $argv1 = $argv[1] ?? null;
 if (!$argv1) {
     fwrite(STDERR, "usage: php bin/smoke.php <composer.json>\n");
     fwrite(STDERR, "       php bin/smoke.php --resolver-fixtures\n");
+    fwrite(STDERR, "       php bin/smoke.php --core-drift\n");
     exit(1);
 }
 
@@ -193,6 +198,104 @@ function runResolverFixtures(string $dir): int
 
     echo "\n";
     echo "Resolver fixtures: {$pass} pass, {$fail} fail\n";
+    if ($failures) {
+        echo "\n--- failures ---\n";
+        foreach ($failures as $f) {
+            echo $f . "\n";
+        }
+    }
+    return $fail === 0 ? 0 : 1;
+}
+
+/**
+ * Locks the Sylius monorepo core set against two failure modes:
+ *
+ *   1. Drift between bin/sylius_core_packages.php (PHP side) and the
+ *      SYLIUS_CORE Set in app.js (browser side). The two have to agree, or
+ *      the smoke composer.json mode and the live classifier disagree about
+ *      which packages count as "Core" vs "Not yet covered".
+ *
+ *   2. Missing 2.x-era monorepo packages. Packages introduced or surfaced
+ *      in Sylius 2.x (twig-hooks, twig-extra, admin-ui, calendar, flow-bundle,
+ *      money-bundle, sylius-rector, etc.) used to fall through to the
+ *      "Not yet covered" bucket, breaking the classifier for any real-world
+ *      2.x composer.json. This list enforces their presence.
+ */
+function runCoreDriftCheck(string $phpFile, string $jsFile): int
+{
+    $phpList = require $phpFile;
+    if (!is_array($phpList)) {
+        fwrite(STDERR, "core-drift: {$phpFile} did not return an array\n");
+        return 1;
+    }
+    $phpSet = array_unique($phpList);
+
+    $jsSource = file_get_contents($jsFile);
+    if ($jsSource === false) {
+        fwrite(STDERR, "core-drift: cannot read {$jsFile}\n");
+        return 1;
+    }
+    if (!preg_match('/const SYLIUS_CORE = new Set\(\[(.+?)\]\);/s', $jsSource, $m)) {
+        fwrite(STDERR, "core-drift: could not locate SYLIUS_CORE Set in {$jsFile}\n");
+        return 1;
+    }
+    preg_match_all("/'([^']+)'/", $m[1], $jsMatches);
+    $jsSet = array_unique($jsMatches[1] ?? []);
+
+    // Packages that must be present in both sides. Each line documents the
+    // signal it carries — without these, a real 2.x composer.json renders
+    // half-broken in the classifier.
+    $required = [
+        'sylius/sylius',                  // root package
+        'sylius/core', 'sylius/core-bundle',
+        // 2.x-era monorepo packages (high-download, prominent in real composer.json)
+        'sylius/twig-hooks',
+        'sylius/twig-extra',
+        'sylius/admin-ui',
+        'sylius/bootstrap-admin-ui',
+        'sylius/ui-translations',
+        'sylius/calendar',
+        'sylius/flow-bundle',
+        'sylius/money-bundle',
+        'sylius/sylius-rector',
+        'sylius/storage',
+        'sylius/translation',
+        'sylius/translation-bundle',
+        'sylius/pdf-generation-bundle',
+        'sylius/import-export-bundle',
+    ];
+
+    $pass = $fail = 0;
+    $failures = [];
+
+    foreach ($required as $pkg) {
+        if (!in_array($pkg, $phpSet, true)) {
+            $fail++;
+            $failures[] = "  missing from PHP (sylius_core_packages.php): {$pkg}";
+        } else {
+            $pass++;
+        }
+        if (!in_array($pkg, $jsSet, true)) {
+            $fail++;
+            $failures[] = "  missing from JS (app.js SYLIUS_CORE): {$pkg}";
+        } else {
+            $pass++;
+        }
+    }
+
+    $onlyPhp = array_values(array_diff($phpSet, $jsSet));
+    $onlyJs = array_values(array_diff($jsSet, $phpSet));
+    foreach ($onlyPhp as $pkg) {
+        $fail++;
+        $failures[] = "  in PHP only (drift, add to app.js): {$pkg}";
+    }
+    foreach ($onlyJs as $pkg) {
+        $fail++;
+        $failures[] = "  in JS only (drift, add to sylius_core_packages.php): {$pkg}";
+    }
+
+    echo "\n";
+    echo "Core-drift check: {$pass} required-package assertions pass, {$fail} fail\n";
     if ($failures) {
         echo "\n--- failures ---\n";
         foreach ($failures as $f) {

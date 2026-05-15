@@ -1,0 +1,35 @@
+{
+    "_doc": "Plugin that declares sylius/grid-bundle + sylius/resource-bundle (no sylius/sylius, no sylius/core, no sylius/core-bundle) on 1.x versions — should classify as 1.x. Real-world case: mobizel/sylius-export-plugin v0.6.0 declares sylius/grid-bundle ^1.10 and sylius/resource-bundle ^1.8.",
+    "input": {
+        "name": "example/sylius-grid-only-plugin",
+        "searchRow": {
+            "name": "example/sylius-grid-only-plugin",
+            "downloads": 3000,
+            "description": "Export plugin depending only on grid+resource bundles",
+            "repository": "https://github.com/example/sylius-grid-only-plugin"
+        },
+        "versions": [
+            {
+                "version": "v0.6.0",
+                "version_normalized": "0.6.0.0",
+                "require": {
+                    "php": "^8.0",
+                    "sylius/grid-bundle": "^1.10",
+                    "sylius/resource-bundle": "^1.8"
+                }
+            }
+        ]
+    },
+    "expected": {
+        "outcome": "ok",
+        "entry": {
+            "packageName": "example/sylius-grid-only-plugin",
+            "latestTag": "v0.6.0",
+            "syliusConstraint": "^1.10",
+            "constraintFrom": "sylius/grid-bundle",
+            "supports1x": true,
+            "supports2x": false,
+            "prereleaseOnly": false
+        }
+    }
+}
