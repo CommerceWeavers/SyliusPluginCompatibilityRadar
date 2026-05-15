@@ -195,6 +195,22 @@
         'sylius/registry',
         'sylius/state-machine-abstraction',
         'sylius/fixtures-bundle',
+        // 2.x-era monorepo packages. Kept in sync with bin/sylius_core_packages.php
+        // via `php bin/smoke.php --core-drift`.
+        'sylius/twig-hooks',
+        'sylius/twig-extra',
+        'sylius/admin-ui',
+        'sylius/bootstrap-admin-ui',
+        'sylius/ui-translations',
+        'sylius/calendar',
+        'sylius/flow-bundle',
+        'sylius/money-bundle',
+        'sylius/sylius-rector',
+        'sylius/storage',
+        'sylius/translation',
+        'sylius/translation-bundle',
+        'sylius/pdf-generation-bundle',
+        'sylius/import-export-bundle',
     ]);
 
     const state = {
