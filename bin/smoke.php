@@ -26,11 +26,17 @@ if (in_array('--core-drift', $argv, true)) {
     exit(runCoreDriftCheck(__DIR__ . '/sylius_core_packages.php', __DIR__ . '/../app.js'));
 }
 
+if (in_array('--discovery-coverage', $argv, true)) {
+    require __DIR__ . '/build-cache.php';
+    exit(runDiscoveryCoverageCheck());
+}
+
 $argv1 = $argv[1] ?? null;
 if (!$argv1) {
     fwrite(STDERR, "usage: php bin/smoke.php <composer.json>\n");
     fwrite(STDERR, "       php bin/smoke.php --resolver-fixtures\n");
     fwrite(STDERR, "       php bin/smoke.php --core-drift\n");
+    fwrite(STDERR, "       php bin/smoke.php --discovery-coverage  (live network)\n");
     exit(1);
 }
 
@@ -303,4 +309,28 @@ function runCoreDriftCheck(string $phpFile, string $jsFile): int
         }
     }
     return $fail === 0 ? 0 : 1;
+}
+
+/**
+ * Live-network check that the type-based discovery escapes Packagist's
+ * /search.json deep-paging cap (300 results). Without combining search.json
+ * with /packages/list.json the radar misses the ~400 long-tail packages
+ * that share the `sylius-plugin` composer type but sit outside the search
+ * ranking window. Asserts the merged result is >500 names — well above
+ * the 300 cap, well below the live registry size (~688 at time of writing)
+ * to allow for organic churn.
+ */
+function runDiscoveryCoverageCheck(): int
+{
+    $threshold = 500;
+    $rows = fetchPackagistByType('sylius-plugin');
+    $names = array_unique(array_filter(array_map(fn($r) => $r['name'] ?? null, $rows)));
+    $count = count($names);
+    echo "Discovery coverage (sylius-plugin): {$count} unique names (threshold {$threshold})\n";
+    if ($count <= $threshold) {
+        echo "FAIL: discovery appears capped — search.json + list.json merge is not working\n";
+        return 1;
+    }
+    echo "PASS\n";
+    return 0;
 }
