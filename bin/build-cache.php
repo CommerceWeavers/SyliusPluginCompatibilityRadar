@@ -31,6 +31,7 @@ use Composer\Semver\VersionParser;
 const PACKAGIST_SEARCH_TYPE = 'https://packagist.org/search.json?type=%s&per_page=100';
 const PACKAGIST_SEARCH_QUERY = 'https://packagist.org/search.json?q=%s&per_page=100';
 const PACKAGIST_SEARCH_TAGS = 'https://packagist.org/search.json?tags=%s&per_page=100';
+const PACKAGIST_LIST_TYPE = 'https://packagist.org/packages/list.json?type=%s';
 const PACKAGIST_P2 = 'https://repo.packagist.org/p2/%s.json';
 const USER_AGENT = 'CommerceWeavers-Radar-Seed/1.1 (+https://commerceweavers.com)';
 
@@ -314,7 +315,30 @@ function parseArgs(array $argv): array
 
 function fetchPackagistByType(string $type): array
 {
-    return fetchPackagistPaginated(sprintf(PACKAGIST_SEARCH_TYPE, urlencode($type)));
+    // Two-step discovery for a composer type:
+    //
+    // 1. /search.json returns rich rows (name + downloads + description +
+    //    repository), but Packagist's underlying search backend caps deep-paging
+    //    at 300 results. For popular types like `sylius-plugin` the actual
+    //    registry holds ~700 packages, so search alone hides hundreds.
+    //
+    // 2. /packages/list.json returns just names with no pagination cap. We use
+    //    it to backfill packages search couldn't reach. Bare rows (`{name}`
+    //    only) are merged downstream by mergePackages, which keeps the rich
+    //    row when both exist for the same package.
+    //
+    // The order matters: rich rows go first so mergePackages' "higher downloads
+    // wins" rule preserves their metadata when the bare backfill arrives.
+    $rich = fetchPackagistPaginated(sprintf(PACKAGIST_SEARCH_TYPE, urlencode($type)));
+    $bare = fetchPackagistTypeList($type);
+    return array_merge($rich, $bare);
+}
+
+function fetchPackagistTypeList(string $type): array
+{
+    $data = httpGetJson(sprintf(PACKAGIST_LIST_TYPE, urlencode($type)));
+    $names = $data['packageNames'] ?? [];
+    return array_map(fn($name) => ['name' => $name], $names);
 }
 
 function fetchPackagistByQuery(string $query): array
