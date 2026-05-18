@@ -31,8 +31,67 @@ use Composer\Semver\VersionParser;
 const PACKAGIST_SEARCH_TYPE = 'https://packagist.org/search.json?type=%s&per_page=100';
 const PACKAGIST_SEARCH_QUERY = 'https://packagist.org/search.json?q=%s&per_page=100';
 const PACKAGIST_SEARCH_TAGS = 'https://packagist.org/search.json?tags=%s&per_page=100';
+const PACKAGIST_LIST_TYPE = 'https://packagist.org/packages/list.json?type=%s';
 const PACKAGIST_P2 = 'https://repo.packagist.org/p2/%s.json';
 const USER_AGENT = 'CommerceWeavers-Radar-Seed/1.1 (+https://commerceweavers.com)';
+
+// Ordered fallback chain for reading a plugin's Sylius version constraint.
+// First match wins, so the most authoritative sources lead. The remainder is
+// the set of Sylius monorepo split packages whose version mirrors sylius/sylius
+// (channel ^2.0 implies Sylius 2.x, resource-bundle ^1.6 implies Sylius 1.x).
+// Packages with independent versioning (twig-hooks v0.12, admin-ui v0.12,
+// calendar v0.5, flow-bundle v0.x, money-bundle v0.x, sylius-rector, storage,
+// translation, translation-bundle, ui-translations, bootstrap-admin-ui,
+// state-machine-abstraction) are deliberately excluded — their constraints
+// don't intersect with >=2.0 <3.0 even when they're plainly 2.x-era code.
+const SYLIUS_CONSTRAINT_FALLBACK_CHAIN = [
+    // Authoritative
+    'sylius/sylius',
+    'sylius/core',
+    'sylius/core-bundle',
+    // Version-mirroring split packages, alphabetical
+    'sylius/addressing',
+    'sylius/addressing-bundle',
+    'sylius/admin-api-bundle',
+    'sylius/admin-bundle',
+    'sylius/api-bundle',
+    'sylius/attribute',
+    'sylius/attribute-bundle',
+    'sylius/channel',
+    'sylius/channel-bundle',
+    'sylius/currency',
+    'sylius/currency-bundle',
+    'sylius/customer',
+    'sylius/customer-bundle',
+    'sylius/grid',
+    'sylius/grid-bundle',
+    'sylius/inventory',
+    'sylius/inventory-bundle',
+    'sylius/locale',
+    'sylius/locale-bundle',
+    'sylius/order',
+    'sylius/order-bundle',
+    'sylius/payment',
+    'sylius/payment-bundle',
+    'sylius/product',
+    'sylius/product-bundle',
+    'sylius/promotion',
+    'sylius/promotion-bundle',
+    'sylius/resource',
+    'sylius/resource-bundle',
+    'sylius/review',
+    'sylius/review-bundle',
+    'sylius/shipping',
+    'sylius/shipping-bundle',
+    'sylius/shop-api-plugin',
+    'sylius/shop-bundle',
+    'sylius/taxation',
+    'sylius/taxation-bundle',
+    'sylius/taxonomy',
+    'sylius/taxonomy-bundle',
+    'sylius/user',
+    'sylius/user-bundle',
+];
 
 // Vendors we trust to be Sylius-ecosystem when a name-match search returns them.
 // Anything outside this allowlist from the broad `q=sylius` query is skipped
@@ -256,7 +315,30 @@ function parseArgs(array $argv): array
 
 function fetchPackagistByType(string $type): array
 {
-    return fetchPackagistPaginated(sprintf(PACKAGIST_SEARCH_TYPE, urlencode($type)));
+    // Two-step discovery for a composer type:
+    //
+    // 1. /search.json returns rich rows (name + downloads + description +
+    //    repository), but Packagist's underlying search backend caps deep-paging
+    //    at 300 results. For popular types like `sylius-plugin` the actual
+    //    registry holds ~700 packages, so search alone hides hundreds.
+    //
+    // 2. /packages/list.json returns just names with no pagination cap. We use
+    //    it to backfill packages search couldn't reach. Bare rows (`{name}`
+    //    only) are merged downstream by mergePackages, which keeps the rich
+    //    row when both exist for the same package.
+    //
+    // The order matters: rich rows go first so mergePackages' "higher downloads
+    // wins" rule preserves their metadata when the bare backfill arrives.
+    $rich = fetchPackagistPaginated(sprintf(PACKAGIST_SEARCH_TYPE, urlencode($type)));
+    $bare = fetchPackagistTypeList($type);
+    return array_merge($rich, $bare);
+}
+
+function fetchPackagistTypeList(string $type): array
+{
+    $data = httpGetJson(sprintf(PACKAGIST_LIST_TYPE, urlencode($type)));
+    $names = $data['packageNames'] ?? [];
+    return array_map(fn($name) => ['name' => $name], $names);
 }
 
 function fetchPackagistByQuery(string $query): array
@@ -369,8 +451,20 @@ function resolvePackageFromVersions(string $name, array $versions, array $search
     $tag = $source['version'] ?? null;
 
     // Prefer sylius/sylius; fall back to monorepo components that mirror its version.
-    // (Many plugins — e.g. Setono — do not declare sylius/sylius directly.)
-    $constraintSources = ['sylius/sylius', 'sylius/core', 'sylius/core-bundle'];
+    // Many plugins do not declare sylius/sylius directly: Setono leans on sylius/core,
+    // and split-package utilities (e.g. setono/sylius-static-contexts-bundle,
+    // flux-se/sylius-hcaptcha-plugin) depend only on individual bundles like
+    // sylius/channel, sylius/shop-bundle, sylius/resource-bundle. Without the wider
+    // fallback those plugins fall into "Not yet covered" even though their constraint
+    // unambiguously identifies 1.x or 2.x.
+    //
+    // ORDER IS LOAD-BEARING. First match wins. Authoritative sources (sylius/sylius,
+    // sylius/core, sylius/core-bundle) lead. The rest is the set of monorepo split
+    // packages whose version mirrors sylius/sylius — packages with independent
+    // versioning (twig-hooks v0.12, admin-ui v0.12, calendar v0.5) are deliberately
+    // excluded, because their constraints don't intersect with >=2.0 <3.0 even when
+    // they're plainly 2.x-era code.
+    $constraintSources = SYLIUS_CONSTRAINT_FALLBACK_CHAIN;
     $syliusConstraint = null;
     $constraintFrom = null;
     foreach ($constraintSources as $key) {
