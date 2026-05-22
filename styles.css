@@ -23,6 +23,7 @@
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
 body {
     font-family: "Inclusive Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
     background: var(--bg);
@@ -89,6 +90,8 @@ button { font-family: inherit; letter-spacing: inherit; cursor: pointer; }
 
 /* ---- page ---- */
 .page { max-width: 76rem; margin: 0 auto; padding: 2.5rem 2rem 5rem; }
+
+#input-screen, #results-screen { scroll-margin-top: 5rem; }
 
 .blogbar {
     max-width: 88rem; margin: 0 auto;
@@ -204,8 +207,16 @@ button { font-family: inherit; letter-spacing: inherit; cursor: pointer; }
 
 .hero__tagline {
     margin: 0; font-size: 1.2rem; color: var(--text-3);
-    max-width: 56ch; text-wrap: pretty;
+    text-wrap: pretty;
 }
+
+.hero__jump {
+    margin-top: 0.5rem;
+}
+.hero__jump-btn {
+    text-decoration: none;
+}
+.hero__jump-btn:hover { text-decoration: none; }
 
 /* ---- tabs ---- */
 .tabs {
@@ -336,6 +347,45 @@ button { font-family: inherit; letter-spacing: inherit; cursor: pointer; }
     border-left: 3px solid var(--red);
     border-radius: 0.5rem; color: #fca5a5;
     font-family: "JetBrains Mono", monospace; font-size: 0.8rem;
+}
+
+/* ---- CTA box ---- */
+.cta-box {
+    margin-top: 2.5rem;
+    background: var(--yellow);
+    color: #000;
+    border-radius: 1.1rem;
+    padding: 1.75rem 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 1.5rem; flex-wrap: wrap;
+}
+.cta-box__body { flex: 1 1 22rem; min-width: 16rem; }
+.cta-box__title {
+    margin: 0 0 0.4rem 0;
+    font-size: 1.4rem; font-weight: 700;
+    letter-spacing: var(--track-tight);
+    color: #000;
+}
+.cta-box__text {
+    margin: 0; font-size: 0.98rem;
+    color: #1a1a1a; text-wrap: pretty;
+    max-width: 52ch;
+}
+.cta-box__btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    background: #000; color: var(--yellow) !important;
+    font-weight: 700; font-size: 0.95rem;
+    padding: 0.85rem 1.6rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: background-color .15s, color .15s, transform .15s;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.cta-box__btn:hover {
+    background: #1a1a1a;
+    text-decoration: none;
+    transform: translateY(-1px);
 }
 
 /* ---- footer ---- */

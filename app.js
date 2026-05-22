@@ -774,7 +774,11 @@
     function showScreen(which) {
         dom.inputScreen.classList.toggle('is-hidden', which !== 'input');
         dom.resultsScreen.classList.toggle('is-hidden', which !== 'results');
-        window.scrollTo({ top: 0, behavior: 'auto' });
+        if (which === 'results') {
+            dom.resultsScreen.scrollIntoView({ block: 'start', behavior: 'smooth' });
+        } else {
+            window.scrollTo({ top: 0, behavior: 'auto' });
+        }
     }
 
     function showParseError(msg) {
