@@ -307,6 +307,12 @@
     });
     $$('[data-radar-back]').forEach((b) => b.addEventListener('click', () => showScreen('input')));
 
+    $$('[data-jump-to-input]').forEach((a) => a.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = dom.checkBtn.offsetParent ? dom.checkBtn : dom.singleBtn;
+        target.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    }));
+
     function switchTab(which) {
         $$('.tab').forEach((t) => t.setAttribute('aria-selected', t.dataset.tab === which ? 'true' : 'false'));
         $$('[data-panel]').forEach((p) => p.classList.toggle('is-hidden', p.dataset.panel !== which));
