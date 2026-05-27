@@ -903,8 +903,8 @@
   (() => {
     'use strict';
 
-    const DATA_URL = 'plugins.json';
-    const TRACKER_STATE_URL = 'tracker-state.json';
+    const DATA_URL = <?= json_encode(($radarBase ?? '.') . '/plugins.json', JSON_UNESCAPED_SLASHES) ?>;
+    const TRACKER_STATE_URL = <?= json_encode(($radarBase ?? '.') . '/tracker-state.json', JSON_UNESCAPED_SLASHES) ?>;
 
     // Tiny embedded fallback so the page still classifies something when
     // opened via file:// (fetch('plugins.json') blocked). Real data lives

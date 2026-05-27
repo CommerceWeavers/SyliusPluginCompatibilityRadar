@@ -1,3 +1,5 @@
+<?php $radarBase = '.'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
