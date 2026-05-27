@@ -394,6 +394,7 @@
     display: flex; align-items: center; justify-content: space-between;
     gap: 1rem; margin-bottom: 1.75rem; flex-wrap: wrap;
 }
+.radar-res-actions { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
 .radar-res-count { display: inline-flex; align-items: baseline; gap: 0.7rem; }
 .radar-res-count__num {
     background: var(--radar-yellow); color: #000;
@@ -700,6 +701,75 @@
     40% { transform: translateY(-4px); opacity: 1; }
 }
 
+/* print-only report header; hidden on screen, revealed in @media print */
+.radar-print-header { display: none; }
+
+/* ---- print: results report only ---- */
+@page { margin: 1.5cm; }
+@media print {
+    /* Show only the results report; hide the rest of the page chrome. */
+    body * { visibility: hidden; }
+    #results-screen, #results-screen * { visibility: visible; }
+    #results-screen {
+        position: absolute;
+        top: 0; left: 0; width: 100%;
+    }
+
+    /* Drop interactive-only controls and the marketing CTA — neither
+       belongs on a printed report. */
+    .radar-res-actions,
+    .radar-center,
+    .radar-cta-box { display: none !important; }
+
+    /* Reveal the print-only report header. */
+    .radar-print-header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 2px solid var(--radar-text);
+    }
+    .radar-print-header__title {
+        font-size: 1.15rem; font-weight: 700;
+        letter-spacing: var(--radar-track-tight);
+    }
+    .radar-print-header__sub {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.75rem; color: var(--radar-text-4);
+    }
+
+    /* Repaint the dark theme as an ink-friendly light report so the
+       light-on-dark text stays readable once browsers drop backgrounds. */
+    :root {
+        --radar-bg: #ffffff;
+        --radar-bg-2: #ffffff;
+        --radar-bg-3: #ffffff;
+        --radar-line: #d4d4d8;
+        --radar-line-2: #a1a1aa;
+        --radar-text: #18181b;
+        --radar-text-2: #27272a;
+        --radar-text-3: #3f3f46;
+        --radar-text-4: #52525b;
+        --radar-text-5: #71717a;
+    }
+    .radar-row__note { color: #1d4ed8; }
+
+    /* Keep the colour-coded accents (count badge, status dots, summary
+       stripes) — they carry the at-a-glance verdict. */
+    .radar-res-count__num,
+    .radar-dot,
+    .radar-summary__cell::before {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* The collapsible lists are forced open via beforeprint, so drop the
+       now-pointless disclosure arrow. */
+    .radar-other__arrow { display: none; }
+}
+
   </style>
   
   <main class="radar-page">
@@ -790,12 +860,20 @@
   <section id="results-screen" class="radar-is-hidden" aria-labelledby="results-title">
     <h2 id="results-title" class="radar-visually-hidden">Results</h2>
 
+    <div class="radar-print-header" aria-hidden="true">
+      <span class="radar-print-header__title">Sylius 2.x Compatibility Report</span>
+      <span class="radar-print-header__sub">Commerce Weavers · Compatibility Radar</span>
+    </div>
+
     <div class="radar-res-header">
       <div class="radar-res-count">
         <span id="plugin-count" class="radar-res-count__num">0</span>
         <span id="plugin-count-label" class="radar-res-count__label">Sylius plugins identified</span>
       </div>
-      <button type="button" class="radar-button radar-btn radar-btn--ghost" data-radar-back>← Check another</button>
+      <div class="radar-res-actions">
+        <button type="button" class="radar-button radar-btn radar-btn--ghost" data-radar-print>🖨 Print report</button>
+        <button type="button" class="radar-button radar-btn radar-btn--ghost" data-radar-back>← Check another</button>
+      </div>
     </div>
 
     <div id="summary-strip" class="radar-summary radar-is-hidden"></div>
@@ -1130,6 +1208,22 @@
         if (e.key === 'Enter') { e.preventDefault(); handleSingle(); }
     });
     $$('[data-radar-back]').forEach((b) => b.addEventListener('click', () => showScreen('input')));
+    $$('[data-radar-print]').forEach((b) => b.addEventListener('click', () => window.print()));
+
+    // Force the collapsible "core" / "other" lists open while printing so the
+    // full dependency inventory lands on paper, then restore the on-screen
+    // state. Only the ones we opened are re-collapsed, so a panel the user
+    // expanded by hand stays open.
+    window.addEventListener('beforeprint', () => {
+        $$('.radar-other').forEach((d) => {
+            if (!d.open) { d.dataset.printForced = '1'; d.open = true; }
+        });
+    });
+    window.addEventListener('afterprint', () => {
+        $$('.radar-other').forEach((d) => {
+            if (d.dataset.printForced) { d.open = false; delete d.dataset.printForced; }
+        });
+    });
 
     function switchTab(which) {
         $$('[data-tab]').forEach((t) => t.setAttribute('aria-selected', t.dataset.tab === which ? 'true' : 'false'));
