@@ -23,7 +23,7 @@ if (in_array('--resolver-fixtures', $argv, true)) {
 }
 
 if (in_array('--core-drift', $argv, true)) {
-    exit(runCoreDriftCheck(__DIR__ . '/sylius_core_packages.php', __DIR__ . '/../app.js'));
+    exit(runCoreDriftCheck(__DIR__ . '/sylius_core_packages.php', __DIR__ . '/../radar.php'));
 }
 
 if (in_array('--discovery-coverage', $argv, true)) {
@@ -217,9 +217,9 @@ function runResolverFixtures(string $dir): int
  * Locks the Sylius monorepo core set against two failure modes:
  *
  *   1. Drift between bin/sylius_core_packages.php (PHP side) and the
- *      SYLIUS_CORE Set in app.js (browser side). The two have to agree, or
- *      the smoke composer.json mode and the live classifier disagree about
- *      which packages count as "Core" vs "Not yet covered".
+ *      SYLIUS_CORE Set inlined in radar.php (browser side). The two have to
+ *      agree, or the smoke composer.json mode and the live classifier
+ *      disagree about which packages count as "Core" vs "Not yet covered".
  *
  *   2. Missing 2.x-era monorepo packages. Packages introduced or surfaced
  *      in Sylius 2.x (twig-hooks, twig-extra, admin-ui, calendar, flow-bundle,
@@ -283,7 +283,7 @@ function runCoreDriftCheck(string $phpFile, string $jsFile): int
         }
         if (!in_array($pkg, $jsSet, true)) {
             $fail++;
-            $failures[] = "  missing from JS (app.js SYLIUS_CORE): {$pkg}";
+            $failures[] = "  missing from JS (radar.php SYLIUS_CORE): {$pkg}";
         } else {
             $pass++;
         }
@@ -293,7 +293,7 @@ function runCoreDriftCheck(string $phpFile, string $jsFile): int
     $onlyJs = array_values(array_diff($jsSet, $phpSet));
     foreach ($onlyPhp as $pkg) {
         $fail++;
-        $failures[] = "  in PHP only (drift, add to app.js): {$pkg}";
+        $failures[] = "  in PHP only (drift, add to radar.php SYLIUS_CORE): {$pkg}";
     }
     foreach ($onlyJs as $pkg) {
         $fail++;

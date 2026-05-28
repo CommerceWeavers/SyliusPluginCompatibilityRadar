@@ -15,7 +15,7 @@ Insert a new step **between** `Build plugins cache` and `Setup SSH`:
 
 ## Why between those steps
 
-- `Build plugins cache` regenerates `plugins.json` — the validator reads `app.js`, not `plugins.json`, so order with build-cache is not strictly required, but keeping them adjacent keeps "data refresh" steps together.
+- `Build plugins cache` regenerates `plugins.json` — the validator reads `radar.php`, not `plugins.json`, so order with build-cache is not strictly required, but keeping them adjacent keeps "data refresh" steps together.
 - The validator writes `tracker-state.json` to the radar root. The existing `rsync -az --delete` (lines 39-48 of the supplied yaml) already syncs every non-excluded file at the radar root, so `tracker-state.json` is picked up automatically. No `rsync --include` adjustment needed.
 - Strict mode (default) exits non-zero on contradiction. Subsequent steps don't run on non-zero exits, so the `Setup SSH` and `Deploy radar` steps are gated automatically.
 

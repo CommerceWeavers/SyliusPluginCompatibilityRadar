@@ -4,7 +4,7 @@
 
 ## What it does
 
-Every entry in `app.js IN_PROGRESS` claims that some Sylius 2.x compatibility effort is in flight. The validator re-checks each claim against GitHub and classifies the result:
+Every entry in `radar.php` `IN_PROGRESS` claims that some Sylius 2.x compatibility effort is in flight. The validator re-checks each claim against GitHub and classifies the result:
 
 | Verdict | What it means | Action |
 |---|---|---|
@@ -18,7 +18,7 @@ Every entry in `app.js IN_PROGRESS` claims that some Sylius 2.x compatibility ef
 | `wrong_target` | Branch tracker, but `composer.json` on that branch declares `sylius/sylius` / `sylius/core` targeting `<2.0` (plugin-v2 trap) | **BLOCKS deploy** — remove from `IN_PROGRESS`, the branch is not Sylius 2.x work |
 | `unreachable` | Network / parse / auth failure on a single entry | Logged, doesn't block |
 
-Soft drift (`refresh`, `soft_stale`) is recorded in `tracker-state.json` — a sidecar the browser merges over `IN_PROGRESS` at runtime. Identity fields (URL, label, summary) always stay sourced from `app.js`.
+Soft drift (`refresh`, `soft_stale`) is recorded in `tracker-state.json` — a sidecar the browser merges over `IN_PROGRESS` at runtime. Identity fields (URL, label, summary) always stay sourced from `radar.php`.
 
 ## Daily workflow
 
@@ -101,7 +101,7 @@ Single transient failure (rate limit, DNS, etc.). Re-run. If it persists for one
 
 Only entries that need an update are emitted. Keys are package names matching `IN_PROGRESS`. Browser ignores keys not in `IN_PROGRESS` (graceful for future sidecars produced by the scanner plan).
 
-### `IN_PROGRESS` entry (in `app.js`)
+### `IN_PROGRESS` entry (in `radar.php`)
 
 ```js
 'vendor/plugin': {
@@ -112,8 +112,8 @@ Only entries that need an update are emitted. Keys are package names matching `I
 }
 ```
 
-`summary`, `tracker`, and the entry's existence are editorial decisions that stay in `app.js`. `lastUpdate` and `stale` will be overwritten by the validator's sidecar, so hand-edits to those fields are advisory.
+`summary`, `tracker`, and the entry's existence are editorial decisions that stay in `radar.php`. `lastUpdate` and `stale` will be overwritten by the validator's sidecar, so hand-edits to those fields are advisory.
 
 ## When this gets retired
 
-The scanner plan (`docs/plans/2026-04-22-001-feat-daily-github-activity-scanner-plan.md`) moves all editorial data into `plugins.json` and adds automated discovery of new in-progress PRs. Once that lands, `bin/verify-trackers.php` is rewritten to validate `plugins.json` directly (no `app.js` parsing), and this runbook is updated. Until then, the validator is the standing safety net.
+The scanner plan (`docs/plans/2026-04-22-001-feat-daily-github-activity-scanner-plan.md`) moves all editorial data into `plugins.json` and adds automated discovery of new in-progress PRs. Once that lands, `bin/verify-trackers.php` is rewritten to validate `plugins.json` directly (no `radar.php` parsing), and this runbook is updated. Until then, the validator is the standing safety net.

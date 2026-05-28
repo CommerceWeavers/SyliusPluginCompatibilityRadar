@@ -1,7 +1,7 @@
 <?php
 
 // Shared list of Sylius core/monorepo packages. Consumed by bin/smoke.php and
-// kept in sync with SYLIUS_CORE in app.js by hand.
+// kept in sync with SYLIUS_CORE in radar.php by hand.
 
 return [
     'sylius/sylius',
@@ -56,8 +56,8 @@ return [
     'sylius/state-machine-abstraction',
     'sylius/fixtures-bundle',
     // 2.x-era monorepo packages. Verified routinely by `php bin/smoke.php --core-drift`.
-    // Keep this set in sync with SYLIUS_CORE in app.js — the drift check fails the
-    // build if they diverge.
+    // Keep this set in sync with SYLIUS_CORE in radar.php — the drift check fails
+    // the build if they diverge.
     'sylius/twig-hooks',
     'sylius/twig-extra',
     'sylius/admin-ui',

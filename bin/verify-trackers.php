@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /**
- * Validates the IN_PROGRESS editorial dict in app.js against live GitHub
+ * Validates the IN_PROGRESS editorial dict in radar.php against live GitHub
  * state. Runs inside the daily deploy workflow; hard-fails (exit 1) if any
  * entry is a customer-facing false positive — PR merged or closed-unmerged,
  * branch deleted, untouched for 180+ days, or branch's composer.json no
@@ -12,13 +12,13 @@ declare(strict_types=1);
  * Soft drift (lastUpdate is off by more than 7 days, or entry crosses the
  * 90-day soft-stale threshold) is written to tracker-state.json — a sidecar
  * the browser merges over IN_PROGRESS at runtime, so the live radar stays
- * current without committing changes to app.js.
+ * current without committing changes to radar.php.
  *
  * Usage:
  *   php bin/verify-trackers.php                       # strict mode (CI default)
  *   php bin/verify-trackers.php --report-only         # never exit non-zero
  *   php bin/verify-trackers.php --json                # machine-readable summary
- *   php bin/verify-trackers.php --app-js=path/to.js   # override input
+ *   php bin/verify-trackers.php --source=path/to.php  # override input
  *   php bin/verify-trackers.php --output=path.json    # override sidecar path
  *
  * Requires:
@@ -36,13 +36,13 @@ const HARD_STALE_DAYS = 180;
 const LAST_UPDATE_DRIFT_DAYS = 7;
 
 $opts = parseOpts($argv);
-$appJsPath = $opts['app-js'] ?? __DIR__ . '/../app.js';
+$sourcePath = $opts['source'] ?? __DIR__ . '/../radar.php';
 $outputPath = $opts['output'] ?? __DIR__ . '/../tracker-state.json';
 $reportOnly = isset($opts['report-only']);
 $asJson = isset($opts['json']);
 
-if (!file_exists($appJsPath)) {
-    fwrite(STDERR, "app.js not found at {$appJsPath}\n");
+if (!file_exists($sourcePath)) {
+    fwrite(STDERR, "source file not found at {$sourcePath}\n");
     exit(1);
 }
 
@@ -52,14 +52,14 @@ if (!ghAvailable($err)) {
 }
 
 try {
-    $entries = parseInProgress(file_get_contents($appJsPath));
+    $entries = parseInProgress(file_get_contents($sourcePath));
 } catch (Throwable $e) {
-    fwrite(STDERR, "Failed to parse IN_PROGRESS from {$appJsPath}: {$e->getMessage()}\n");
+    fwrite(STDERR, "Failed to parse IN_PROGRESS from {$sourcePath}: {$e->getMessage()}\n");
     exit(1);
 }
 
 if (!$entries) {
-    fwrite(STDERR, "No IN_PROGRESS entries found in {$appJsPath}\n");
+    fwrite(STDERR, "No IN_PROGRESS entries found in {$sourcePath}\n");
     exit(1);
 }
 
@@ -178,10 +178,11 @@ function runShell(array $cmd, ?string &$out = null, ?string &$err = null): int
 // --- IN_PROGRESS parser ---
 
 /**
- * Parses the `const IN_PROGRESS = { ... };` block in app.js into a list of
- * entries. Tolerant of the JS-style single quotes, trailing commas, and
- * nested `tracker: { ... }` objects. Returns array of [packageName, summary,
- * tracker.type, tracker.url, tracker.label, lastUpdate, stale].
+ * Parses the `const IN_PROGRESS = { ... };` block from the radar source (now
+ * inlined in radar.php) into a list of entries. Tolerant of the JS-style
+ * single quotes, trailing commas, and nested `tracker: { ... }` objects.
+ * Returns array of [packageName, summary, tracker.type, tracker.url,
+ * tracker.label, lastUpdate, stale].
  */
 function parseInProgress(string $source): array
 {
